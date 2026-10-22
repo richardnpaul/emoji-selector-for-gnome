@@ -1,0 +1,7 @@
+# Build tools for the packages in requirements.in that have no wheel for the image's Python and are
+# compiled from source (PyYAML needs Cython; the tree-sitter packages need setuptools and wheel).
+# They are installed first, from hashes, and the main requirements are then built with
+# --no-build-isolation, so pip never downloads an unpinned build tool.
+setuptools
+wheel
+Cython

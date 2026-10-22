@@ -1,0 +1,6 @@
+# Direct dependencies of the dev container's Python tools. Edit this, then regenerate the locked
+# requirements.txt (with hashes) using the command in its header.
+pre-commit==4.5.1
+shexli==0.2.1
+# 0.26.0 segfaults on Python 3.14+; 0.25.0 is known good.
+tree-sitter==0.25.0

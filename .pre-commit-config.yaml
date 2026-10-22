@@ -1,0 +1,116 @@
+# Install once with `pre-commit install --install-hooks --hook-type pre-commit --hook-type pre-push`
+# (the devcontainer does it). Run everything with `pre-commit run --all-files`.
+default_install_hook_types: [pre-commit, pre-push]
+minimum_pre_commit_version: '4.5.1'
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # frozen: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+        exclude: \.(po|pot)$
+      - id: end-of-file-fixer
+      - id: check-yaml
+        # The only dependency of this hook, pinned: pre-commit would otherwise take the newest.
+        additional_dependencies: ['ruamel.yaml==0.19.1']
+      - id: check-json
+      - id: check-xml
+      - id: check-added-large-files
+        args: [--maxkb=500]
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: check-symlinks
+      - id: destroyed-symlinks
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: detect-private-key
+        # Example secrets that the security-review skill teaches reviewers to recognise.
+        exclude: ^\.agents/skills/security-review/references/
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: check-vcs-permalinks
+      - id: check-illegal-windows-names
+      - id: forbid-new-submodules
+      - id: no-commit-to-branch
+        args: [--branch, main, --branch, master]
+
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: a6564f5d57444e123433a5c9af733e3975c77229 # frozen: v0.11.0.1-1
+    hooks:
+      - id: shellcheck
+        args: [--external-sources]
+
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: 479be5958357ba5ab65ce47172117348516860e9 # frozen: v3.14.1-1
+    hooks:
+      - id: shfmt # indentation comes from .editorconfig
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: 57b21406f092110c18776e39b0bda50d37c945c8 # frozen: v2.4.3
+    hooks:
+      - id: codespell
+        # afterAll is an identifier, not a typo.
+        args: [--ignore-words-list=afterall]
+        # The emoji tables and gettext files hold other languages and generated text, and the
+        # security references are third-party example patterns.
+        exclude: ^(package-lock\.json|tests/fixtures/.*|\.agents/skills/security-review/references/.*|emoji-selector@maestroschan\.fr/locale/.*|src/data/.*)$
+
+  - repo: https://github.com/rhysd/actionlint
+    rev: 914e7df21a07ef503a81201c76d2b11c789d3fca # frozen: v1.7.12
+    hooks:
+      - id: actionlint # workflow syntax, expressions and the shell in `run:` steps (built from Go modules checked by go.sum)
+
+  - repo: https://github.com/AleksaC/hadolint-py
+    rev: 6e7504451511eaeb62a3e7f14d63b0296cbf86eb # frozen: v2.15.1
+    hooks:
+      - id: hadolint # the dev container's Dockerfile
+        # DL3041 asks to pin dnf package versions, which dnf cannot lock (see .devcontainer/README.md).
+        args: [--ignore, DL3041]
+
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: c92afdf2c6ca336aaa8f39e2bd8d48f62dbd8e1f # frozen: v1.31.1
+    hooks:
+      - id: zizmor # security audit of the workflows (injection, permissions, unpinned actions...)
+        args: [--no-online-audits]
+
+  - repo: local
+    hooks:
+      - id: eslint
+        name: eslint
+        entry: npx --no-install eslint --max-warnings=0
+        language: system
+        types_or: [javascript, ts]
+      - id: prettier
+        name: prettier
+        entry: npx --no-install prettier --write --ignore-unknown
+        language: system
+        types_or: [javascript, ts, json, yaml, markdown, css]
+      - id: no-suppressed-gates
+        name: no suppressed quality gates
+        description: A skipped test, a lint/type suppression or a coverage/mutation ignore needs the maintainer's explicit approval.
+        language: pygrep
+        entry: >-
+          (Stryker disable|istanbul ignore|c8 ignore|v8 ignore|eslint-disable|eslint-enable|@ts-ignore|@ts-nocheck|@ts-expect-error|shellcheck disable|prettier-ignore|codespell:ignore|\.(skip|skipIf|only|todo|fails)\(|\b(xit|xdescribe|fit|fdescribe)\()
+        # Code and configuration, not the docs that describe these rules (nor this file).
+        files: \.(m?js|ts|sh|ya?ml|json)$
+        exclude: ^\.pre-commit-config\.yaml$
+      - id: gsettings-schema
+        name: gsettings schema compiles (strict)
+        entry: glib-compile-schemas --strict --dry-run emoji-selector@maestroschan.fr/schemas
+        language: system
+        files: \.gschema\.xml$
+        pass_filenames: false
+      - id: translations
+        name: translation catalogues are valid
+        entry: bash -c 'for f in "$@"; do msgfmt --check --output-file=/dev/null "$f" || exit 1; done' _
+        language: system
+        files: \.po$
+      - id: tests
+        name: tests with the 100% coverage thresholds
+        entry: npm run test:coverage
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]

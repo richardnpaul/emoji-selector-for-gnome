@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-14 18:44+0100\n"
+"POT-Creation-Date: 2026-10-22 15:11+0000\n"
 "PO-Revision-Date: 2023-04-23 10:03+0200\n"
 "Last-Translator: Kryštof Černý <cleerline1mc@gmail.com>\n"
 "Language-Team: \n"
@@ -18,111 +18,73 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: emoji-selector@maestroschan.fr/extension.js
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Emoji Selector"
-msgstr "Menu emotikonů"
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Základní rozvržení"
 
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Smileys & Body"
-msgstr "Tváře a tělo"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Peoples & Clothing"
-msgstr "Lidé a oblečení"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Animals & Nature"
-msgstr "Zvířata a příroda"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Food & Drink"
-msgstr "Jídlo a pití"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Travel & Places"
-msgstr "Cestování a místa"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Activities & Sports"
-msgstr "Aktivity a sporty"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Objects"
-msgstr "Předměty"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Symbols"
-msgstr "Symboly"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Flags"
-msgstr "Vlajky"
-
-#: emoji-selector@maestroschan.fr/prefs.js
-msgid "Modifications will be effective after reloading the extension."
-msgstr "Úpravy budou použity po restartu rozšíření."
-
-#: emoji-selector@maestroschan.fr/prefs.js
-msgid "From top to bottom"
-msgstr "Shora dolů"
-
-#: emoji-selector@maestroschan.fr/prefs.js
-msgid "From bottom to top"
-msgstr "Zespoda nahoru"
-
-#: emoji-selector@maestroschan.fr/prefs.js
-#, javascript-format
-msgid "The default value is %s"
-msgstr "Výchozí hodnota je %s"
-
-#: emoji-selector@maestroschan.fr/prefs.js
-#, javascript-format
-msgid "version %s"
-msgstr "verze %s"
-
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
+#, fuzzy
+#| msgid ""
+#| "Displaying the interface from the bottom is better if you use a bottom "
+#| "panel instead of the default top bar. Modifications will be effective "
+#| "after reloading the extension."
 msgid ""
 "Displaying the interface from the bottom is better if you use a bottom panel "
-"instead of the default top bar. Modifications will be effective after "
-"reloading the extension."
+"instead of the default top bar."
 msgstr ""
 "Rozhraní zespoda nahoru je lepší, když používáte spodní panel místo "
 "výchozího horního panelu. Úpravy budou použity po restartu rozšíření."
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "General layout"
-msgstr "Základní rozvržení"
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Shora dolů"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Zespoda nahoru"
+
+#: src/prefs.ts
 msgid "Number of emojis per line"
 msgstr "Počet emotikonů na řádek"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "Size of emojis (px)"
 msgstr "Velikost emotikonů (px)"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "Layout"
 msgstr "Rozvržení"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Modifikační klíče musí být ve špičatých závorkách"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Výchozí hodnota je %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Nepoužívejte klávesovou zkratku, která je již použita."
+
+#: src/prefs.ts
 msgid "Use a keyboard shortcut to toggle the menu"
 msgstr "Použít klávesovou zkratku pro přepnutí menu"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Help"
-msgstr "Nápověda"
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Apply"
-msgstr "Použít"
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Seznam platných jmen klíčů"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "Always show the icon in the panel"
 msgstr "Vždy zobrazit ikonu na panelu"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid ""
 "If you access the menu with the keyboard shortcut, you don't need to always "
 "display the icon."
@@ -130,95 +92,138 @@ msgstr ""
 "Pokud vyvoláváte menu pomocí klávesové zkratky, nepotřebujete mít vždy "
 "zobrazenou ikonu."
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "Keyboard bindings"
 msgstr "Přiřazení kláves"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Menu emotikonů"
+
+#: src/prefs.ts
+#, fuzzy
+#| msgid ""
+#| "This extension provides a parametrable popup menu displaying most emojis, "
+#| "clicking on an emoji copies it to the clipboard."
 msgid ""
-"This extension provides a parametrable popup menu displaying most emojis, "
+"This extension provides a configurable popup menu displaying most emojis, "
 "clicking on an emoji copies it to the clipboard."
 msgstr ""
 "Toto rozšíření poskytuje nastavitelné menu zobrazující většinu emotikonů, "
 "kliknutím na emotikon jej zkopírujete do schránky."
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Report bugs or ideas"
-msgstr "Nahlásit chyby nebo nápady"
-
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "Author"
 msgstr "Autor"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Translator(s)"
-msgstr "Překladatelé"
-
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "translator-credits"
 msgstr "Kryštof Černý"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Překladatelé"
+
+#: src/prefs.ts
 msgid "Contributors"
 msgstr "Přispěvatelé"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Nahlásit chyby nebo nápady"
+
+#: src/prefs.ts
 msgid "About"
 msgstr "O rozšíření"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "List of valid key names"
-msgstr "Seznam platných jmen klíčů"
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Tváře a tělo"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Modifier keys must be between chevrons"
-msgstr "Modifikační klíče musí být ve špičatých závorkách"
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Lidé a oblečení"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Don't use a keyboard shortcut that already exists."
-msgstr "Nepoužívejte klávesovou zkratku, která je již použita."
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Zvířata a příroda"
 
-#: emoji-selector@maestroschan.fr/emojiCategory.js
-#, javascript-format
-msgid "Incorrect number of keywords for category '%s':"
-msgstr "Nesprávný počet klíčových slov pro kategorii \"%s\":"
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Jídlo a pití"
 
-#: emoji-selector@maestroschan.fr/emojiCategory.js
-msgid "Please report this bug"
-msgstr "Prosíme, nahlašte tuto chybu"
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Cestování a místa"
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Aktivity a sporty"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Předměty"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Symboly"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Vlajky"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Pište sem pro vyhledávání…"
+
+#: src/lib/skinTonesBar.ts
 msgid "No skin tone"
 msgstr "Bez barvy pleti"
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Light skin tone"
 msgstr "Světlá barva pleti"
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Medium light skin tone"
 msgstr "Středně světlá barva pleti"
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Medium skin tone"
 msgstr "Jemně tmavá barva pleti"
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Medium dark skin tone"
 msgstr "Středně tmavá barva pleti"
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Dark skin tone"
 msgstr "Tmavá barva pleti"
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Women"
 msgstr "Žena"
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Men"
 msgstr "Muž"
 
-#: emoji-selector@maestroschan.fr/emojiSearchItem.js
-msgid "Type here to search…"
-msgstr "Pište sem pro vyhledávání…"
+#~ msgid "Modifications will be effective after reloading the extension."
+#~ msgstr "Úpravy budou použity po restartu rozšíření."
+
+#, javascript-format
+#~ msgid "version %s"
+#~ msgstr "verze %s"
+
+#~ msgid "Help"
+#~ msgstr "Nápověda"
+
+#~ msgid "Apply"
+#~ msgstr "Použít"
+
+#, javascript-format
+#~ msgid "Incorrect number of keywords for category '%s':"
+#~ msgstr "Nesprávný počet klíčových slov pro kategorii \"%s\":"
+
+#~ msgid "Please report this bug"
+#~ msgstr "Prosíme, nahlašte tuto chybu"

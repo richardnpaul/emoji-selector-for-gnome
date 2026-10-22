@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-14 18:44+0100\n"
+"POT-Creation-Date: 2026-10-22 15:11+0000\n"
 "PO-Revision-Date: 2017-11-10 10:59-0300\n"
 "Last-Translator: Fábio Nogueira <fnogueira@gnome.org>\n"
 "Language-Team: \n"
@@ -19,205 +19,187 @@ msgstr ""
 "X-Generator: Poedit 2.0.4\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: emoji-selector@maestroschan.fr/extension.js
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Emoji Selector"
+#: src/prefs.ts
+msgid "General layout"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/extension.js
-#, fuzzy
-msgid "Smileys & Body"
-msgstr "Smileys e pessoas"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Peoples & Clothing"
+#: src/prefs.ts
+msgid ""
+"Displaying the interface from the bottom is better if you use a bottom panel "
+"instead of the default top bar."
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Animals & Nature"
-msgstr "Animais e natureza"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Food & Drink"
-msgstr "Comidas e bebidas"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Travel & Places"
-msgstr "Viagem e lugares"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Activities & Sports"
-msgstr "Atividades e esportes"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Objects"
-msgstr "Objetos"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Symbols"
-msgstr "Símbolos"
-
-#: emoji-selector@maestroschan.fr/extension.js
-msgid "Flags"
-msgstr "Bandeiras"
-
-#: emoji-selector@maestroschan.fr/prefs.js
-msgid "Modifications will be effective after reloading the extension."
-msgstr "Estas modificações necessitam reiniciar a extensão."
-
-#: emoji-selector@maestroschan.fr/prefs.js
+#: src/prefs.ts
 msgid "From top to bottom"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.js
+#: src/prefs.ts
 msgid "From bottom to top"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.js
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Número de emojis por linha"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Tamanho dos emojis (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr ""
+
+#: src/prefs.ts
 #, javascript-format
 msgid "The default value is %s"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.js
-#, javascript-format
-msgid "version %s"
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid ""
-"Displaying the interface from the bottom is better if you use a bottom panel "
-"instead of the default top bar. Modifications will be effective after "
-"reloading the extension."
-msgstr ""
-
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "General layout"
-msgstr ""
-
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Number of emojis per line"
-msgstr "Número de emojis por linha"
-
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Size of emojis (px)"
-msgstr "Tamanho dos emojis (px)"
-
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Layout"
-msgstr ""
-
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "Use a keyboard shortcut to toggle the menu"
 msgstr "Utilizar um atalho de teclado para alternar o menu"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Help"
+#: src/prefs.ts
+msgid "Keyboard shortcut"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Apply"
-msgstr "Aplicar"
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "Always show the icon in the panel"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid ""
 "If you access the menu with the keyboard shortcut, you don't need to always "
 "display the icon."
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "Keyboard bindings"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr ""
+
+#: src/prefs.ts
 msgid ""
-"This extension provides a parametrable popup menu displaying most emojis, "
+"This extension provides a configurable popup menu displaying most emojis, "
 "clicking on an emoji copies it to the clipboard."
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Report bugs or ideas"
-msgstr ""
-
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "Author"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Translator(s)"
-msgstr ""
-
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
 msgid "translator-credits"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr ""
+
+#: src/prefs.ts
 msgid "Contributors"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr ""
+
+#: src/prefs.ts
 msgid "About"
 msgstr "Sobre"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "List of valid key names"
+#: src/lib/emojiMenu.ts
+#, fuzzy
+msgid "Smileys & Body"
+msgstr "Smileys e pessoas"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Modifier keys must be between chevrons"
-msgstr ""
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Animais e natureza"
 
-#: emoji-selector@maestroschan.fr/prefs.ui
-msgid "Don't use a keyboard shortcut that already exists."
-msgstr ""
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Comidas e bebidas"
 
-#: emoji-selector@maestroschan.fr/emojiCategory.js
-#, javascript-format
-msgid "Incorrect number of keywords for category '%s':"
-msgstr ""
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Viagem e lugares"
 
-#: emoji-selector@maestroschan.fr/emojiCategory.js
-msgid "Please report this bug"
-msgstr ""
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Atividades e esportes"
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Objetos"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Símbolos"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bandeiras"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Digite aqui para pesquisar…"
+
+#: src/lib/skinTonesBar.ts
 msgid "No skin tone"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Light skin tone"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Medium light skin tone"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Medium skin tone"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Medium dark skin tone"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Dark skin tone"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Women"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/emojiOptionsBar.js
+#: src/lib/skinTonesBar.ts
 msgid "Men"
 msgstr ""
 
-#: emoji-selector@maestroschan.fr/emojiSearchItem.js
-msgid "Type here to search…"
-msgstr "Digite aqui para pesquisar…"
+#~ msgid "Modifications will be effective after reloading the extension."
+#~ msgstr "Estas modificações necessitam reiniciar a extensão."
+
+#~ msgid "Apply"
+#~ msgstr "Aplicar"
 
 #~ msgid "Default value is:"
 #~ msgstr "O valor padrão é"

@@ -1,0 +1,8 @@
+{
+  "name": "claude-code-devcontainer",
+  "private": true,
+  "description": "Pins Claude Code for the dev container. Update the version here, then run: npm install --package-lock-only --ignore-scripts",
+  "dependencies": {
+    "@anthropic-ai/claude-code": "2.1.306"
+  }
+}

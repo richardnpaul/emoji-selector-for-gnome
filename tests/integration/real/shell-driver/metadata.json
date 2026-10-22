@@ -1,0 +1,6 @@
+{
+  "uuid": "emoji-test-driver@example.org",
+  "name": "Emoji Selector test driver",
+  "description": "Drives Emoji Selector inside a real, headless GNOME Shell and reports what happened. Only ever installed by the tests.",
+  "shell-version": ["51"]
+}

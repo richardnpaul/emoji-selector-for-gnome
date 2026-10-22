@@ -1,0 +1,22 @@
+# https://editorconfig.org - read by editors, Prettier and shfmt.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# JavaScript and shell have always been tab-indented in this project.
+[*.{js,mjs,sh}]
+indent_style = tab
+
+# Two trailing spaces are a line break in Markdown.
+[*.md]
+trim_trailing_whitespace = false
+
+# Generated and compiled by gettext tools.
+[*.{po,pot}]
+trim_trailing_whitespace = false

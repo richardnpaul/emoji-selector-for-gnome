@@ -1,0 +1,15 @@
+# Generated, compiled or third-party
+node_modules/
+coverage/
+reports/
+dist/
+.stryker-tmp/
+package-lock.json
+LICENSE
+tests/fixtures/emoji-data.json
+
+# The emoji tables, one emoji per line
+src/data/
+
+# Translations (gettext tools own their format)
+emoji-selector@maestroschan.fr/locale/

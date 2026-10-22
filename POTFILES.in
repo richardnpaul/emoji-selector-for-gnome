@@ -1,7 +1,5 @@
-emoji-selector@maestroschan.fr/extension.js
-emoji-selector@maestroschan.fr/prefs.js
-emoji-selector@maestroschan.fr/prefs.ui
-emoji-selector@maestroschan.fr/emojiButton.js
-emoji-selector@maestroschan.fr/emojiCategory.js
-emoji-selector@maestroschan.fr/emojiOptionsBar.js
-emoji-selector@maestroschan.fr/emojiSearchItem.js
+src/extension.ts
+src/prefs.ts
+src/lib/emojiMenu.ts
+src/lib/emojiSearchItem.ts
+src/lib/skinTonesBar.ts
