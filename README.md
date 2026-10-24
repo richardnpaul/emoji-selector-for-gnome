@@ -145,8 +145,8 @@ language, is in [`docs/language-support-plan.md`](docs/language-support-plan.md)
 `pre-commit install --install-hooks` once (`npm install` does not). Every
 commit then runs the checks (whitespace, JSON/XML/YAML, ShellCheck, shfmt,
 codespell, ESLint, Prettier, the GSettings schema, the translation catalogues,
-and a guard against skipped tests or suppressed lint/coverage/mutation checks),
-and every push runs the tests with the coverage thresholds.
+a guard against skipped tests or suppressed lint/coverage/mutation checks, and
+the tests with the coverage thresholds).
 `pre-commit run --all-files` runs them on demand.
 
 **CI** (`.github/workflows/ci.yml`) runs the same gates in the dev container image on every

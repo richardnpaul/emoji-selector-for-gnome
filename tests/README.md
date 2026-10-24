@@ -105,7 +105,7 @@ tests/
 ```
 
 Tests named `*.real.test.js` run in the real GNOME (a real Shell, real GTK under Xvfb). They are slower, need the
-container's session tooling and add no coverage, so `npm test`, `npm run check` and the pre-push hook leave them out:
+container's session tooling and add no coverage, so `npm test`, `npm run check` and the pre-commit hook leave them out:
 `npm run test:real` (or `check:all`) runs them, and CI does in its own job `real-gnome`. Tests named `*.tooling.test.js` read the sources as text or run external tools. They are excluded from
 mutation testing automatically (`vitest.stryker.config.mjs`), because Stryker instruments the sources and
 these tests cannot kill mutants anyway.

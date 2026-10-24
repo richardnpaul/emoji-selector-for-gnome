@@ -31,8 +31,8 @@ fresh_template=$(mktemp)
 trap 'rm -f -- "${fresh_template:?}"' EXIT
 
 echo "Generating $template..."
-# (An unusable GIT_DIR stops xgettext from asking git for file dates, and from complaining about names it cannot parse.)
-GIT_DIR=/nonexistent xgettext --files-from=POTFILES.in --from-code=UTF-8 --add-location=file \
+# (--language=JavaScript because gettext older than 1.0 does not know .ts files and would read them as C. An unusable GIT_DIR stops xgettext from asking git for file dates, and from complaining about names it cannot parse.)
+GIT_DIR=/nonexistent xgettext --language=JavaScript --files-from=POTFILES.in --from-code=UTF-8 --add-location=file \
 	--package-name='Emoji Selector' --msgid-bugs-address='https://github.com/richardnpaul/emoji-selector-for-gnome/issues' \
 	--output="$fresh_template"
 

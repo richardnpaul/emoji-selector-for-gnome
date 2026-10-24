@@ -165,7 +165,11 @@ describe('translations', () => {
 		try {
 			const out = path.join(scratch, 'fresh.pot');
 			const files = readFileSync(path.join(ROOT, 'POTFILES.in'), 'utf8').split('\n').filter(Boolean);
-			const result = run('xgettext', ['--from-code=UTF-8', '--keyword=_', '--output', out, ...files], { cwd: ROOT });
+			const result = run(
+				'xgettext',
+				['--language=JavaScript', '--from-code=UTF-8', '--keyword=_', '--output', out, ...files],
+				{ cwd: ROOT },
+			);
 			expect(result.status).toBe(0);
 			// --no-wrap joins the continuation lines of long messages, which a plain scan would miss.
 			const ids = (file) => {

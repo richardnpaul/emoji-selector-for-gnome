@@ -73,9 +73,12 @@ describe('quality gates', () => {
 		expect(ci).toMatch(/real-gnome:[\s\S]*npm run test:real/);
 	});
 
-	it('are run by a hook before pushing, thresholds included', () => {
+	it('are run by a hook on every commit, thresholds included', () => {
 		const config = readFileSync(path.join(ROOT, '.pre-commit-config.yaml'), 'utf8');
-		expect(config).toMatch(/entry: npm run test:coverage\n(?:.*\n)*?\s+stages: \[pre-push\]/);
+		expect(config).toMatch(
+			/entry: npm run test:coverage\n\s+language: system\n\s+pass_filenames: false\n\s+always_run: true\n?$/,
+		);
+		expect(config).not.toMatch(/stages:/);
 	});
 });
 
