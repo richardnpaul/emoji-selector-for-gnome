@@ -1,0 +1,199 @@
+# Armenian translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: hy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Ընդհանուր դասավորություն"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Ինտերֆեյսը ներքևից ցուցադրելն ավելի լավ է, եթե օգտագործում եք ներքևի վահանակ՝ լռելյայն վերևի գոտու փոխարեն։"
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Վերևից ներքև"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Ներքևից վերև"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Կարգավորումը չհաջողվեց պահպանել"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Էմոջիների քանակը մեկ տողում"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Էմոջիների չափը (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Դասավորություն"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Փոփոխիչ ստեղները պետք է լինեն անկյունավոր փակագծերի մեջ"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Լռելյայն արժեքը %s է"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Մի օգտագործեք արդեն գոյություն ունեցող ստեղնային դյուրանցում։"
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Օգտագործել ստեղնային դյուրանցում՝ ցանկը բացելու և փակելու համար"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Ստեղնային դյուրանցում"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Սա վավեր ստեղնային դյուրանցում չէ"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Վավեր ստեղների անունների ցանկ"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Միշտ ցուցադրել պատկերակը վահանակում"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Եթե ցանկը բացում եք ստեղնային դյուրանցմամբ, պատկերակը միշտ ցուցադրելու կարիք չկա։"
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Ստեղնային կապակցումներ"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Այս ընդլայնումը տրամադրում է կարգավորելի թռուցիկ ցանկ, որտեղ ցուցադրվում են էմոջիների մեծ մասը. էմոջիի վրա սեղմելով այն պատճենվում է փոխանակման բուֆերում։"
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Հեղինակ"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Թարգմանիչ(ներ)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Աջակցողներ"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Հաղորդել սխալների կամ գաղափարների մասին"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Ծրագրի մասին"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Չհաջողվեց բացել վեբ էջը"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Ժպտիկներ և մարմին"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Մարդիկ և հագուստ"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Կենդանիներ և բնություն"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Սնունդ և ըմպելիք"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Ճանապարհորդություն և վայրեր"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Գործունեություն և սպորտ"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Առարկաներ"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Նշաններ"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Դրոշներ"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Մուտքագրեք այստեղ՝ որոնելու համար…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Առանց մաշկի երանգի"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Բաց մաշկի երանգ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Միջին-բաց մաշկի երանգ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Միջին մաշկի երանգ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Միջին-մուգ մաշկի երանգ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Մուգ մաշկի երանգ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Կանայք"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Տղամարդիկ"

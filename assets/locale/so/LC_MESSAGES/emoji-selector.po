@@ -1,0 +1,199 @@
+# Somali translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: so\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Qaabka guud"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Muujinta interface-ka hoosta waa ka fiican tahay haddii aad isticmaasho guddi hoose halkii aad ka isticmaali lahayd bar-sare ee caadiga ah."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Kor ilaa hoos"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Hoos ilaa kor"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Dejinta lama keydin karo"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Tirada emoji-yada xariiq kasta"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Cabbirka emoji-yada (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Habaynta"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Furayaasha beddelka waa inay u dhexeeyaan calaamadaha < >"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Qiimaha caadiga ah waa %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Ha isticmaalin gaaban-kiiboodh hore u jira."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Isticmaal gaaban-kiiboodh si aad menu-ga u furto ama u xidho"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Gaaban-kiiboodh"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Kani ma aha gaaban-kiiboodh sax ah"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Liiska magacyada furayaasha ee sax ah"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Had iyo jeer ka muuji astaanta guddiga"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Haddii aad menu-ga ku gasho gaaban-kiiboodhka, uma baahnid inaad had iyo jeer muujiso astaanta."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Gaabanayaasha kiiboodhka"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Kordhintan waxay bixisaa menu la habeyn karo oo muujinaya inta badan emoji-yada; marka la gujiyo emoji waxaa lagu koobiyeeyaa clipboard-ka."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Qoraaga"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Turjumaan(ada)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Wax-ku-biirayaasha"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Soo sheeg cayayaan ama fikrado"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Ku saabsan"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Bogga webka lama furi karin"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Wejiyo iyo Jidh"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Dad iyo Dhar"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Xayawaan iyo Dabeecad"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Cunto iyo Cabitaan"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Safar iyo Goobo"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Hawlo iyo Isboorti"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Alaabta"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Calaamadaha"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Calamada"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Halkan ku qor si aad u raadiso…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Midab-maqaar la'aan"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Midab-maqaar khafiif ah"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Midab-maqaar dhexdhexaad khafiif ah"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Midab-maqaar dhexdhexaad ah"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Midab-maqaar dhexdhexaad madow"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Midab-maqaar madow"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Dumar"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Rag"

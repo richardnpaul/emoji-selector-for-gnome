@@ -1,0 +1,199 @@
+# Language ckb translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ckb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "ڕێکخستنی گشتی"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "ئەگەر لە جیاتی شریتی سەرەوەی بنەڕەتی، پانێڵێکی خوارەوە بەکاردەهێنیت، پیشاندانی ڕووکار لە خوارەوە باشترە."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "لە سەرەوە بۆ خوارەوە"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "لە خوارەوە بۆ سەرەوە"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "ڕێکخستنەکە پاشەکەوت نەکرا"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "ژمارەی ئیمۆجی لە هەر دێڕێکدا"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "قەبارەی ئیمۆجی (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "ڕێکخستن"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "دوگمەکانی گۆڕێنەر دەبێت لەنێوان کەوانەی گۆشەداردا بن"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "بەهای بنەڕەتی بریتییە لە %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "کورتەڕێگایەکی تەختەکلیل بەکارمەهێنە کە پێشتر هەیە."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "کورتەڕێگای تەختەکلیل بەکاربهێنە بۆ کردنەوە و داخستنی مێنۆ"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "کورتەڕێگای تەختەکلیل"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "ئەمە کورتەڕێگایەکی تەختەکلیلی دروست نییە"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "لیستی ناوی دوگمە دروستەکان"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "هەمیشە ئایکۆنەکە لە پانێڵدا پیشان بدە"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "ئەگەر بە کورتەڕێگای تەختەکلیل دەگەیتە مێنۆ، پێویست ناکات هەمیشە ئایکۆنەکە پیشان بدرێت."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "بەستنەوەکانی تەختەکلیل"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ئەم زیادکراوە مێنۆیەکی دەرکەوتووی ڕێکخراو دابین دەکات کە زۆربەی ئیمۆجییەکان پیشان دەدات؛ کلیککردن لەسەر ئیمۆجییەک دەیکۆپی دەکات بۆ کلیپبۆرد."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "نووسەر"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "وەرگێڕ(ان)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "بەشداربووان"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "کێشە یان بیرۆکەکان ڕابگەیەنە"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "دەربارە"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "نەتوانرا پەڕەی وێب بکرێتەوە"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "زەردەخەنە و جەستە"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "خەڵک و جلوبەرگ"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "ئاژەڵ و سروشت"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "خواردن و خواردنەوە"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "گەشت و شوێنەکان"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "چالاکی و وەرزش"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "شتەکان"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "هێماکان"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "ئاڵاکان"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "بۆ گەڕان لێرە بنووسە…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "بێ ڕەنگی پێست"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "ڕەنگی پێستی کاڵ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "ڕەنگی پێستی مامناوەندی کاڵ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "ڕەنگی پێستی مامناوەند"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "ڕەنگی پێستی مامناوەندی تۆخ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "ڕەنگی پێستی تۆخ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "ژنان"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "پیاوان"

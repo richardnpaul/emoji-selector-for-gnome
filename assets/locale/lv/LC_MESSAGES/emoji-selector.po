@@ -1,0 +1,199 @@
+# Latvian translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==0 || (n%100>=11 && n%100<=19) ? 0 : n%10==1 && n%100!=11 ? 1 : 2);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Vispārīgs izkārtojums"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Saskarnes attēlošana no apakšas ir labāka, ja izmantojat apakšējo paneli noklusējuma augšējās joslas vietā."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "No augšas uz leju"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "No apakšas uz augšu"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Neizdevās saglabāt iestatījumu"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Emocijzīmju skaits rindā"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Emocijzīmju izmērs (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Izkārtojums"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Modificētājtaustiņiem jābūt starp leņķa iekavām"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Noklusējuma vērtība ir %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Neizmantojiet īsinājumtaustiņu, kas jau pastāv."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Izmantot īsinājumtaustiņu izvēlnes pārslēgšanai"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Īsinājumtaustiņš"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Šis nav derīgs īsinājumtaustiņš"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Derīgo taustiņu nosaukumu saraksts"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Vienmēr rādīt ikonu panelī"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Ja izvēlnei piekļūstat ar īsinājumtaustiņu, ikonu nav obligāti rādīt vienmēr."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Īsinājumtaustiņi"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Šis paplašinājums nodrošina konfigurējamu uznirstošo izvēlni ar vairumu emocijzīmju; noklikšķinot uz emocijzīmes, tā tiek kopēta starpliktuvē."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Autors"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Tulkotājs(-i)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Līdzstrādnieki"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Ziņot par kļūdām vai idejām"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Par"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Neizdevās atvērt tīmekļa lapu"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smaidiņi un ķermenis"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Cilvēki un apģērbs"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Dzīvnieki un daba"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Ēdiens un dzēriens"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Ceļojumi un vietas"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Aktivitātes un sports"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Priekšmeti"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Simboli"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Karogi"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Rakstiet šeit, lai meklētu…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Bez ādas toņa"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Gaišs ādas tonis"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Vidēji gaišs ādas tonis"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Vidējs ādas tonis"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Vidēji tumšs ādas tonis"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Tumšs ādas tonis"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Sievietes"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Vīrieši"

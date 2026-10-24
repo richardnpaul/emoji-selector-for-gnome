@@ -3,7 +3,10 @@
 # shell-driver) installed under XDG_DATA_HOME, enables and disables the extension twice over D-Bus, and
 # leaves the Shell's log where the test can read it.
 #
-# Usage: run-shell.sh XDG_DATA_HOME LOG_FILE UUID   (UUID: the extension to drive, installed in XDG_DATA_HOME)
+# Usage: run-shell.sh XDG_DATA_HOME LOG_FILE UUID [LOCALE [texts]]
+#   UUID: the extension to drive, installed in XDG_DATA_HOME
+#   LOCALE: the locale of the Shell (an installed one, such as ja_JP.utf8); default C.utf8
+#   texts: only enable the extension once and report the texts it shows (the default is the whole scenario)
 #
 # Needs no root and touches nothing outside its own temporary directory: the system bus it gives the
 # Shell is a private one, with a fake logind on it (the Shell refuses to start without logind).
@@ -11,13 +14,19 @@ set -euo pipefail
 
 DRIVER='emoji-test-driver@example.org'
 
-if (($# != 3)); then
-	echo "Usage: $0 XDG_DATA_HOME LOG_FILE UUID" >&2
+if (($# < 3 || $# > 5)); then
+	echo "Usage: $0 XDG_DATA_HOME LOG_FILE UUID [LOCALE [texts]]" >&2
 	exit 2
 fi
 data_home=$1
 log_file=$2
 UNDER_TEST=$3
+locale=${4:-C.utf8}
+DRIVER_MODE=${5:-full}
+if [[ $DRIVER_MODE != full && $DRIVER_MODE != texts ]]; then
+	echo "The last argument must be 'texts' (or nothing), not '$DRIVER_MODE'." >&2
+	exit 2
+fi
 if [[ $data_home != /* || $log_file != /* ]]; then
 	echo "Both paths must be absolute." >&2
 	exit 2
@@ -112,6 +121,10 @@ sleep 2
 extensions EnableExtension "$DRIVER"
 wait_for ready 1
 extensions EnableExtension "$UNDER_TEST"
+if [[ $DRIVER_MODE == texts ]]; then
+	wait_for texts 1
+	exit 0
+fi
 wait_for shortcut-on-again 1
 extensions DisableExtension "$UNDER_TEST"
 wait_for disabled 1
@@ -121,7 +134,8 @@ extensions DisableExtension "$UNDER_TEST"
 wait_for shortcut-after-disable 1
 SESSION
 
-export UNDER_TEST DRIVER
+# (The locale is the Shell's own, and so the language the extension is translated into.)
+export UNDER_TEST DRIVER DRIVER_MODE LC_ALL="$locale"
 # (The session bus starts a crowd of GNOME services that talk a lot; only a failure is worth showing.)
 status=0
 LOG_FILE=$log_file dbus-run-session -- bash "$work/session.sh" >"$work/session.log" 2>&1 || status=$?

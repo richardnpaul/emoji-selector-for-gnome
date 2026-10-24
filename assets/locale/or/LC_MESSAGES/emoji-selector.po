@@ -1,0 +1,199 @@
+# Oriya translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: or\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "ସାଧାରଣ ଲେଆଉଟ୍"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "ଡିଫଲ୍ଟ ଉପର ବାର୍ ବଦଳରେ ତଳ ପ୍ୟାନେଲ୍ ବ୍ୟବହାର କଲେ ଇଣ୍ଟରଫେସ୍ ତଳୁ ଦେଖାଇବା ଭଲ।"
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "ଉପରୁ ତଳକୁ"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "ତଳୁ ଉପରକୁ"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "ସେଟିଂଟି ସଂରକ୍ଷଣ କରାଯାଇପାରିଲା ନାହିଁ"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "ପ୍ରତି ଧାଡ଼ିରେ ଇମୋଜି ସଂଖ୍ୟା"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ଇମୋଜିର ଆକାର (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "ଲେଆଉଟ୍"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "ମୋଡିଫାୟର୍ କୀଗୁଡ଼ିକ କୋଣାକାର ବନ୍ଧନୀ ମଧ୍ୟରେ ରହିବା ଆବଶ୍ୟକ"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "ଡିଫଲ୍ଟ ମୂଲ୍ୟ ହେଉଛି %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "ପୂର୍ବରୁ ଥିବା କୀବୋର୍ଡ୍ ଶର୍ଟକଟ୍ ବ୍ୟବହାର କରନ୍ତୁ ନାହିଁ।"
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "ମେନୁ ଟୋଗଲ୍ କରିବାକୁ କୀବୋର୍ଡ୍ ଶର୍ଟକଟ୍ ବ୍ୟବହାର କରନ୍ତୁ"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "କୀବୋର୍ଡ୍ ଶର୍ଟକଟ୍"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "ଏହା ଏକ ବୈଧ କୀବୋର୍ଡ୍ ଶର୍ଟକଟ୍ ନୁହେଁ"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "ବୈଧ କୀ ନାମର ତାଲିକା"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "ପ୍ୟାନେଲରେ ସର୍ବଦା ଆଇକନ୍ ଦେଖାନ୍ତୁ"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "କୀବୋର୍ଡ୍ ଶର୍ଟକଟ୍ ଦ୍ୱାରା ମେନୁ ଖୋଲିଲେ ଆଇକନ୍ ସର୍ବଦା ଦେଖାଇବା ଆବଶ୍ୟକ ନାହିଁ।"
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "କୀବୋର୍ଡ୍ ବାଇଣ୍ଡିଂ"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ଏହି ଏକ୍ସଟେନସନ୍ ଏକ ବିନ୍ୟାସଯୋଗ୍ୟ ପପଅପ୍ ମେନୁ ଦିଏ ଯେଉଁଥିରେ ଅଧିକାଂଶ ଇମୋଜି ଦେଖାଯାଏ; ଇମୋଜି ଉପରେ କ୍ଲିକ୍ କଲେ ତାହା କ୍ଲିପବୋର୍ଡକୁ କପି ହୁଏ।"
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "ଲେଖକ"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "ଅନୁବାଦକ"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "ସହଯୋଗୀ"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "ତ୍ରୁଟି କିମ୍ବା ଧାରଣା ଜଣାନ୍ତୁ"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "ବିଷୟରେ"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "ୱେବ୍ ପୃଷ୍ଠା ଖୋଲାଯାଇପାରିଲା ନାହିଁ"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "ସ୍ମାଇଲି ଓ ଶରୀର"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "ଲୋକ ଓ ପୋଷାକ"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "ପଶୁ ଓ ପ୍ରକୃତି"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "ଖାଦ୍ୟ ଓ ପାନୀୟ"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "ଯାତ୍ରା ଓ ସ୍ଥାନ"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "କାର୍ଯ୍ୟକଳାପ ଓ କ୍ରୀଡ଼ା"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "ବସ୍ତୁ"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "ପ୍ରତୀକ"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "ପତାକା"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "ସନ୍ଧାନ ପାଇଁ ଏଠାରେ ଲେଖନ୍ତୁ…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "ଚର୍ମର ରଙ୍ଗ ନାହିଁ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "ହାଲୁକା ଚର୍ମ ରଙ୍ଗ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "ମଧ୍ୟମ ହାଲୁକା ଚର୍ମ ରଙ୍ଗ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "ମଧ୍ୟମ ଚର୍ମ ରଙ୍ଗ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "ମଧ୍ୟମ ଗାଢ଼ ଚର୍ମ ରଙ୍ଗ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "ଗାଢ଼ ଚର୍ମ ରଙ୍ଗ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "ମହିଳା"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "ପୁରୁଷ"

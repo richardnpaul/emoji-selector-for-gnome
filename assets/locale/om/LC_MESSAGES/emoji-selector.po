@@ -1,0 +1,199 @@
+# (Afan) Oromo translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: om\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Qindaa'ina waliigalaa"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Interface gad aanaa irraa agarsiisuun isa gaarii dha yoo paanaalii gadii bakka baara ol aanaa durtii fayyadamte."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Ol irraa gara gadiitti"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Gad irraa gara oliitti"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Qindaa'inni kun olkaa'amuu hin dandeenye"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Lakkoofsa emoji sarara tokkoo"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Guddina emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Qindaa'ina"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Furtuuwwan jijjiiraa gidduu mallattoowwan < > jiraachuu qabu"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Gatiin durtii %s dha"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Gabaabduu kiiboordii duraanuu jiru hin fayyadamin."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Menu banuuf fi cufuuf gabaabduu kiiboordii fayyadami"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Gabaabduu kiiboordii"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Kun gabaabduu kiiboordii fudhatama qabu miti"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Tarreeffama maqaa furtuuwwanii fudhatama qabu"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Yeroo hunda mallattoo paanaalii irratti agarsiisi"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Menu gabaabduu kiiboordiitiin yoo banatte, yeroo hunda mallattoo agarsiisuun si hin barbaachisu."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Gabaabduuwwan kiiboordii"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Dabalaan kun menu qindaa'uu danda'u emoji baay'ee agarsiisu dhiheessa; emoji tuquun clipboard irratti isa koopii godha."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Barreessaa"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Hiikaa"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Gumaachitoota"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Dogoggora yookaan yaada gabaasi"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Waa'ee"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Fuulli weebii banamuu hin dandeenye"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Fuulota fi Qaama"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Namoota fi Uffata"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Bineensota fi Uumama"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Nyaata fi Dhugaatii"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Imala fi Iddoowwan"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Sochii fi Ispoortii"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Waantota"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Mallattoowwan"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Alaabaawwan"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Barbaaduuf as barreessi…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Halluu gogaa malee"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Halluu gogaa ifaa"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Halluu gogaa giddu-galeessa ifaa"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Halluu gogaa giddu-galeessa"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Halluu gogaa giddu-galeessa dukkanaa'aa"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Halluu gogaa dukkanaa'aa"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Dubartoota"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Dhiirota"

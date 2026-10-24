@@ -4,7 +4,8 @@ Goal: the same breadth of language support as
 [gnome-shell-extensions-sync](https://github.com/richardnpaul/gnome-shell-extensions-sync) (140 catalogues), for the
 interface **and** for searching emoji in the user's own language.
 
-Status: **Phases 1 and 2 done** (see [Phases](#phases)); the rest is a plan. Decisions marked _(decided)_ were made by the
+Status: **Phases 1 to 3 done** (see [Phases](#phases)); the rest is a plan. The languages are listed, with their origin
+and tier, in [`languages.md`](languages.md). Decisions marked _(decided)_ were made by the
 maintainer; the rest are proposals.
 
 ## Decisions so far
@@ -46,6 +47,16 @@ gn haw hmn jv nah nv ny prs qu rn sn ty` (checked against the `glibc-langpack-*`
    no), and writes `Language: pt` for `pt_PT`. The catalogue script therefore sets the `Language` header itself and
    warns when plural forms are missing; Phase 3 adds a reviewed table of plural forms for every language (derived
    from CLDR's plural rules and checked against them).
+
+## English
+
+English has no catalogue: the source strings (the `msgid`s) are the English, written in **British English**, and serve
+every English locale. A locale expands to its own name, then its language, then the source text, as GLib shows:
+`en_GB` gives `en_GB`, `en`, `C`; `en_US` gives `en_US`, `en`, `C`. So an `en_US` catalogue, if one is ever needed,
+is only consulted for `en_US` users and cannot stand in for `en_GB`. Today no string differs between the two (the
+template was checked), so none is needed; if one does, add `en_US` (and `en_CA` and so on only where that locale differs
+again). A test rejects the common American spellings in the template. The rule is in
+`.agents/rules/localisation-rules.md`.
 
 ## Fallback for the languages skipped (and the weakest ones kept)
 
@@ -159,8 +170,21 @@ Each phase is test-first, keeps coverage and mutation at 100%, and ends with the
    (for instance "key names" translated as the keys of cryptography in six languages, and angle brackets turned into
    quotation marks or square brackets) and are replaced; 9 are listed for a native speaker to look at. The headers
    were not removed: they carry no marker, and the origin of each catalogue is in `translations/provenance.json`.
-3. **Generate the remaining catalogues by region**, one commit per region; parallel subagents for the batches, all
-   validated by the same tests.
+3. **Generate the remaining catalogues by region. Done: 113 catalogues in all.** Nine batches were translated in
+   parallel by language models from one written brief, each checked by a validator (45 strings, `%s` kept, no empty
+   line), then turned into catalogues with `new-catalogue.sh`. Each translator reported which languages it was least
+   sure of, and that is recorded as the note of the language in `translations/provenance.json`. What was decided:
+   - **Not shipped:** Cherokee (`chr`) and Inuktitut (`iu`). The translator could only translate "Women" and "Men" and
+     advised against shipping them; a catalogue that is 95% English is worse than none. Four more were generated and
+     then dropped on the maintainer's decision, as the translators described them as mostly loanwords with no
+     established desktop vocabulary: Tibetan (`bo`), Sanskrit (`sa`), Fula (`ff`) and Wolof (`wo`).
+   - **Not generated, because the base catalogue serves them:** `es_MX` and `es_AR` (the `es` catalogue), `fr_CA`
+     (`fr`) and `en_GB` (the extension has no English word that differs). `zh_SG` also uses nothing yet.
+   - **Plural forms** come from CLDR by `translations/tools/plural-forms.mjs`, and a test checks every catalogue's
+     formula against the CLDR rules for 0 to 2000. Six languages have no CLDR rules and are set by hand, with the reason.
+   - **Words left in English** because they are the usual loanword (for instance "Layout" in Danish) are listed
+     per catalogue in `sameAsEnglish`; no other string may be identical to the English.
+   - The package is 312 KB with all the catalogues, up from 174 KB.
 4. **Other-language runs** of `test:prefs` and `test:shell`; README language table and credits.
 5. **Track B pipeline:** CLDR to per-locale modules; golden tests for a few locales; size measurement.
 6. **Track B runtime:** language list, loader and search folding behind fakes; a real-Shell test that types `chat`

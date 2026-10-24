@@ -1,0 +1,199 @@
+# Malagasy translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: mg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=((n>=0 && n<=1) ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Endrika ankapobeny"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Tsara kokoa ny mampiseho ny interface avy any ambany raha mampiasa panel ambany ianao fa tsy ny bara ambony mahazatra."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Avy any ambony mankany ambany"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Avy any ambany mankany ambony"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Tsy afaka notahiry ny fandrindrana"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Isan'ny emoji isaky ny andalana"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Haben'ny emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Endrika"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Tsy maintsy eo anelanelan'ny < > ny fanalahidy mpanova"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Ny sanda mahazatra dia %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Aza mampiasa lalana fohy amin'ny klavie efa misy."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Mampiasà lalana fohy amin'ny klavie hanokatra na hanidy ny menio"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Lalana fohy amin'ny klavie"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Tsy lalana fohy amin'ny klavie mety ity"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lisitry ny anaran'ny fanalahidy mety"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Asehoy foana ny kisary ao amin'ny panel"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Raha miditra amin'ny menio amin'ny alàlan'ny lalana fohy ianao, tsy mila asehoina foana ny kisary."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Fanendrena klavie"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Ity extension ity dia manome menio azo fanamboarina mampiseho ny ankamaroan'ny emoji; ny fanindriana emoji dia mandika azy ao amin'ny clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Mpanoratra"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Mpandika teny"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Mpandray anjara"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Ampahafantaro ny diso na hevitra"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Momba"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Tsy afaka nanokatra ny pejin-tranonkala"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Tarehy sy vatana"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Olona sy akanjo"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Biby sy natiora"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Sakafo sy zava-pisotro"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Dia sy toerana"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Hetsika sy fanatanjahantena"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Zavatra"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Marika"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Saina"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Soraty eto hikarohana…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Tsy misy loko hoditra"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Loko hoditra mazava"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Loko hoditra mazava antonony"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Loko hoditra antonony"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Loko hoditra maizina antonony"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Loko hoditra maizina"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Vehivavy"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Lehilahy"

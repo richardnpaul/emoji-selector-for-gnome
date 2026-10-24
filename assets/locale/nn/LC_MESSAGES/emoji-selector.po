@@ -1,0 +1,199 @@
+# Norwegian Nynorsk translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Generell utforming"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Det er betre å vise grensesnittet nedanfrå viss du brukar eit panel nede i staden for den øvste linja som er standard."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Frå topp til botn"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Frå botn til topp"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Innstillinga kunne ikkje lagrast"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Tal på emojiar per line"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Storleik på emojiar (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Utforming"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Modifikatortastar må stå mellom vinkelparentesar"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Standardverdien er %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Ikkje bruk ein snøggtast som finst frå før."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Bruk ein snøggtast for å opne og lukke menyen"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Snøggtast"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Dette er ikkje ein gyldig snøggtast"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Liste over gyldige tastenamn"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Vis alltid ikonet i panelet"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Viss du opnar menyen med snøggtasten, treng du ikkje alltid vise ikonet."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Snøggtastar"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Denne utvidinga gir ein konfigurerbar sprettoppmeny som viser dei fleste emojiane, og eit klikk på ein emoji kopierer han til utklippstavla."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Forfattar"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Omsetjar(ar)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Bidragsytarar"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Rapporter feil eller idear"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Om"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Kunne ikkje opne nettsida"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smilefjes & kropp"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Menneske & klede"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Dyr & natur"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Mat & drikke"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Reise & stader"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Aktivitetar & sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Objekt"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Symbol"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Flagg"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Skriv her for å søkje…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Ingen hudtone"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Lys hudtone"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Middels lys hudtone"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Middels hudtone"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Middels mørk hudtone"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Mørk hudtone"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Kvinner"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Menn"

@@ -12,68 +12,678 @@
   },
   "sameAsEnglish": ["Emoji Selector", "translator-credits"],
   "catalogues": {
+    "af": {
+      "name": "Afrikaans",
+      "origin": "machine",
+      "tier": 2,
+      "note": "High confidence; least sure of the wording for 'modifier keys' and the clipboard term."
+    },
+    "ak": {
+      "name": "Akan",
+      "origin": "machine",
+      "tier": 3,
+      "sameAsEnglish": ["Keyboard shortcut"],
+      "note": "Low confidence overall; Twi technical wording is mostly loanwords, least sure of rows 2, 6, 9, 20 and the skin tone names."
+    },
+    "am": {
+      "name": "Amharic",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Medium confidence; least sure of the long subtitle sentences and the shortcut/binding terms."
+    },
     "ar": {
       "origin": "merged",
-      "tier": 1
+      "tier": 1,
+      "name": "Arabic"
+    },
+    "as": {
+      "name": "Assamese",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderately confident; Assamese software terms are mostly Bengali-script transliterations, least sure of strings 2, 9 and the skin tone names."
+    },
+    "az": {
+      "name": "Azerbaijani",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'Klaviatura bağlamaları' and 'mübadilə buferi' for clipboard."
+    },
+    "be": {
+      "name": "Belarusian",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Moderately confident; least sure of 'Смайлы і цела', 'Прадвызначанае значэнне' and 'Прывязкі клавіш'."
+    },
+    "bg": {
+      "name": "Bulgarian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of 'Усмивки и тяло' and 'Общо оформление'."
+    },
+    "bn": {
+      "name": "Bengali",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of the skin tone names and 'কীবোর্ড বাইন্ডিং'."
+    },
+    "br": {
+      "name": "Breton",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Low to moderate confidence; least sure of 'menu', 'clipboard', 'astenn' for extension, skin tone phrases and the modifier keys sentence."
+    },
+    "bs": {
+      "name": "Bosnian",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'Smajliji i tijelo' and 'međuspremnik'."
+    },
+    "ca": {
+      "name": "Catalan",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Confident; least sure of barra for panel and the skin tone phrasing."
+    },
+    "ckb": {
+      "name": "Kurdish (Sorani)",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Moderate confidence; least sure of 'کورتەڕێگا' for shortcut, 'زیادکراو' for extension and the modifier keys sentence."
     },
     "cs": {
       "origin": "merged",
-      "tier": 1
+      "tier": 1,
+      "name": "Czech"
+    },
+    "cy": {
+      "name": "Welsh",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of the 'modifier keys / angle brackets' wording and 'toglo' for toggle."
+    },
+    "da": {
+      "name": "Danish",
+      "origin": "machine",
+      "tier": 1,
+      "sameAsEnglish": ["Layout"],
+      "note": "Fairly confident; least sure of the skin tone names (Medium hudtone) and the pop op-menu wording."
     },
     "de": {
       "origin": "merged",
       "tier": 1,
-      "sameAsEnglish": ["Layout"]
+      "sameAsEnglish": ["Layout"],
+      "name": "German"
+    },
+    "el": {
+      "name": "Greek",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of 'γωνιακές αγκύλες' and 'Φατσούλες και σώμα'."
     },
     "eo": {
       "origin": "merged",
-      "tier": 2
+      "tier": 2,
+      "name": "Esperanto"
     },
     "es": {
       "origin": "merged",
-      "tier": 1
+      "tier": 1,
+      "name": "Spanish"
+    },
+    "et": {
+      "name": "Estonian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of 'Emojide' declension and 'Muuteklahvid'."
+    },
+    "eu": {
+      "name": "Basque",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of the skin tone names and the Aurpegierak category name."
+    },
+    "fa": {
+      "name": "Persian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of 'اتصال‌های صفحه‌کلید' for key bindings and 'شمایل' versus 'آیکون'."
+    },
+    "fi": {
+      "name": "Finnish",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of the medium skin tone names (keskisävyinen, keskitumma)."
+    },
+    "fil": {
+      "name": "Filipino",
+      "origin": "machine",
+      "tier": 2,
+      "sameAsEnglish": ["Layout", "Keyboard shortcut"],
+      "note": "Moderate; Filipino software mixes English terms heavily, least sure of the skin-tone phrases (mapusyaw/maitim) and category names."
+    },
+    "fo": {
+      "name": "Faroese",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Low confidence in Faroese; least sure of snarknappur (shortcut), uppískoyti (extension), brúkaraflatan (interface) and the skin tone names."
     },
     "fr": {
       "origin": "merged",
-      "tier": 1
+      "tier": 1,
+      "name": "French"
+    },
+    "ga": {
+      "name": "Irish",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Moderately confident; least sure of 'breiseán' for extension, 'Aghaidheanna' for smileys and 'gearrthaisce' for clipboard."
+    },
+    "gd": {
+      "name": "Scottish Gaelic",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of 'Rèiteachadh' for layout, 'leudachan' for extension and the 'clipboard' loanword."
     },
     "gl": {
       "origin": "merged",
-      "tier": 2
+      "tier": 2,
+      "name": "Galician"
+    },
+    "gu": {
+      "name": "Gujarati",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'લીટી' vs 'પંક્તિ' (row 6) and the skin tone names."
+    },
+    "ha": {
+      "name": "Hausa",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Medium confidence; least sure of 'allon maɓalli' for keyboard, 'mahaɗa' for interface and the skin tone phrases."
     },
     "he": {
       "origin": "machine",
-      "tier": 1
+      "tier": 1,
+      "name": "Hebrew"
+    },
+    "hi": {
+      "name": "Hindi",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Confident; least sure of 'कोणीय कोष्ठक' for chevrons and the skin tone phrasing."
+    },
+    "hr": {
+      "name": "Croatian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of 'šiljastih zagrada' and 'Smajlići i tijelo'."
+    },
+    "ht": {
+      "name": "Haitian Creole",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of the term for clipboard (près-papye), panel (panno) and Keyboard bindings."
+    },
+    "hu": {
+      "name": "Hungarian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Confident; least sure of the loanword emodzsi and the skin tone names."
+    },
+    "hy": {
+      "name": "Armenian",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'Ստեղնային կապակցումներ' and the skin tone wording."
+    },
+    "id": {
+      "name": "Indonesian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Confident; least sure of 'Keyboard bindings' (Pengikatan papan ketik) and 'Author' (Pembuat)."
+    },
+    "ig": {
+      "name": "Igbo",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Low-medium confidence; skin tone strings (rows 39-43) and the long sentences are the least certain, tech terms left as loanwords."
+    },
+    "is": {
+      "name": "Icelandic",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Moderately confident; least sure of panel as stika and the emoji-tákn wording."
     },
     "it": {
       "origin": "merged",
       "tier": 1,
-      "sameAsEnglish": ["Layout"]
+      "sameAsEnglish": ["Layout"],
+      "name": "Italian"
     },
     "ja": {
       "origin": "machine",
-      "tier": 1
+      "tier": 1,
+      "name": "Japanese"
+    },
+    "ka": {
+      "name": "Georgian",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'კლავიატურის მიბმები' and the long description sentence."
+    },
+    "kk": {
+      "name": "Kazakh",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of the skin tone labels and 'алмасу буфері' for clipboard."
+    },
+    "km": {
+      "name": "Khmer",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Moderate; least sure of 'Keyboard bindings' (ការចងក្តារចុច) and the skin-tone and 'smileys' wording."
+    },
+    "kn": {
+      "name": "Kannada",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'ಮಾರ್ಪಾಡು ಕೀಗಳು' for modifier keys and the skin tone names."
+    },
+    "ko": {
+      "name": "Korean",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Confident; least sure of 'Smileys & Body' (스마일리 및 신체) and 'Keyboard bindings' (키 바인딩)."
+    },
+    "ku": {
+      "name": "Kurdish (Kurmanji)",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Moderate confidence; least sure of 'Rêkxistin' for layout, 'guhêrker' for modifier and the description sentence."
+    },
+    "ky": {
+      "name": "Kyrgyz",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Fairly confident; least sure of 'ыкчам баскыч' for keyboard shortcut and the skin tone labels."
+    },
+    "lb": {
+      "name": "Luxembourgish",
+      "origin": "machine",
+      "tier": 2,
+      "sameAsEnglish": ["Layout"],
+      "note": "Moderately confident in Luxembourgish; least sure of the panel sentence, Matwierkender and the skin tone names."
+    },
+    "lg": {
+      "name": "Luganda",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Low to moderate confidence; software terms are kept as English loanwords, and I am least sure of rows 2, 5, 28 and the skin tone names."
+    },
+    "ln": {
+      "name": "Lingala",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of rows 2, 9, 29-31 (category names, boissons is a French loanword) and the skin tone names."
+    },
+    "lo": {
+      "name": "Lao",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Low-moderate; Lao desktop terminology is scarce, least sure of 'modifier key', 'extension', 'Keyboard bindings' and skin-tone terms."
+    },
+    "lt": {
+      "name": "Lithuanian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of 'Prisidėjusieji' and 'Modifikavimo klavišai'."
+    },
+    "lv": {
+      "name": "Latvian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of 'Smaidiņi un ķermenis' and 'Modificētājtaustiņiem'."
+    },
+    "mg": {
+      "name": "Malagasy",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of rows 2, 9 (fanalahidy mpanova for modifier keys) and 18."
+    },
+    "mi": {
+      "name": "Māori",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of 'paewhiri' (panel), 'ara poto papapātuhi' (keyboard shortcut), clipboard left in English, and the skin tone phrasing."
+    },
+    "mk": {
+      "name": "Macedonian",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Moderately confident; least sure of 'Модификаторските копчиња', 'Смајлиња и тело' and 'привремена меморија'."
+    },
+    "ml": {
+      "name": "Malayalam",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'കടുത്ത' for dark and the skin tone names."
+    },
+    "mn": {
+      "name": "Mongolian",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Moderately confident; least sure of 'эможи' spelling, 'урсдаг цэс' for popup and 'түр санах ой' for clipboard."
+    },
+    "mr": {
+      "name": "Marathi",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of the skin tone names and 'विषयी' for About."
+    },
+    "ms": {
+      "name": "Malay",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Confident; least sure of 'Keyboard bindings' (Pengikatan papan kekunci) and 'Perihal' for About."
+    },
+    "mt": {
+      "name": "Maltese",
+      "origin": "machine",
+      "tier": 2,
+      "sameAsEnglish": ["Layout"],
+      "note": "Moderate confidence; I kept English loanwords (layout, default, shortcut, icon, panel) where unsure of the Maltese software term."
+    },
+    "my": {
+      "name": "Burmese",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Low-moderate; kept English loanwords panel, Modifier, extension, Bug, least sure of technical terms and skin-tone wording."
+    },
+    "nb": {
+      "name": "Norwegian Bokmål",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Confident; least sure of the emoji category wording (Smilefjes & kropp)."
+    },
+    "ne": {
+      "name": "Nepali",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of the skin tone phrasing and 'कोणीय कोष्ठ'."
     },
     "nl": {
       "origin": "merged",
-      "tier": 1
+      "tier": 1,
+      "name": "Dutch"
+    },
+    "nn": {
+      "name": "Norwegian Nynorsk",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of the Nynorsk forms (snøggtast, emojiar, søkje)."
     },
     "oc": {
       "origin": "merged",
-      "tier": 3
+      "tier": 3,
+      "name": "Occitan"
+    },
+    "om": {
+      "name": "Oromo",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of rows 2, 9, 20 and the skin tone names."
+    },
+    "or": {
+      "name": "Odia",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderately confident; least sure of the long sentences (2, 17, 20) and skin tone names."
+    },
+    "pa": {
+      "name": "Punjabi",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'ਮੌਡੀਫਾਇਰ' and the skin tone phrasing."
+    },
+    "pap": {
+      "name": "Papiamento",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence (Curaçao orthography); least sure of 'diseño' for layout, 'klipbord', and the plural forms of the category names."
     },
     "pl": {
       "origin": "merged",
-      "tier": 1
+      "tier": 1,
+      "name": "Polish"
+    },
+    "ps": {
+      "name": "Pashto",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Moderate confidence; least sure of the loanword-heavy keyboard terms, the modifier keys sentence and the skin tone phrases."
+    },
+    "pt": {
+      "name": "Portuguese",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Confident in European Portuguese; least sure of Smileys & corpo."
     },
     "pt_BR": {
       "origin": "merged",
       "tier": 1,
-      "sameAsEnglish": ["Layout"]
+      "sameAsEnglish": ["Layout"],
+      "name": "Portuguese (Brazil)"
+    },
+    "ro": {
+      "name": "Romanian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of panou for panel and the skin tone phrasing."
+    },
+    "rw": {
+      "name": "Kinyarwanda",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of row 9 (modifier keys), the skin tone names and the use of clavier and extension as loanwords."
+    },
+    "sd": {
+      "name": "Sindhi",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderately confident; least sure of the verb forms and 'گهاٽو' for dark skin tone, 'حصيدار' for contributors."
+    },
+    "si": {
+      "name": "Sinhala",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Moderately confident; least sure of 'වෙනස්කරන යතුරු' for modifier keys and the skin tone names."
+    },
+    "sk": {
+      "name": "Slovak",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Confident; least sure of the About title (O rozšírení) and smajlíky for smileys."
+    },
+    "sl": {
+      "name": "Slovenian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of 'ostri oklepaji' (chevrons) and 'emodžij' declension."
+    },
+    "sm": {
+      "name": "Samoan",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Low-moderate confidence; software terms (keyboard, panel, menu, clipboard, setting) are kept as English loanwords, and I am least sure of the long sentences and the skin tone phrasing."
+    },
+    "so": {
+      "name": "Somali",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Fairly confident in basic grammar; least sure of the GNOME wording for keyboard shortcut (gaaban-kiiboodh), rows 2 and 9, and the skin tone names."
+    },
+    "sq": {
+      "name": "Albanian",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Least confident language: unsure of 'emoji' forms, 'modifikues', 'clipboard' (kept English) and the skin tone phrases."
+    },
+    "sr": {
+      "name": "Serbian (Cyrillic)",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of 'Смајлији и тело' and 'угластих заграда'."
+    },
+    "st": {
+      "name": "Sesotho",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of rows 2, 5, 9, 24 and the skin tone names."
+    },
+    "su": {
+      "name": "Sundanese",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Low-moderate; Sundanese software wording is scarce, least sure of 'potong kompas kibor' (shortcut), 'pangikat kibor' and skin-tone terms."
+    },
+    "sv": {
+      "name": "Swedish",
+      "origin": "machine",
+      "tier": 1,
+      "sameAsEnglish": ["Layout"],
+      "note": "Fairly confident; least sure of the medium skin tone name (Mellanton hudton)."
+    },
+    "sw": {
+      "name": "Swahili",
+      "origin": "machine",
+      "tier": 2,
+      "note": "High confidence; least sure of 'kibadilishi' for modifier keys and 'Mikato ya kibodi' for bindings."
+    },
+    "ta": {
+      "name": "Tamil",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'மாற்றி விசைகள்' for modifier keys, 'பட்டியல்' for menu and the skin tone names."
+    },
+    "te": {
+      "name": "Telugu",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'సహకారులు' for contributors and the skin tone names."
+    },
+    "tg": {
+      "name": "Tajik",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderately confident; least sure of 'миёнбур' for shortcut, 'эмодзӣ' spelling and the long strings 2 and 17."
+    },
+    "th": {
+      "name": "Thai",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Moderately confident; periods omitted per Thai convention, least sure of 'Keyboard bindings' and 'Modifier keys' terms."
+    },
+    "ti": {
+      "name": "Tigrinya",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate to low confidence; Ge'ez script, least sure of rows 2, 5, 9, 20 and the skin tone names."
+    },
+    "tk": {
+      "name": "Turkmen",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of 'giňeltme', 'alyş-çalyş buferi' and the modifier keys sentence."
+    },
+    "tn": {
+      "name": "Setswana",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of rows 2, 5, 9, 24 and the skin tone names."
+    },
+    "to": {
+      "name": "Tongan",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Low-moderate confidence; computing terms are kept as English loanwords (keyboard, shortcut, menu, icon, panel), and I am least sure of the grammar of the long sentences and of the skin tone terms."
+    },
+    "tpi": {
+      "name": "Tok Pisin",
+      "origin": "machine",
+      "tier": 3,
+      "sameAsEnglish": ["Layout"],
+      "note": "Low-moderate confidence; no established Tok Pisin GNOME vocabulary, so English loanwords are used for technical terms, and I am least sure of the skin tone phrasing and category names."
+    },
+    "tr": {
+      "name": "Turkish",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Confident; least sure of 'Gülen yüzler ve vücut' and 'açılı ayraçlar'."
+    },
+    "ug": {
+      "name": "Uyghur",
+      "origin": "machine",
+      "tier": 3,
+      "note": "Moderate confidence; least sure of 'ئارايۈز', 'باغلىمىلىرى' for bindings and the modifier keys sentence."
+    },
+    "uk": {
+      "name": "Ukrainian",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of 'Смайли та тіло' and the 'Прив'язки клавіш' wording."
+    },
+    "ur": {
+      "name": "Urdu",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'خاکہ' for layout and 'ترمیمی کلیدیں' for modifier keys."
+    },
+    "uz": {
+      "name": "Uzbek",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Fairly confident; least sure of 'tezkor tugmalar birikmasi' wording and the skin tone labels."
+    },
+    "vi": {
+      "name": "Vietnamese",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Confident; least sure of 'Keyboard bindings' (Tổ hợp phím) and 'Modifier keys' (Phím bổ trợ)."
+    },
+    "xh": {
+      "name": "Xhosa",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Medium-high confidence; least sure of 'isinqumleli' for shortcut and 'ujongano' for interface."
+    },
+    "yo": {
+      "name": "Yoruba",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Medium confidence; least sure of 'ojú-ìbáṣepọ̀' (interface), 'ọ̀nà àbùjá' (shortcut) and the skin tone strings."
     },
     "zh_CN": {
       "origin": "merged",
-      "tier": 1
+      "tier": 1,
+      "name": "Chinese (Simplified)"
+    },
+    "zh_HK": {
+      "name": "Chinese (Traditional, Hong Kong)",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; HK wording (快捷鍵, 擴充功能) used, least sure of 'Keyboard bindings' (鍵盤綁定)."
+    },
+    "zh_TW": {
+      "name": "Chinese (Traditional, Taiwan)",
+      "origin": "machine",
+      "tier": 1,
+      "note": "Fairly confident; least sure of the 'Keyboard bindings' term (鍵盤繫結) and the first category name."
+    },
+    "zu": {
+      "name": "Zulu",
+      "origin": "machine",
+      "tier": 2,
+      "note": "Medium-high confidence; least sure of 'isinqumelo' for shortcut and row 40 (medium light skin tone) wording."
     }
   }
 }

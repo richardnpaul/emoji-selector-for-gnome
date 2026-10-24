@@ -1,0 +1,199 @@
+# Burmese translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: my\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "ယေဘုယျ အပြင်အဆင်"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "အောက်ခြေ panel ကို မူလအပေါ်ဘားအစား အသုံးပြုပါက အင်တာဖေ့စ်ကို အောက်ခြေမှ ပြသခြင်းက ပိုကောင်းသည်။"
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "အပေါ်မှ အောက်သို့"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "အောက်မှ အပေါ်သို့"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "ဆက်တင်ကို သိမ်းဆည်း၍ မရပါ"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "တစ်ကြောင်းလျှင် အီမိုဂျီ အရေအတွက်"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "အီမိုဂျီ အရွယ်အစား (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "အပြင်အဆင်"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Modifier ခလုတ်များကို ထောင့်ကွင်းများ ကြားတွင် ထားရမည်"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "မူလတန်ဖိုးမှာ %s ဖြစ်သည်"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "ရှိပြီးသား ကီးဘုတ်ဖြတ်လမ်းကို မသုံးပါနှင့်။"
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "မီနူးကို ဖွင့်/ပိတ်ရန် ကီးဘုတ်ဖြတ်လမ်း သုံးပါ"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "ကီးဘုတ်ဖြတ်လမ်း"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "ဤသည်မှာ မှန်ကန်သော ကီးဘုတ်ဖြတ်လမ်း မဟုတ်ပါ"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "မှန်ကန်သော ခလုတ်အမည်များ စာရင်း"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "panel တွင် အိုင်ကွန်ကို အမြဲပြပါ"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "မီနူးကို ကီးဘုတ်ဖြတ်လမ်းဖြင့် ဝင်ရောက်ပါက အိုင်ကွန်ကို အမြဲပြစရာ မလိုပါ။"
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "ကီးဘုတ် ချိတ်ဆက်မှုများ"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ဤ extension သည် အီမိုဂျီအများစုကို ပြသသည့် စီစဉ်ပြင်ဆင်နိုင်သော ပေါ့ပ်အပ်မီနူးကို ပံ့ပိုးပေးပြီး အီမိုဂျီကို နှိပ်လျှင် clipboard သို့ ကူးယူသည်။"
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "ရေးသားသူ"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "ဘာသာပြန်သူ"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "ပါဝင်ကူညီသူများ"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Bug သို့မဟုတ် အကြံဉာဏ်များ တင်ပြရန်"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "အကြောင်း"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "ဝဘ်စာမျက်နှာကို ဖွင့်၍ မရပါ"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "ပြုံးမျက်နှာနှင့် ခန္ဓာကိုယ်"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "လူနှင့် အဝတ်အစား"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "တိရစ္ဆာန်နှင့် သဘာဝ"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "အစားအသောက်"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "ခရီးသွားလာမှုနှင့် နေရာများ"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "လှုပ်ရှားမှုနှင့် အားကစား"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "ပစ္စည်းများ"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "သင်္ကေတများ"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "အလံများ"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "ဤနေရာတွင် ရိုက်ထည့်၍ ရှာပါ…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "အသားအရေအရောင် မရှိ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "အသားအရေအရောင် ဖျော့"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "အသားအရေအရောင် အလယ်အလတ်ဖျော့"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "အသားအရေအရောင် အလယ်အလတ်"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "အသားအရေအရောင် အလယ်အလတ်ရင့်"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "အသားအရေအရောင် ရင့်"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "အမျိုးသမီး"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "အမျိုးသား"

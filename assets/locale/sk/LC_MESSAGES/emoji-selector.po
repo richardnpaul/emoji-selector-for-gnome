@@ -1,0 +1,199 @@
+# Slovak translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Všeobecné rozloženie"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Zobrazenie rozhrania zospodu je lepšie, ak namiesto predvoleného horného panela používate spodný panel."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Zhora nadol"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Zdola nahor"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Nastavenie sa nepodarilo uložiť"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Počet emoji na riadok"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Veľkosť emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Rozloženie"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Modifikačné klávesy musia byť medzi lomenými zátvorkami"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Predvolená hodnota je %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Nepoužívajte klávesovú skratku, ktorá už existuje."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Použiť klávesovú skratku na otvorenie a zatvorenie ponuky"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Klávesová skratka"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Toto nie je platná klávesová skratka"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Zoznam platných názvov kláves"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Vždy zobrazovať ikonu v paneli"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Ak ponuku otvárate klávesovou skratkou, nemusíte ikonu zobrazovať stále."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Klávesové skratky"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Toto rozšírenie poskytuje konfigurovateľnú vyskakovaciu ponuku zobrazujúcu väčšinu emoji, kliknutím na emoji sa skopíruje do schránky."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Autor"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Prekladateľ(ia)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Prispievatelia"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Nahlásiť chyby alebo nápady"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "O rozšírení"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Webovú stránku sa nepodarilo otvoriť"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smajlíky & telo"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Ľudia & oblečenie"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Zvieratá & príroda"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Jedlo & nápoje"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Cestovanie & miesta"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Aktivity & šport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Predmety"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Symboly"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Vlajky"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Sem napíšte hľadaný text…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Bez odtieňa pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Svetlý odtieň pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Stredne svetlý odtieň pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Stredný odtieň pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Stredne tmavý odtieň pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Tmavý odtieň pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Ženy"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Muži"

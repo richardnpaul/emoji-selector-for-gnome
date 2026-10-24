@@ -1,0 +1,199 @@
+# Ganda translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: lg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Entegeka y'awamu"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Okulaga interface okuva wansi kisinga bulungi bw'okozesa ekipande ekya wansi mu kifo ky'olunyiriri olwa waggulu olwa bulijjo."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Okuva waggulu okukka wansi"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Okuva wansi okulinnya waggulu"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Enteekateeka tesobose kuterekebwa"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Omuwendo gwa emoji ku lunyiriri"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Obunene bwa emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Entegeka"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Ebisumuluzo ebikyusa birina okubeera wakati w'obubonero < >"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Omuwendo ogwa bulijjo gwe %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Tokozesa shortcut ya keyboard eriwo dda."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Kozesa shortcut ya keyboard okuggulawo n'okuggalawo menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Shortcut ya keyboard"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Eno si shortcut ya keyboard entuufu"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Olukalala lw'amannya g'ebisumuluzo ebituufu"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Laga bulijjo akabonero ku kipande"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Bw'oyingira mu menu ng'okozesa shortcut ya keyboard, tekyetaagisa kulaga bulijjo akabonero."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Shortcut za keyboard"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Extension eno ereeta menu esobola okutegekebwa eraga emoji nnyingi; okunyiga emoji kigikoppa mu clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Omuwandiisi"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Omuvvuunuzi(abavvuunuzi)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Abayambi"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Tegeeza ku nsobi oba ebirowoozo"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Ebikwata ku"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Omukutu gwa webu tegusobose kuggulwawo"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Amaaso n'omubiri"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Abantu n'Engoye"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Ensolo n'Obutonde"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Emmere n'Ebyokunywa"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Olugendo n'Ebifo"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Emirimu n'Emizannyo"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Ebintu"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Obubonero"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bendera"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Wandiika wano okunoonya…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Tewali langi ya lususu"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Olususu olweru"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Olususu olweru mu makkati"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Olususu olwa wakati"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Olususu olwa wakati olwa kiddugavu"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Olususu olwa kiddugavu"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Abakazi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Abasajja"

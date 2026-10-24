@@ -36,7 +36,18 @@ These rules govern localisation across all code, configuration, templates, and U
   - Design UI containers to accommodate 30–50% text expansion (e.g., German translations vs English). Avoid fixed-width controls that cause text clipping or ellipsis overflow; enable text wrapping (`wrap: true`) on labels.
   - In Libadwaita and GTK4, use logical widget positioning (`add_prefix` / `add_suffix`, start/end alignment) rather than physical left/right positioning to ensure native Right-to-Left (RTL) mirroring.
 
-## 5. Verification and Testing
+## 5. The English of the source strings
+
+- The source strings (the `msgid`s) are written in **British English**, and serve every English locale: `en`, `en_GB`,
+  `en_AU`, `en_CA`, `en_US`, ... A locale expands to its own name, then its language, then the source text
+  (`en_GB` to `en_GB`, `en`, then the source), so there is no `en` or `en_GB` catalogue, and an `en_US` catalogue is
+  never consulted for an `en_GB` user.
+- Write the source in British spelling and vocabulary ("colour", "centre", "customise", "licence"). A test rejects
+  the common American spellings in the template.
+- If a string ever needs a word that Americans say differently, add the `en_US` catalogue holding the American
+  wording (and `en_CA` and so on, only where that locale differs again). Never make `en_US` stand in for `en_GB`.
+
+## 6. Verification and Testing
 
 - When writing tests (in accordance with TDD rules), verify that:
   - User-facing strings pass through gettext `_()` rather than raw string literals.

@@ -1,0 +1,199 @@
+# Samoan translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sm\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Faatulagaga lautele"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "E sili ona lelei le faaali o le interface mai lalo pe afai e te faaaoga se panel i lalo nai lo le pito i luga masani."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Mai luga i lalo"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Mai lalo i luga"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Sa le mafai ona faasaoina le setting"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Numera o emoji i laina taʻitasi"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Lapoʻa o emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Faatulagaga"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "E tatau ona i le va o chevron ki suiga"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "O le tau masani o le %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Aua le faaaoga se ala pupuu o le keyboard ua i ai."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Faaaoga se ala pupuu o le keyboard e tatala ma tapuni ai le menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Ala pupuu o le keyboard"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "E le o se ala pupuu talafeagai o le keyboard"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lisi o igoa o ki talafeagai"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Faaali pea le ata i le panel"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Afai e te faaaoga le ala pupuu o le keyboard e tatala ai le menu, e te le manaʻomia le faaali pea o le ata."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Ala pupuu o ki"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "O lenei faaopoopoga e maua ai se menu e mafai ona faatulagaina e faaali ai le tele o emoji; pe a kiliki i se emoji e kopi i le clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Tusitala"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Faaliliu"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Tagata fesoasoani"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Lipoti ni faafitauli po o ni manatu"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "E uiga i"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Sa le mafai ona tatala le itulau web"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smiley ma Tino"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Tagata ma Ofu"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Manu ma Natura"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Meaʻai ma Meainu"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Malaga ma Nofoaga"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Gaoioiga ma Taaloga"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Mea"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Faailoga"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Fuʻa"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Tusi iinei e saili ai…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Leai se lanu o le paʻu"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Lanu paʻu mama"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Lanu paʻu ogatotonu mama"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Lanu paʻu ogatotonu"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Lanu paʻu ogatotonu uliuli"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Lanu paʻu uliuli"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Fafine"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Tane"

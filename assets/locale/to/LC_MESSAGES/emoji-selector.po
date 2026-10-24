@@ -1,0 +1,199 @@
+# Tonga translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: to\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Fokotuʻu fakalūkufua"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "ʻOku lelei ange ke fakahaaʻi ʻa e interface mei lalo kapau ʻoku ke ngāueʻaki ha panel ʻi lalo ʻo ʻikai ko e laine masani ʻi ʻolunga."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Mei ʻolunga ki lalo"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Mei lalo ki ʻolunga"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Naʻe ʻikai lava ke tauhi ʻa e seti"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Fika ʻo e emoji ʻi he laine kotoa"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Lahi ʻo e emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Fokotuʻu"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Kuo pau ke ʻi he vahaʻa ʻo e chevron ʻa e ngaahi key liliu"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Ko e tuʻunga masani ko e %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "ʻOua naʻa ngāueʻaki ha shortcut keyboard kuo ʻi ai."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Ngāueʻaki ha shortcut keyboard ke fakaava mo tāpuni ʻa e menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Shortcut keyboard"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "ʻOku ʻikai ko ha shortcut keyboard totonu ʻeni"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lisi ʻo e ngaahi huafa key totonu"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Fakahaaʻi maʻuaipē ʻa e icon ʻi he panel"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Kapau ʻoku ke aʻu ki he menu ʻaki e shortcut keyboard, ʻoku ʻikai fiemaʻu ke fakahaaʻi maʻuaipē ʻa e icon."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Ngaahi shortcut keyboard"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ʻOku ʻomi ʻe he extension ni ha menu ʻoku lava ke fokotuʻu ʻoku fakahaaʻi ai ʻa e tokolahi taha ʻo e ngaahi emoji; ʻi he lomiʻi ha emoji ʻoku kopi ia ki he clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Tokotaha tohi"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Tokotaha liliu"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Ngaahi tokotaha tokoni"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Lipooti ha ngaahi bug pe fakakaukau"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Fekauʻaki"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Naʻe ʻikai lava ke fakaava ʻa e peesi uepi"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smiley mo e Sino"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Kakai mo e Kofu"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Fanga manu mo e Natula"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Kai mo e Inu"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Folau mo e Ngaahi Potu"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Ngaahi Ngāue mo e Ngaahi Sipoti"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Ngaahi Meʻa"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Ngaahi Fakaʻilonga"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Ngaahi Fuka"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Hiki ʻi heni ke kumi…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "ʻIkai ha lanu kili"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Lanu kili maama"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Lanu kili vaeua-maama"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Lanu kili vaeua"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Lanu kili vaeua-ʻuli"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Lanu kili ʻuli"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Fefine"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Tangata"

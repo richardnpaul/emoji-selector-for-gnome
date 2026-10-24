@@ -1,0 +1,199 @@
+# Uzbek translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Umumiy joylashuv"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Agar standart yuqori panel oʻrniga pastki paneldan foydalansangiz, interfeysni pastdan koʻrsatgan maʼqul."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Yuqoridan pastga"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Pastdan yuqoriga"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Sozlamani saqlab boʻlmadi"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Har qatordagi emojilar soni"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Emojilar oʻlchami (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Joylashuv"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Modifikator tugmalari burchakli qavslar ichida boʻlishi kerak"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Standart qiymat — %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Allaqachon mavjud boʻlgan tezkor tugmalar birikmasini ishlatmang."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Menyuni ochish va yopish uchun tezkor tugmalar birikmasidan foydalanish"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Tezkor tugmalar birikmasi"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Bu yaroqli tezkor tugmalar birikmasi emas"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Yaroqli tugma nomlari roʻyxati"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Belgini panelda doim koʻrsatish"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Menyuga tezkor tugmalar birikmasi orqali kirsangiz, belgini doim koʻrsatish shart emas."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Tezkor tugmalar"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Ushbu kengaytma koʻpchilik emojilarni koʻrsatuvchi sozlanuvchi qalqib chiquvchi menyuni taqdim etadi, emojini bosish uni vaqtinchalik xotiraga nusxalaydi."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Muallif"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Tarjimon(lar)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Hissa qoʻshganlar"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Xatolar yoki gʻoyalar haqida xabar berish"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Dastur haqida"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Veb-sahifani ochib boʻlmadi"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smayliklar va tana"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Odamlar va kiyim"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Hayvonlar va tabiat"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Oziq-ovqat va ichimliklar"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Sayohat va joylar"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Faoliyat va sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Narsalar"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Belgilar"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bayroqlar"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Qidirish uchun bu yerga yozing…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Teri rangi yoʻq"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Och teri rangi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Oʻrtacha och teri rangi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Oʻrtacha teri rangi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Oʻrtacha toʻq teri rangi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Toʻq teri rangi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Ayollar"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Erkaklar"

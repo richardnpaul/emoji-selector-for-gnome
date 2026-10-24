@@ -1,0 +1,199 @@
+# Maltese translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: mt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n==0 || (n%100>=3 && n%100<=10) ? 2 : (n%100>=11 && n%100<=19) ? 3 : 4);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Layout ġenerali"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Huwa aħjar li turi l-interface minn isfel jekk tuża panel fl-qiegħ minflok il-bar default ta' fuq."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Minn fuq għal isfel"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Minn isfel għal fuq"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "L-issettjar ma setax jinħażen"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Numru ta' emojis f'kull linja"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Daqs tal-emojis (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Layout"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Iċ-ċwievet modifikaturi jridu jkunu bejn parentesi angolari"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Il-valur default huwa %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Tużax shortcut tat-tastiera li diġà jeżisti."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Uża shortcut tat-tastiera biex tiftaħ u tagħlaq il-menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Shortcut tat-tastiera"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Dan mhuwiex shortcut tat-tastiera validu"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lista ta' ismijiet validi taċ-ċwievet"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Uri dejjem l-icon fil-panel"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Jekk taċċessa l-menu bl-shortcut tat-tastiera, m'għandekx bżonn turi l-icon dejjem."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Shortcuts tat-tastiera"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Din l-estensjoni tipprovdi menu popup li jista' jiġi kkonfigurat u li juri l-biċċa l-kbira tal-emojis, u meta tikklikkja fuq emoji tikkopjah fil-clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Awtur"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Traduttur/i"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Kontributuri"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Irrapporta bugs jew ideat"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Dwar"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Ma setgħetx tinfetaħ il-paġna web"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smileys & ġisem"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Nies & ħwejjeġ"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Annimali & natura"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Ikel & xorb"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Vjaġġi & postijiet"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Attivitajiet & sports"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Oġġetti"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Simboli"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bnadar"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Ittajpja hawn biex tfittex…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "L-ebda ton tal-ġilda"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Ton tal-ġilda ċar"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Ton tal-ġilda medju-ċar"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Ton tal-ġilda medju"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Ton tal-ġilda medju-skur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Ton tal-ġilda skur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Nisa"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Irġiel"

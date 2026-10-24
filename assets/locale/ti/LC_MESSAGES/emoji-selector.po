@@ -1,0 +1,199 @@
+# Tigrinya translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ti\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=((n>=0 && n<=1) ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "ሓፈሻዊ ኣቀማምጣ"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "ካብ ላዕሊ ዝጅምር ስሩዕ ባር ክንዲ ምጥቃም፡ ታሕተዋይ ፓነል እንተ ተጠቒምካ፡ ኢንተርፌስ ካብ ታሕቲ ምርኣይ ይበልጽ።"
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "ካብ ላዕሊ ናብ ታሕቲ"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "ካብ ታሕቲ ናብ ላዕሊ"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "እቲ ቅጥዒ ክምዝገብ ኣይከኣለን"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "ቁጽሪ ኢሞጂታት ኣብ ሓደ መስመር"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ዓቐን ኢሞጂታት (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "ኣቀማምጣ"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "ቁልፍታት መቐያየሪ ኣብ መንጎ ምልክታት < > ክኾኑ ኣለዎም"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "ነባሪ ዋጋ %s እዩ"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "ዘሎ ሓጺር መንገዲ ሰሌዳ ኣይትጠቀም።"
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "ምናሌ ንምኽፋትን ንምዕጻውን ሓጺር መንገዲ ሰሌዳ ተጠቐም"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "ሓጺር መንገዲ ሰሌዳ"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "እዚ ቅኑዕ ሓጺር መንገዲ ሰሌዳ ኣይኮነን"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "ዝርዝር ቅኑዓት ሽም ቁልፍታት"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "ወትሩ ምልክት ኣብ ፓነል ኣርኢ"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "ብሓጺር መንገዲ ሰሌዳ ናብ ምናሌ እንተኣተኻ፡ ወትሩ ምልክት ከተርእይ ኣየድልየካን።"
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "ሓጸርቲ መንገድታት ሰሌዳ"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "እዚ ተውሳኺ ዝበዝሑ ኢሞጂታት ዘርኢ ክትስርሖ ዝከኣል ምናሌ የቕርብ፤ ኢሞጂ ምጥዋቕ ናብ ክሊፕቦርድ ይቅዳሕ።"
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "ደራሲ"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "ተርጓሚ(ታት)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "ተሓባበርቲ"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "ጌጋታት ወይ ሓሳባት ሪፖርት ግበር"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "ብዛዕባ"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "እቲ ገጽ መርበብ ክኽፈት ኣይከኣለን"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "ፈገግታን ኣካልን"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "ሰባትን ክዳውንትን"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "እንስሳታትን ተፈጥሮን"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "መግብን መስተን"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "ጉዕዞን ቦታታትን"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "ንጥፈታትን ስፖርትን"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "ኣቕሑ"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "ምልክታት"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "ባንዴራታት"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "ንምድላይ ኣብዚ ጽሓፍ…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "ከለር ቆርበት የለን"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "ብሩህ ከለር ቆርበት"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "ማእከላይ ብሩህ ከለር ቆርበት"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "ማእከላይ ከለር ቆርበት"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "ማእከላይ ጸሊም ከለር ቆርበት"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "ጸሊም ከለር ቆርበት"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "ደቀንስትዮ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "ደቀ-ተባዕትዮ"

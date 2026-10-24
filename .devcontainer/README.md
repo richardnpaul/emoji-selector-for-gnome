@@ -32,6 +32,10 @@ Mutter 51, Node 22). Includes `pre-commit`, `shexli` (pinned, see below),
   cannot be switched off from `devcontainer.json` (setting them to `false` is
   ignored). `github-cli` only supports `apt-get`, so it fails the build on
   Fedora. `git` and `gh` are installed by the Dockerfile instead.
+- **Translations of the Shell.** The base image installs only English, so the Dockerfile sets `%_install_langs` to the
+  languages of the tests. This is not cosmetic: GLib translates nothing in a program that has its own text domain
+  (the Shell's) when that domain has no catalogue for the locale, so without the Shell's translations an extension
+  stays in English in a headless Shell.
 - **Locales.** The image installs a few `glibc-langpack-*` packages so that the real gettext can be run as a user of
   that language would (`tests/integration/catalogues.tooling.test.js` checks the list). Other locales are not
   installed: `locale -a` shows what exists.

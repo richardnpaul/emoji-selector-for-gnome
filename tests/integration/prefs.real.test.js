@@ -9,6 +9,7 @@ import path from 'node:path';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
 import { accelerator_parse as acceleratorParseFake } from '../support/fakes/adw.js';
+import { readCatalogue } from '../support/po.js';
 import { EXTENSION_DIR, METADATA } from '../support/paths.js';
 import { buildAndInstall } from '../support/real-package.js';
 
@@ -29,7 +30,7 @@ describe('the preferences in the real libraries', () => {
 	}, 120_000);
 	afterAll(() => rmSync(base, { recursive: true, force: true }));
 
-	function open(...args) {
+	function open(args = [], locale = 'C.utf8') {
 		const result = spawnSync('xvfb-run', ['-a', 'gjs', '-m', HARNESS, ...args], {
 			encoding: 'utf8',
 			env: {
@@ -41,6 +42,7 @@ describe('the preferences in the real libraries', () => {
 				GI_TYPELIB_PATH: [process.env.GI_TYPELIB_PATH, ...TYPELIBS].filter(Boolean).join(':'),
 				LD_LIBRARY_PATH: process.env.LD_LIBRARY_PATH ?? '',
 				LANG: 'C.UTF-8',
+				LC_ALL: locale,
 			},
 		});
 		if (result.status !== 0) {
@@ -145,9 +147,92 @@ describe('the preferences in the real libraries', () => {
 	});
 
 	it('opens just as well in a right-to-left language, without complaints', () => {
-		const { status, problems, report } = open('rtl');
+		const { status, problems, report } = open(['rtl']);
 		expect({ status, problems }).toEqual({ status: 0, problems: [] });
 		expect(report.direction).toBe('rtl');
 		expect(report.mapped).toBe(true);
 	}, 60_000);
+
+	// What real users see: the locale of the user picks the catalogue, as the Extensions app does for an extension.
+	describe('in the languages of its users', () => {
+		// [a locale installed in the dev container, the catalogue its users get, whether the language is right-to-left]
+		const USERS = [
+			['de_DE.utf8', 'de', false],
+			['es_MX.utf8', 'es', false],
+			['fr_CA.utf8', 'fr', false],
+			['ja_JP.utf8', 'ja', false],
+			['pt_BR.utf8', 'pt_BR', false],
+			['pt_PT.utf8', 'pt', false],
+			['zh_CN.utf8', 'zh_CN', false],
+			['zh_TW.utf8', 'zh_TW', false],
+			['zh_HK.utf8', 'zh_HK', false],
+			['ar_EG.utf8', 'ar', true],
+			['he_IL.utf8', 'he', true],
+		];
+		const LOCALE_DIR = path.join(EXTENSION_DIR, 'locale');
+		/** The translation of a message in a catalogue, escaped as libadwaita's markup needs it in a description. */
+		const translator = (name) => {
+			const entries = new Map(
+				readCatalogue(path.join(LOCALE_DIR, name, 'LC_MESSAGES', `${METADATA['gettext-domain']}.po`)).entries.map(
+					(entry) => [entry.msgid, entry.msgstr],
+				),
+			);
+			return (msgid) => entries.get(msgid);
+		};
+		const escapeMarkup = (text) =>
+			text
+				.replaceAll('&', '&amp;')
+				.replaceAll('<', '&lt;')
+				.replaceAll('>', '&gt;')
+				.replaceAll("'", '&apos;')
+				.replaceAll('"', '&quot;');
+
+		it.each(USERS)(
+			'a user of %s sees the catalogue %s on every page and row',
+			(locale, name, rtl) => {
+				const tr = translator(name);
+				const { report } = open(['texts'], locale);
+				expect(report.pages.slice(0, 3)).toEqual([tr('Layout'), tr('Keyboard bindings'), tr('About')]);
+				const titles = report.rows.map((row) => row.title);
+				for (const msgid of [
+					'General layout',
+					'Number of emojis per line',
+					'Size of emojis (px)',
+					'Use a keyboard shortcut to toggle the menu',
+					'Keyboard shortcut',
+					'List of valid key names',
+					'Always show the icon in the panel',
+					'Author',
+					'Contributors',
+					'Report bugs or ideas',
+				]) {
+					expect(titles, `${locale}: ${msgid}`).toContain(tr(msgid));
+				}
+				expect(report.rows.find((row) => row.title === tr('General layout')).subtitle).toBe(
+					tr(
+						'Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar.',
+					),
+				);
+				expect(report.positionItems).toEqual([tr('From top to bottom'), tr('From bottom to top')]);
+				// the help of the shortcut page: three lines, the second with the default shortcut put in
+				expect(report.groups.map((group) => group.description)).toContain(
+					[
+						tr('Modifier keys must be between chevrons'),
+						tr('The default value is %s').replace('%s', '<Super>period'),
+						tr("Don't use a keyboard shortcut that already exists."),
+					]
+						.map(escapeMarkup)
+						.join('\n'),
+				);
+				expect(report.direction).toBe(rtl ? 'rtl' : 'ltr');
+			},
+			60_000,
+		);
+
+		it('shows the English texts, left to right, to a user whose language has no catalogue', () => {
+			const { report } = open(['texts'], 'C.utf8');
+			expect(report.pages.slice(0, 3)).toEqual(['Layout', 'Keyboard bindings', 'About']);
+			expect(report.direction).toBe('ltr');
+		}, 60_000);
+	});
 });

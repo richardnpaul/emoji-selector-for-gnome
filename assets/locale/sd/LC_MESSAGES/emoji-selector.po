@@ -1,0 +1,199 @@
+# Sindhi translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sd\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "عام ترتيب"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "جيڪڏهن توهان ڊفالٽ مٿين بار بدران هيٺيون پينل استعمال ڪندا آهيو ته انٽرفيس هيٺان ڏيکارڻ بهتر آهي."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "مٿان کان هيٺ تائين"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "هيٺ کان مٿي تائين"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "سيٽنگ محفوظ نه ٿي سگهي"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "هر سٽ ۾ ايموجي جو تعداد"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ايموجي جي سائيز (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "ترتيب"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "ترميمي ڪيز زاويائي قوسن جي وچ ۾ هجڻ گهرجن"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "ڊفالٽ قدر %s آهي"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "اهڙو ڪي بورڊ شارٽ ڪٽ استعمال نه ڪريو جيڪو اڳ ۾ ئي موجود هجي."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "مينيو کولڻ ۽ بند ڪرڻ لاءِ ڪي بورڊ شارٽ ڪٽ استعمال ڪريو"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "ڪي بورڊ شارٽ ڪٽ"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "هي صحيح ڪي بورڊ شارٽ ڪٽ ناهي"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "صحيح ڪيز جي نالن جي فهرست"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "آئڪن کي هميشه پينل ۾ ڏيکاريو"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "جيڪڏهن توهان مينيو تائين ڪي بورڊ شارٽ ڪٽ ذريعي پهچندا آهيو ته آئڪن کي هميشه ڏيکارڻ جي ضرورت ناهي."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "ڪي بورڊ شارٽ ڪٽس"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "هي واڌارو هڪ ترتيب ڏيڻ جوڳو پاپ اپ مينيو مهيا ڪري ٿو جيڪو گهڻا ايموجي ڏيکاري ٿو، ڪنهن ايموجي تي ڪلڪ ڪرڻ سان اها ڪلپ بورڊ تي ڪاپي ٿي وڃي ٿي."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "ليکڪ"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "ترجمو ڪندڙ"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "حصيدار"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "غلطين يا خيالن بابت ٻڌايو"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "بابت"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "ويب صفحو کولي نه سگهيو"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "مرڪون ۽ جسم"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "ماڻهو ۽ لباس"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "جانور ۽ فطرت"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "کاڌو ۽ پيئڻ"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "سفر ۽ هنڌ"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "سرگرميون ۽ رانديون"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "شيون"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "علامتون"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "جهنڊا"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "ڳولڻ لاءِ هتي لکو…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "چمڙيءَ جو رنگ ناهي"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "چمڙيءَ جو هلڪو رنگ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "چمڙيءَ جو وچولو هلڪو رنگ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "چمڙيءَ جو وچولو رنگ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "چمڙيءَ جو وچولو گهاٽو رنگ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "چمڙيءَ جو گهاٽو رنگ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "عورتون"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "مرد"

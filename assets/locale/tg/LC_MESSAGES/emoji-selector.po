@@ -1,0 +1,199 @@
+# Tajik translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Тарҳбандии умумӣ"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Агар ба ҷои навори болоии пешфарз панели поёнро истифода баред, намоиши интерфейс аз поён беҳтар аст."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Аз боло ба поён"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Аз поён ба боло"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Танзим захира карда нашуд"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Шумораи эмодзиҳо дар як сатр"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Андозаи эмодзиҳо (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Тарҳбандӣ"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Тугмаҳои тағйирдиҳанда бояд дар қавсҳои кунҷдор бошанд"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Қимати пешфарз — %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Миёнбури клавиатураеро, ки аллакай вуҷуд дорад, истифода набаред."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Барои кушодан ва пӯшидани меню миёнбури клавиатураро истифода баред"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Миёнбури клавиатура"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Ин миёнбури дурусти клавиатура нест"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Рӯйхати номҳои дурусти тугмаҳо"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Нишона ҳамеша дар панел намоиш дода шавад"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Агар ба меню бо миёнбури клавиатура дастрасӣ дошта бошед, ҳамеша намоиш додани нишона лозим нест."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Миёнбурҳои клавиатура"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Ин васеъкунӣ менюи калкидаи танзимшавандаро пешкаш мекунад, ки аксари эмодзиҳоро нишон медиҳад, пахш кардани эмодзӣ онро ба буфери мубодила нусха мекунад."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Муаллиф"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Тарҷумон(ҳо)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Иштирокчиён"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Дар бораи хатогиҳо ё ғояҳо хабар диҳед"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Дар бораи барнома"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Саҳифаи веб кушода нашуд"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Табассумҳо ва бадан"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Одамон ва либос"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Ҳайвонот ва табиат"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Ғизо ва нӯшокӣ"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Сафар ва ҷойҳо"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Фаъолиятҳо ва варзиш"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Ашё"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Рамзҳо"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Парчамҳо"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Барои ҷустуҷӯ дар ин ҷо нависед…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Бе рангии пӯст"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Рангии равшани пӯст"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Рангии миёнаи равшани пӯст"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Рангии миёнаи пӯст"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Рангии миёнаи торики пӯст"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Рангии торики пӯст"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Занон"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Мардон"

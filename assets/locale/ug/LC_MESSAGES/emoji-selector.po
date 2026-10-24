@@ -1,0 +1,199 @@
+# Uighur translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "ئومۇمىي ئورۇنلاشتۇرۇش"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "ئەگەر سۈكۈتتىكى ئۈستۈنكى بالداق ئورنىغا ئاستىنقى تاختا ئىشلەتسىڭىز، ئارايۈزنى ئاستىدىن كۆرسەتكىنىڭىز ياخشى."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "ئۈستىدىن ئاستىغا"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "ئاستىدىن ئۈستىگە"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "تەڭشەكنى ساقلىغىلى بولمىدى"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "ھەر قۇردىكى ئېموجى سانى"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ئېموجى چوڭلۇقى (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "ئورۇنلاشتۇرۇش"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "ئۆزگەرتكۈچ كۇنۇپكىلار بۇلۇڭلۇق تىرناق ئىچىدە بولۇشى كېرەك"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "سۈكۈتتىكى قىممەت %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "مەۋجۇت بولغان ھەرپتاختا تېزلەتمىسىنى ئىشلەتمەڭ."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "تىزىملىكنى ئېچىش ۋە ياپىش ئۈچۈن ھەرپتاختا تېزلەتمىسىنى ئىشلىتىش"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "ھەرپتاختا تېزلەتمىسى"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "بۇ ئۈنۈملۈك ھەرپتاختا تېزلەتمىسى ئەمەس"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "ئۈنۈملۈك كۇنۇپكا ناملىرى تىزىمى"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "سىنبەلگىنى ھەمىشە تاختىدا كۆرسەت"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "تىزىملىكنى ھەرپتاختا تېزلەتمىسى بىلەن ئاچسىڭىز، سىنبەلگىنى ھەمىشە كۆرسىتىشنىڭ ھاجىتى يوق."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "ھەرپتاختا باغلىمىلىرى"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "بۇ كېڭەيتمە تەڭشىگىلى بولىدىغان قاڭقىش تىزىملىك تەمىنلەيدۇ، ئۇ كۆپلىگەن ئېموجىلارنى كۆرسىتىدۇ؛ ئېموجىنى چەككەندە ئۇ چاپلاش تاختىسىغا كۆچۈرۈلىدۇ."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "ئاپتور"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "تەرجىمان(لار)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "تۆھپىكارلار"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "خاتالىق ياكى پىكىرلەرنى مەلۇم قىلىڭ"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "ھەققىدە"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "تور بەتنى ئاچقىلى بولمىدى"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "كۈلكە ۋە بەدەن"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "كىشىلەر ۋە كىيىم-كېچەك"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "ھايۋانلار ۋە تەبىئەت"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "يېمەك-ئىچمەك"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "ساياھەت ۋە ئورۇنلار"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "پائالىيەتلەر ۋە تەنتەربىيە"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "بۇيۇملار"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "بەلگىلەر"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "بايراقلار"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "ئىزدەش ئۈچۈن بۇ يەرگە كىرگۈزۈڭ…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "تېرە رەڭگى يوق"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "ئوچۇق تېرە رەڭگى"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "ئوتتۇرا ئوچۇق تېرە رەڭگى"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "ئوتتۇرا تېرە رەڭگى"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "ئوتتۇرا قېنىق تېرە رەڭگى"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "قېنىق تېرە رەڭگى"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "ئاياللار"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "ئەرلەر"

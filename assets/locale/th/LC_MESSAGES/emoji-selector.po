@@ -1,0 +1,199 @@
+# Thai translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "รูปแบบการจัดวางโดยรวม"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "การแสดงส่วนติดต่อผู้ใช้จากด้านล่างจะดีกว่า หากคุณใช้แผงที่ด้านล่างแทนแถบด้านบนตามค่าปริยาย"
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "จากบนลงล่าง"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "จากล่างขึ้นบน"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "ไม่สามารถบันทึกการตั้งค่าได้"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "จำนวนอีโมจิต่อบรรทัด"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ขนาดของอีโมจิ (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "การจัดวาง"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "ปุ่มปรับแต่งต้องอยู่ระหว่างวงเล็บแหลม"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "ค่าปริยายคือ %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "อย่าใช้ปุ่มลัดที่มีอยู่แล้ว"
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "ใช้ปุ่มลัดเพื่อสลับเปิด/ปิดเมนู"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "ปุ่มลัด"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "นี่ไม่ใช่ปุ่มลัดที่ถูกต้อง"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "รายชื่อปุ่มที่ใช้ได้"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "แสดงไอคอนในแผงเสมอ"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "หากคุณเข้าถึงเมนูด้วยปุ่มลัด คุณไม่จำเป็นต้องแสดงไอคอนตลอดเวลา"
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "การกำหนดปุ่มแป้นพิมพ์"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ส่วนขยายนี้มีเมนูป๊อปอัปที่ปรับแต่งได้ ซึ่งแสดงอีโมจิเกือบทั้งหมด การคลิกอีโมจิจะคัดลอกไปยังคลิปบอร์ด"
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "ผู้เขียน"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "ผู้แปล"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "ผู้ร่วมพัฒนา"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "รายงานข้อบกพร่องหรือแจ้งความคิดเห็น"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "เกี่ยวกับ"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "ไม่สามารถเปิดหน้าเว็บได้"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "หน้ายิ้มและร่างกาย"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "ผู้คนและเครื่องแต่งกาย"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "สัตว์และธรรมชาติ"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "อาหารและเครื่องดื่ม"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "การเดินทางและสถานที่"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "กิจกรรมและกีฬา"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "วัตถุ"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "สัญลักษณ์"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "ธง"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "พิมพ์ที่นี่เพื่อค้นหา…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "ไม่มีสีผิว"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "สีผิวอ่อน"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "สีผิวอ่อนปานกลาง"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "สีผิวปานกลาง"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "สีผิวเข้มปานกลาง"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "สีผิวเข้ม"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "ผู้หญิง"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "ผู้ชาย"

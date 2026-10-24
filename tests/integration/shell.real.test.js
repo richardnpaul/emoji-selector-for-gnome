@@ -12,19 +12,21 @@ import path from 'node:path';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
 import { EXTENSION_DIR, METADATA } from '../support/paths.js';
+import { readCatalogue } from '../support/po.js';
 import { buildAndInstall } from '../support/real-package.js';
 
 const ROOT = path.resolve(EXTENSION_DIR, '..');
 
 describe('the extension in a real GNOME Shell', () => {
 	let base;
+	let xdgDataHome;
 	let log;
 	let reports;
 	let status;
 
 	beforeAll(() => {
 		base = mkdtempSync(path.join(os.tmpdir(), 'emoji-shell-'));
-		const { xdgDataHome } = buildAndInstall(base);
+		({ xdgDataHome } = buildAndInstall(base));
 		const logFile = path.join(base, 'shell.log');
 		const result = spawnSync(
 			'bash',
@@ -118,5 +120,87 @@ describe('the extension in a real GNOME Shell', () => {
 		]);
 		expect(reported('shortcut-off')).toEqual([{ menuOpen: false }]);
 		expect(reported('shortcut-on-again')).toEqual([{ menuOpen: true }]);
+	});
+
+	// The texts the Shell shows, as the driver reads them from the actors of the menu: [panel, search hint, categories, tones, genders].
+	const CATEGORIES = [
+		'Smileys & Body',
+		'Peoples & Clothing',
+		'Animals & Nature',
+		'Food & Drink',
+		'Travel & Places',
+		'Activities & Sports',
+		'Objects',
+		'Symbols',
+		'Flags',
+	];
+	const TONES = [
+		'No skin tone',
+		'Light skin tone',
+		'Medium light skin tone',
+		'Medium skin tone',
+		'Medium dark skin tone',
+		'Dark skin tone',
+	];
+	const texts = (translate) => ({
+		panelName: translate('Emoji Selector'),
+		hint: translate('Type here to search…'),
+		categories: CATEGORIES.map(translate),
+		tones: TONES.map(translate),
+		genders: ['Women', 'Men'].map(translate),
+	});
+
+	it('shows its texts in English to a user whose language has no catalogue', () => {
+		expect(reported('texts')).toEqual([texts((msgid) => msgid)]);
+	});
+
+	describe('in the languages of its users', () => {
+		// [a locale installed in the dev container, the catalogue its users get]
+		const USERS = [
+			['ja_JP.utf8', 'ja'],
+			['ar_EG.utf8', 'ar'],
+			['de_DE.utf8', 'de'],
+		];
+
+		it.each(USERS)(
+			'a user of %s sees the catalogue %s on the panel and in the menu',
+			(locale, name) => {
+				const entries = new Map(
+					readCatalogue(
+						path.join(EXTENSION_DIR, 'locale', name, 'LC_MESSAGES', `${METADATA['gettext-domain']}.po`),
+					).entries.map((entry) => [entry.msgid, entry.msgstr]),
+				);
+				const logFile = path.join(base, `shell-${locale}.log`);
+				const result = spawnSync(
+					'bash',
+					[
+						path.join(ROOT, 'tests/integration/real/run-shell.sh'),
+						xdgDataHome,
+						logFile,
+						METADATA.uuid,
+						locale,
+						'texts',
+					],
+					{
+						encoding: 'utf8',
+						timeout: 240_000,
+						env: {
+							PATH: process.env.PATH,
+							HOME: path.join(base, 'home'),
+							GI_TYPELIB_PATH: process.env.GI_TYPELIB_PATH ?? '',
+							LD_LIBRARY_PATH: process.env.LD_LIBRARY_PATH ?? '',
+							LANG: 'C.UTF-8',
+						},
+					},
+				);
+				expect({ code: result.status, stderr: result.stderr }).toEqual({ code: 0, stderr: '' });
+				const seen = readFileSync(logFile, 'utf8')
+					.split('\n')
+					.filter((line) => line.includes('DRIVER {"name":"texts"'))
+					.map((line) => JSON.parse(line.slice(line.indexOf('DRIVER ') + 'DRIVER '.length)).value);
+				expect(seen).toEqual([texts((msgid) => entries.get(msgid))]);
+			},
+			300_000,
+		);
 	});
 });

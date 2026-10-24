@@ -1,0 +1,199 @@
+# Georgian translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "ზოგადი განლაგება"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "ინტერფეისის ქვემოდან ჩვენება უკეთესია, თუ ნაგულისხმევი ზედა ზოლის ნაცვლად ქვედა პანელს იყენებთ."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "ზემოდან ქვემოთ"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "ქვემოდან ზემოთ"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "პარამეტრის შენახვა ვერ მოხერხდა"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "ემოჯიების რაოდენობა ერთ ხაზში"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ემოჯიების ზომა (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "განლაგება"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "მოდიფიკატორის კლავიშები კუთხურ ფრჩხილებში უნდა იყოს"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "ნაგულისხმევი მნიშვნელობაა %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "ნუ გამოიყენებთ უკვე არსებულ კლავიატურის მალსახმობს."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "გამოიყენეთ კლავიატურის მალსახმობი მენიუს გასახსნელად და დასახურად"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "კლავიატურის მალსახმობი"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "ეს კლავიატურის სწორი მალსახმობი არ არის"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "სწორი კლავიშების სახელების სია"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "ხატულის პანელზე ყოველთვის ჩვენება"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "თუ მენიუს კლავიატურის მალსახმობით ხსნით, ხატულის მუდმივად ჩვენება აუცილებელი არ არის."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "კლავიატურის მიბმები"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ეს გაფართოება გვთავაზობს მორგებად ამომხტარ მენიუს, რომელიც ემოჯიების უმეტესობას აჩვენებს; ემოჯიზე დაწკაპუნებით ის გაცვლის ბუფერში კოპირდება."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "ავტორი"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "მთარგმნელი(ები)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "მონაწილეები"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "შეატყობინეთ შეცდომების ან იდეების შესახებ"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "შესახებ"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "ვებგვერდის გახსნა ვერ მოხერხდა"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "სმაილიკები და სხეული"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "ადამიანები და ტანსაცმელი"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "ცხოველები და ბუნება"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "საჭმელ-სასმელი"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "მოგზაურობა და ადგილები"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "აქტივობები და სპორტი"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "ობიექტები"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "სიმბოლოები"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "დროშები"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "საძიებლად აკრიფეთ აქ…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "კანის ტონის გარეშე"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "კანის ღია ტონი"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "კანის საშუალოდ ღია ტონი"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "კანის საშუალო ტონი"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "კანის საშუალოდ მუქი ტონი"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "კანის მუქი ტონი"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "ქალები"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "მამაკაცები"

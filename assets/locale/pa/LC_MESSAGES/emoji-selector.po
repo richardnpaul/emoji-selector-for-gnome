@@ -1,0 +1,199 @@
+# Punjabi translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=((n>=0 && n<=1) ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "ਆਮ ਲੇਆਉਟ"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "ਜੇ ਤੁਸੀਂ ਮੂਲ ਉੱਤਲੀ ਪੱਟੀ ਦੀ ਥਾਂ ਹੇਠਲਾ ਪੈਨਲ ਵਰਤਦੇ ਹੋ ਤਾਂ ਇੰਟਰਫੇਸ ਨੂੰ ਹੇਠੋਂ ਵਿਖਾਉਣਾ ਬਿਹਤਰ ਹੈ।"
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "ਉੱਪਰ ਤੋਂ ਹੇਠਾਂ"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "ਹੇਠਾਂ ਤੋਂ ਉੱਪਰ"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "ਸੈਟਿੰਗ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "ਪ੍ਰਤੀ ਲਾਈਨ ਇਮੋਜੀ ਦੀ ਗਿਣਤੀ"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ਇਮੋਜੀ ਦਾ ਆਕਾਰ (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "ਲੇਆਉਟ"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "ਮੌਡੀਫਾਇਰ ਕੁੰਜੀਆਂ ਕੋਣੀ ਬਰੈਕਟਾਂ ਵਿਚਕਾਰ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "ਮੂਲ ਮੁੱਲ %s ਹੈ"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "ਪਹਿਲਾਂ ਤੋਂ ਮੌਜੂਦ ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਨਾ ਵਰਤੋ।"
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "ਮੇਨੂ ਖੋਲ੍ਹਣ ਅਤੇ ਬੰਦ ਕਰਨ ਲਈ ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਵਰਤੋ"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "ਇਹ ਜਾਇਜ਼ ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਨਹੀਂ ਹੈ"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "ਜਾਇਜ਼ ਕੁੰਜੀ ਨਾਵਾਂ ਦੀ ਸੂਚੀ"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "ਆਈਕਾਨ ਨੂੰ ਹਮੇਸ਼ਾਂ ਪੈਨਲ ਵਿੱਚ ਵਿਖਾਓ"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "ਜੇ ਤੁਸੀਂ ਮੇਨੂ ਨੂੰ ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਨਾਲ ਖੋਲ੍ਹਦੇ ਹੋ ਤਾਂ ਆਈਕਾਨ ਹਮੇਸ਼ਾਂ ਵਿਖਾਉਣ ਦੀ ਲੋੜ ਨਹੀਂ।"
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "ਕੀਬੋਰਡ ਬਾਈਡਿੰਗ"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ਇਹ ਐਕਸਟੈਂਸ਼ਨ ਇੱਕ ਸੰਰਚਨਾਯੋਗ ਪੌਪਅੱਪ ਮੇਨੂ ਦਿੰਦੀ ਹੈ ਜੋ ਜ਼ਿਆਦਾਤਰ ਇਮੋਜੀ ਵਿਖਾਉਂਦਾ ਹੈ, ਕਿਸੇ ਇਮੋਜੀ ਉੱਤੇ ਕਲਿੱਕ ਕਰਨ ਨਾਲ ਉਹ ਕਲਿੱਪਬੋਰਡ ਉੱਤੇ ਕਾਪੀ ਹੋ ਜਾਂਦਾ ਹੈ।"
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "ਲੇਖਕ"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "ਅਨੁਵਾਦਕ"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "ਯੋਗਦਾਨ ਪਾਉਣ ਵਾਲੇ"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "ਬੱਗ ਜਾਂ ਵਿਚਾਰ ਦੱਸੋ"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "ਬਾਰੇ"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "ਵੈੱਬ ਸਫ਼ਾ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "ਸਮਾਈਲੀ ਅਤੇ ਸਰੀਰ"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "ਲੋਕ ਅਤੇ ਕੱਪੜੇ"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "ਜਾਨਵਰ ਅਤੇ ਕੁਦਰਤ"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "ਖਾਣਾ ਅਤੇ ਪੀਣ ਵਾਲੇ ਪਦਾਰਥ"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "ਯਾਤਰਾ ਅਤੇ ਥਾਵਾਂ"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "ਸਰਗਰਮੀਆਂ ਅਤੇ ਖੇਡਾਂ"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "ਵਸਤੂਆਂ"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "ਚਿੰਨ੍ਹ"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "ਝੰਡੇ"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "ਖੋਜਣ ਲਈ ਇੱਥੇ ਲਿਖੋ…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "ਕੋਈ ਚਮੜੀ ਰੰਗ ਨਹੀਂ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "ਹਲਕਾ ਚਮੜੀ ਰੰਗ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "ਦਰਮਿਆਨਾ ਹਲਕਾ ਚਮੜੀ ਰੰਗ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "ਦਰਮਿਆਨਾ ਚਮੜੀ ਰੰਗ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "ਦਰਮਿਆਨਾ ਗੂੜ੍ਹਾ ਚਮੜੀ ਰੰਗ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "ਗੂੜ੍ਹਾ ਚਮੜੀ ਰੰਗ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "ਔਰਤਾਂ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "ਮਰਦ"

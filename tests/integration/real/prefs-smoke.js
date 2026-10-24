@@ -1,14 +1,15 @@
-// Run with: xvfb-run -a gjs -m tests/integration/real/prefs-smoke.js [rtl]
+// Run with: xvfb-run -a gjs -m tests/integration/real/prefs-smoke.js [rtl | texts]
 // (XDG_DATA_HOME must hold the installed extension and GSETTINGS_BACKEND=memory is advisable.)
 //
 // Opens the extension's REAL preferences, from the installed package, in the REAL libadwaita and the real
 // Extensions app's preferences module, drives the widgets the way a user does and prints what happened
 // as JSON, so that a test can check it (and check the fakes used by the unit tests against reality).
+// With `texts` it only reports what the window shows, in whatever language the environment (LC_ALL) selects.
 import Adw from 'gi://Adw';
 import Gio from 'gi://Gio';
 import GLib from 'gi://GLib';
 import Gtk from 'gi://Gtk?version=4.0';
-import { programArgs } from 'system';
+import { exit, programArgs } from 'system';
 
 const UUID = GLib.getenv('UNDER_TEST');
 const root = `${GLib.getenv('XDG_DATA_HOME')}/gnome-shell/extensions/${UUID}`;
@@ -53,6 +54,23 @@ const report = {
 	groupDescriptions: groups.map((group) => group.description),
 	groupTitles: groups.map((group) => group.title),
 };
+
+if (programArgs.includes('texts')) {
+	const combo = all.find((widget) => widget instanceof Adw.ComboRow);
+	print(
+		JSON.stringify({
+			direction: report.direction,
+			pages: report.pages,
+			groups: groups.map((group) => ({ title: group.title, description: group.description })),
+			rows: all
+				.filter((widget) => widget instanceof Adw.PreferencesRow)
+				.map((row) => ({ title: row.title, subtitle: row.subtitle ?? null })),
+			positionItems: Array.from({ length: combo.model.get_n_items() }, (_, i) => combo.model.get_string(i)),
+		}),
+	);
+	window.destroy();
+	exit(0);
+}
 
 // -- Layout
 const position = rows['General layout'];

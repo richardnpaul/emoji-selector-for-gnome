@@ -162,10 +162,31 @@ export default class Driver extends Extension {
 		return find(indicator.menu.box, styled('EmojisItemStyle'));
 	}
 
+	/** The texts the extension shows, in the language of the Shell: what its actors say about themselves. */
+	#texts(indicator) {
+		const box = indicator.menu.box;
+		const names = (style) => find(box, styled(style)).map((actor) => actor.accessible_name);
+		const [entry] = find(box, (actor) => actor.name === 'searchEntry');
+		return {
+			panelName: indicator.accessible_name,
+			hint: entry.hint_text,
+			categories: names('EmojisCategory'),
+			// (Three categories have a tone bar, the first of them comes first; two have genders.)
+			tones: names('EmojisTone').slice(0, 6),
+			genders: names('EmojisGender').slice(0, 2),
+		};
+	}
+
 	async #enabled() {
 		const round = ++this.#round;
 		const indicator = Main.panel.statusArea[UNDER_TEST];
 		say('enabled', { round, ...this.#inspect() });
+		if (round === 1) {
+			say('texts', this.#texts(indicator));
+			if (GLib.getenv('DRIVER_MODE') === 'texts') {
+				return;
+			}
+		}
 		if (round !== 1) {
 			// Leave the menu open: the extension is disabled next, as when the screen locks. (The panel
 			// lays its new button out first: a menu opened at once has no position to open at.)

@@ -1,0 +1,199 @@
+# Romanian translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n==0 || n!=1 && (n%100>=1 && n%100<=19) ? 1 : 2);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Aspect general"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Este mai bine să afișați interfața de jos dacă folosiți un panou jos în loc de bara de sus implicită."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "De sus în jos"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "De jos în sus"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Setarea nu a putut fi salvată"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Numărul de emoji pe rând"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Dimensiunea emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Aspect"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Tastele modificatoare trebuie scrise între paranteze unghiulare"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Valoarea implicită este %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Nu folosiți o scurtătură de tastatură care există deja."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Folosiți o scurtătură de tastatură pentru a deschide și a închide meniul"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Scurtătură de tastatură"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Aceasta nu este o scurtătură de tastatură validă"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lista numelor de taste valide"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Afișați întotdeauna pictograma în panou"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Dacă accesați meniul cu scurtătura de tastatură, nu trebuie să afișați mereu pictograma."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Scurtături de tastatură"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Această extensie oferă un meniu pop-up configurabil care afișează majoritatea emoji, iar un clic pe un emoji îl copiază în clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Autor"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Traducător(i)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Contribuitori"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Raportați erori sau idei"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Despre"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Pagina web nu a putut fi deschisă"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Zâmbete & corp"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Persoane & îmbrăcăminte"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Animale & natură"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Mâncare & băutură"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Călătorii & locuri"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Activități & sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Obiecte"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Simboluri"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Steaguri"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Tastați aici pentru a căuta…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Fără nuanță a pielii"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Nuanță deschisă a pielii"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Nuanță mediu-deschisă a pielii"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Nuanță medie a pielii"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Nuanță mediu-închisă a pielii"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Nuanță închisă a pielii"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Femei"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Bărbați"

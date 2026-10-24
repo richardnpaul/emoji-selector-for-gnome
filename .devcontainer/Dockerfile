@@ -9,6 +9,13 @@ ARG CONTAINER_USER=vscode
 ARG USER_UID=1000
 ARG USER_GID=1000
 
+# The base image installs only the English translations of its packages (%_install_langs). A real desktop has the
+# others, and that matters: GLib refuses to translate anything in a program that has set its own text domain, as
+# the Shell has, when that domain has no catalogue for the user's language. Without the Shell's own translations an
+# extension would never be translated here. So install them for the languages that the tests run in
+# (tests/integration/catalogues.tooling.test.js checks that these cover its users).
+RUN echo '%_install_langs en_US:ar:de:es:fr:he:ja:pt:pt_BR:zh_CN:zh_TW:zh_HK' > /etc/rpm/macros.image-language-conf
+
 # gnome-shell/mutter: nested headless compositor + the Shell typelibs
 # gjs/gtk4/libadwaita: run prefs.js for real (under Xvfb)
 # glib2-devel: glib-compile-schemas; gettext: xgettext/msgmerge/msgfmt

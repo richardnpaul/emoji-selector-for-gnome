@@ -7,6 +7,7 @@ import path from 'node:path';
 
 import { describe, expect, it } from 'vitest';
 
+import { renderLanguages } from '../../translations/tools/languages.mjs';
 import { readCatalogue, placeholders } from '../support/po.js';
 import { EXTENSION_DIR, METADATA } from '../support/paths.js';
 
@@ -54,7 +55,10 @@ describe('catalogues are found by the locales of real users (real gettext)', () 
 		['he_IL.utf8', 'he'],
 		['ja_JP.utf8', 'ja'],
 		['pt_BR.utf8', 'pt_BR'],
+		['pt_PT.utf8', 'pt'],
 		['zh_CN.utf8', 'zh_CN'],
+		['zh_TW.utf8', 'zh_TW'],
+		['zh_HK.utf8', 'zh_HK'],
 	];
 
 	/** A few messages the catalogue really translates (not fuzzy, not left as in English). */
@@ -90,6 +94,15 @@ describe('catalogues are found by the locales of real users (real gettext)', () 
 		expect(languages.filter((language) => !dockerfile.includes(`glibc-langpack-${language} `))).toEqual([]);
 	});
 
+	it('has the translations of the Shell itself for these users in the image (GLib translates nothing without them)', () => {
+		const dockerfile = readFileSync(path.join(ROOT, '.devcontainer/Dockerfile'), 'utf8');
+		const installed = new Set(/%_install_langs ([^']+)'/.exec(dockerfile)[1].split(':'));
+		const missing = USERS.map(([locale]) => locale.replace('.utf8', '')).filter(
+			(locale) => !installed.has(locale) && !installed.has(locale.split('_')[0]),
+		);
+		expect(missing).toEqual([]);
+	});
+
 	it('a user of a language without a catalogue gets the English messages', () => {
 		const result = spawnSync(
 			'gjs',
@@ -114,6 +127,43 @@ describe('provenance', () => {
 		const entry = provenance?.catalogues[name];
 		expect(['human', 'machine', 'merged'], name).toContain(entry?.origin);
 		expect([1, 2, 3], name).toContain(entry?.tier);
+	});
+});
+
+describe('the English of the source strings', () => {
+	// American spellings and words; the source is British English and serves en, en_GB, en_US, en_CA, ...
+	const AMERICAN =
+		/\b(?:colors?|colored|favorites?|behaviors?|centers?|centered|grays?|customize|customized|organize|organized|license|catalogs?|neighbors?|honors?|defense|theaters?|meters?|traveling|canceled|analyze|recognize|recognized|realized?|optimize|initialize|minimize|maximize|synchronize|normalize|apologize|summarize|prioritize|localize|authorize|categorize)\b/i;
+
+	it('recognises American spellings, and not British ones (a control for the check below)', () => {
+		for (const american of ['Customize the color', 'Favorites', 'Show the center', 'Organize', 'Synchronize']) {
+			expect(AMERICAN.test(american), american).toBe(true);
+		}
+		for (const british of [
+			'Customise the colour',
+			'Favourites',
+			'Show the centre',
+			'Size of emojis',
+			'Travel & Places',
+		]) {
+			expect(AMERICAN.test(british), british).toBe(false);
+		}
+	});
+
+	it('are written in British English: no American spelling in the template', () => {
+		const template = readCatalogue(path.join(LOCALE_DIR, `${DOMAIN}.pot`)).entries.map((entry) => entry.msgid);
+		expect(template.filter((msgid) => AMERICAN.test(msgid))).toEqual([]);
+	});
+
+	it('have no English catalogue to stand in for another: en_GB, en_US and en users all get the source text', () => {
+		expect(catalogues.filter((name) => name === 'en' || name.startsWith('en_'))).toEqual([]);
+	});
+});
+
+describe('the table of languages', () => {
+	it('names every language, and is docs/languages.md as the generator writes it', () => {
+		expect(catalogues.filter((name) => !provenance?.catalogues[name]?.name)).toEqual([]);
+		expect(readFileSync(path.join(ROOT, 'docs', 'languages.md'), 'utf8')).toBe(renderLanguages(provenance));
 	});
 });
 

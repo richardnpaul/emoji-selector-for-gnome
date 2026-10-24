@@ -1,0 +1,199 @@
+# Sundanese translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: su\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Perenah umum"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Nampilkeun antarmuka ti handap leuwih hadé lamun anjeun maké panél handap tinimbang bar luhur bawaan."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Ti luhur ka handap"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Ti handap ka luhur"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Setélan teu bisa disimpen"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Jumlah émoji per baris"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Ukuran émoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Perenah"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Tombol pangubah kudu aya di antara tanda kurung sudut"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Nilai bawaanna nyaéta %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Entong maké potong kompas kibor anu geus aya."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Maké potong kompas kibor pikeun muka/nutup ménu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Potong kompas kibor"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Ieu lain potong kompas kibor anu sah"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Daptar ngaran tombol anu sah"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Salawasna témbongkeun ikon dina panél"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Lamun anjeun ngaksés ménu maké potong kompas kibor, anjeun teu kudu salawasna nampilkeun ikon."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Pangikat kibor"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Éksténsi ieu nyadiakeun ménu pop-up anu bisa diatur anu nampilkeun lolobana émoji; ngaklik émoji bakal nyalin ka papan klip."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Pangarang"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Panarjamah"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Kontributor"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Laporkeun bug atawa gagasan"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Ngeunaan"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Teu bisa muka kaca wéb"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smiley & Awak"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Jalma & Papakéan"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Sato & Alam"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Kadaharan & Inuman"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Lalampahan & Tempat"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Kagiatan & Olahraga"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Barang"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Simbol"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bandéra"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Ketik di dieu pikeun neangan…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Euweuh warna kulit"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Warna kulit caang"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Warna kulit satengah caang"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Warna kulit sedeng"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Warna kulit satengah poék"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Warna kulit poék"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Awéwé"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Lalaki"

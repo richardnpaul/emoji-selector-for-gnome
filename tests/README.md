@@ -75,6 +75,7 @@ tests/
     catalogues.tooling.test.js        catalogue names and headers; real gettext finds the right catalogue for the locales of
                                       nine kinds of user; provenance.json; placeholders; machine-made and merged catalogues
                                       complete; a merged catalogue differs from the human one only where the report says
+    plural-forms.tooling.test.js      every catalogue's Plural-Forms against the CLDR plural rules for 0 to 2000
     real-tools.tooling.test.js        real glib-compile-schemas, msgfmt (all catalogues), shipped .mo == .po,
                                       template matches the sources, real API names and constants, icons,
                                       stylesheet classes, no binaries
@@ -99,9 +100,11 @@ container's session tooling and add no coverage, so `npm test`, `npm run check` 
 mutation testing automatically (`vitest.stryker.config.mjs`), because Stryker instruments the sources and
 these tests cannot kill mutants anyway.
 
-Quirks of the real Shell that the driver works around: the first events of a new virtual pointer or keyboard
-are lost (it moves twice and retries the shortcut), and without the extension's shortcut Super+period opens
-the overview.
+Quirks of the real Shell that the driver works around: the first events of a new virtual pointer or keyboard are lost (it
+moves twice and retries the shortcut), and without the extension's shortcut Super+period opens the overview. One the
+image has to deal with: when the Shell's own text domain has no catalogue for the user's locale, GLib translates no
+extension string at all, so the Dockerfile installs the Shell's translations for the languages of the tests
+(`%_install_langs`).
 
 ## Mutation testing
 

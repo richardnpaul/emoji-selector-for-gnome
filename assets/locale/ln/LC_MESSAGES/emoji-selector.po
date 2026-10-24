@@ -1,0 +1,199 @@
+# Lingala translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ln\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=((n>=0 && n<=1) ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Lolenge ya mobimba"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Kolakisa interface uta na nse eleki malamu soki ozali kosalela panneau ya nse na esika ya barre ya likolo ya ntango nyonso."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Uta likolo tii nse"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Uta nse tii likolo"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Eloko ya kobongisa ekoki kobombama te"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Motango ya emoji na molongo moko"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Monene ya emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Lolenge"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Bilembo ya modifier esengeli kozala kati na < >"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Motuya ya liboso ezali %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Kosalela te nzela mokuse ya clavier oyo ezali kala."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Salela nzela mokuse ya clavier mpo na kofungola to kokanga menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Nzela mokuse ya clavier"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Oyo ezali nzela mokuse ya clavier oyo ekoki te"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Liste ya nkombo ya ba touche oyo ekoki"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Lakisa ntango nyonso elilingi na panneau"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Soki ofungoli menu na nzela mokuse ya clavier, osengeli te kolakisa ntango nyonso elilingi."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Ba nzela mokuse ya clavier"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Extension oyo epesi menu oyo ekoki kobongisama oyo elakisi mingi ya ba emoji; kopina na emoji ekopi yango na clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Mokomi"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Mobongoli(ba)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Basungi"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Yebisa mabunga to makanisi"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Na ntina na"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Ekokaki kofungola lokasa ya wɛbu te"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Bilongi mpe nzoto"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Bato mpe bilamba"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Banyama mpe bikelamu"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Bilei mpe boissons"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Mibembo mpe bisika"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Misala mpe sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Biloko"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Bilembo"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bendele"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Koma awa mpo na koluka…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Langi ya poso te"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Poso ya polele"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Poso ya polele na katikati"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Poso ya katikati"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Poso ya moindo na katikati"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Poso ya moindo"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Basi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Babali"

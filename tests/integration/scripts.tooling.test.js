@@ -339,14 +339,14 @@ describe('maintainer scripts', () => {
 		const create = (...args) => run('new-catalogue.sh', args);
 
 		it('creates the catalogue of a language from the template: every message, none translated', () => {
-			const result = create('ko');
+			const result = create('ru');
 			expect(result.stderr).toBe('');
 			expect(result.status).toBe(0);
-			expect(result.stdout).toBe(`Created assets/locale/ko/LC_MESSAGES/${DOMAIN}.po\n`);
-			const text = readFileSync(po('ko'), 'utf8');
-			expect(text).toContain('"Language: ko\\n"');
-			expect(text).toContain('"Plural-Forms: nplurals=1; plural=0;\\n"');
-			const { entries } = readCatalogue(po('ko'));
+			expect(result.stdout).toBe(`Created assets/locale/ru/LC_MESSAGES/${DOMAIN}.po\n`);
+			const text = readFileSync(po('ru'), 'utf8');
+			expect(text).toContain('"Language: ru\\n"');
+			expect(text).toContain('"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0');
+			const { entries } = readCatalogue(po('ru'));
 			const template = readCatalogue(path.join(locale(), `${DOMAIN}.pot`)).entries.map((entry) => entry.msgid);
 			expect(entries.map((entry) => entry.msgid)).toEqual(template);
 			expect(entries.filter((entry) => entry.msgstr !== '')).toEqual([]);
@@ -358,16 +358,16 @@ describe('maintainer scripts', () => {
 		});
 
 		it('says so when msginit does not know the plural forms of the language, and still creates the catalogue', () => {
-			const result = create('ak');
+			const result = create('yue');
 			expect(result.status).toBe(0);
 			expect(result.stderr).toMatch(/Plural-Forms/);
-			expect(readFileSync(po('ak'), 'utf8')).toContain('"Language: ak\\n"');
+			expect(readFileSync(po('yue'), 'utf8')).toContain('"Language: yue\\n"');
 		});
 
 		it('does not touch the other catalogues, the template or the compiled files', () => {
 			const before = fingerprint(locale());
-			expect(create('ko').status).toBe(0);
-			rmSync(path.join(locale(), 'ko'), { recursive: true });
+			expect(create('ru').status).toBe(0);
+			rmSync(path.join(locale(), 'ru'), { recursive: true });
 			expect(fingerprint(locale())).toBe(before);
 		});
 
@@ -398,10 +398,10 @@ describe('maintainer scripts', () => {
 
 		it('fails, creating nothing, when the template is missing', () => {
 			rmSync(path.join(locale(), `${DOMAIN}.pot`));
-			const result = create('ko');
+			const result = create('ru');
 			expect(result.status).not.toBe(0);
 			expect(result.stderr).toContain('.pot');
-			expect(existsSync(path.join(locale(), 'ko'))).toBe(false);
+			expect(existsSync(path.join(locale(), 'ru'))).toBe(false);
 		});
 	});
 
@@ -451,7 +451,7 @@ describe('maintainer scripts', () => {
 			['new-catalogue.sh', 'msginit'],
 		])('%s names the missing %s and changes nothing', (script, tool) => {
 			const before = fingerprint(repo);
-			const args = script === 'new-catalogue.sh' ? ['ko'] : [];
+			const args = script === 'new-catalogue.sh' ? ['ru'] : [];
 			const result = run(script, args, { PATH: withoutTool(tool), EXTENSIONS_DIR: path.join(base, 'ext') });
 			expect(result.status).not.toBe(0);
 			expect(result.stderr).toContain(tool);

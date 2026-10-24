@@ -1,0 +1,199 @@
+# Zulu translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: zu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Isakhiwo jikelele"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Kungcono ukubonisa isixhumi esibonakalayo kusukela phansi uma usebenzisa iphaneli engezansi esikhundleni sebha ephezulu ezenzakalelayo."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Kusukela phezulu kuya phansi"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Kusukela phansi kuya phezulu"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Lesi sethingi asikwazanga ukulondolozwa"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Inani lama-emoji emgqeni ngamunye"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Usayizi wama-emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Isakhiwo"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Okhiye bokuguqula kufanele babe phakathi kwezimpawu < >"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Inani elizenzakalelayo ngu-%s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Ungasebenzisi isinqumelo sekhibhodi esivele sikhona."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Sebenzisa isinqumelo sekhibhodi ukuvula nokuvala imenyu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Isinqumelo sekhibhodi"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Lesi akusona isinqumelo sekhibhodi esivumelekile"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Uhlu lwamagama okhiye avumelekile"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Njalo bonisa isithonjana epanelini"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Uma uvula imenyu ngesinqumelo sekhibhodi, awudingi ukubonisa isithonjana njalo."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Ukuhlanganiswa kwekhibhodi"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Lesi sandiso sinikeza imenyu evelelayo elungisekayo ebonisa ama-emoji amaningi; ukuchofoza i-emoji kuyayikopisha ku-clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Umbhali"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Umhumushi"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Abanikele"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Bika amaphutha noma imibono"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Mayelana"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Ikhasi lewebhu alikwazanga ukuvulwa"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Ubuso & Umzimba"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Abantu & Izimpahla"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Izilwane & Imvelo"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Ukudla & Ukuphuza"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Ukuvakasha & Izindawo"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Imisebenzi & Imidlalo"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Izinto"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Izimpawu"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Amafulegi"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Thayipha lapha ukuze usesha…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Awukho umbala wesikhumba"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Umbala wesikhumba olula"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Umbala wesikhumba olula ophakathi nendawo"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Umbala wesikhumba ophakathi nendawo"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Umbala wesikhumba ophakathi nendawo omnyama"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Umbala wesikhumba omnyama"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Abesifazane"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Amadoda"

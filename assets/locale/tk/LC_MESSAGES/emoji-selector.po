@@ -1,0 +1,199 @@
+# Turkmen translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: tk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Umumy ýerleşiş"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Eger adaty ýokarky paneliň ýerine aşaky panel ulanýan bolsaňyz, interfeýsi aşakdan görkezmek has gowy."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Ýokardan aşaklygyna"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Aşakdan ýokarlygyna"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Sazlama ýatda saklanyp bilinmedi"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Her setirdäki emoji sany"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Emojileriň ölçegi (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Ýerleşiş"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Üýtgediji düwmeler burçly ýaýlaryň arasynda bolmaly"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Adaty baha: %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Eýýäm bar bolan klawiatura gysga ýoluny ulanmaň."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Menýuny açmak we ýapmak üçin klawiatura gysga ýoluny ulanyň"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Klawiatura gysga ýoly"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Bu dogry klawiatura gysga ýoly däl"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Dogry düwme atlarynyň sanawy"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Nyşany panelde elmydama görkez"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Menýuny klawiatura gysga ýoly bilen açýan bolsaňyz, nyşany elmydama görkezmegiň zerurlygy ýok."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Klawiatura baglanyşyklary"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Bu giňeltme köp emojileri görkezýän sazlanyp bilinýän açylýan menýu hödürleýär; emojä basmak ony alyş-çalyş buferine göçürýär."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Awtor"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Terjimeçi(ler)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Goşant goşanlar"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Säwlikler ýa-da pikirler barada habar beriň"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Barada"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Web sahypasyny açyp bolmady"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smaýlikler we beden"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Adamlar we egin-eşik"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Haýwanlar we tebigat"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Iýmit we içgi"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Syýahat we ýerler"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Işjeňlikler we sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Obýektler"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Simwollar"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Baýdaklar"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Gözlemek üçin şu ýere ýazyň…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Deri tony ýok"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Açyk deri tony"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Orta açyk deri tony"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Orta deri tony"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Orta goýy deri tony"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Goýy deri tony"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Aýallar"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Erkekler"

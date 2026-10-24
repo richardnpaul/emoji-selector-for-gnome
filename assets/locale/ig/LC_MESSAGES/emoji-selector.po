@@ -1,0 +1,199 @@
+# Igbo translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ig\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Nhazi izugbe"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Igosipụta interface site n'ala ka mma ma ọ bụrụ na ị na-eji panel dị n'ala kama ogwe dị n'elu nke ndabara."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Site n'elu ruo n'ala"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Site n'ala ruo n'elu"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Enweghị ike ichekwa ntọala ahụ"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Ọnụọgụ emoji n'ahịrị ọ bụla"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Nha emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Nhazi"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Igodo mgbanwe ga-adị n'etiti akara < >"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Uru ndabara bụ %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Ejila ụzọ mkpirisi keyboard nke dị ugbu a."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Jiri ụzọ mkpirisi keyboard mepee ma mechie menu ahụ"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Ụzọ mkpirisi keyboard"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Nke a abụghị ụzọ mkpirisi keyboard ziri ezi"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Ndepụta aha igodo ziri ezi"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Gosipụta akara ngosi n'ime panel mgbe niile"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Ọ bụrụ na ị na-eji ụzọ mkpirisi keyboard emepe menu ahụ, ịchọghị igosipụta akara ngosi mgbe niile."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Njikọ keyboard"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Ndọtị a na-enye menu pop-up enwere ike ịhazi nke na-egosi ọtụtụ emoji; ịpị emoji na-edegara ya na clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Onye dere ya"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Onye ntụgharị"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Ndị so nye aka"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Kọọ ahụhụ ma ọ bụ echiche"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Maka"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Enweghị ike imepe ibe weebụ ahụ"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Ihu ọchị & Ahụ"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Ndị mmadụ & Uwe"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Anụmanụ & Okike"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Nri & Ihe ọṅụṅụ"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Njem & Ebe"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Ọrụ & Egwuregwu"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Ihe"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Akara"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Ọkọlọtọ"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Pịnye ebe a ichọ…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Enweghị ụcha akpụkpọ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Ụcha akpụkpọ na-acha ọcha"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Ụcha akpụkpọ etiti na-acha ọcha"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Ụcha akpụkpọ etiti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Ụcha akpụkpọ etiti nke ojii"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Ụcha akpụkpọ ojii"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Ụmụ nwanyị"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Ụmụ nwoke"

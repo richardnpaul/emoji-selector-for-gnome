@@ -1,0 +1,199 @@
+# Catalan translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Disposició general"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "És millor mostrar la interfície des de baix si utilitzes una barra inferior en lloc de la barra superior predeterminada."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "De dalt a baix"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "De baix a dalt"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "No s'ha pogut desar el paràmetre"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Nombre d'emojis per línia"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Mida dels emojis (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Disposició"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Les tecles modificadores han d'anar entre parèntesis angulars"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "El valor predeterminat és %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "No utilitzis una drecera de teclat que ja existeixi."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Utilitza una drecera de teclat per obrir i tancar el menú"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Drecera de teclat"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Aquesta no és una drecera de teclat vàlida"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Llista de noms de tecla vàlids"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Mostra sempre la icona a la barra"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Si accedeixes al menú amb la drecera de teclat, no cal que mostris sempre la icona."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Dreceres de teclat"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Aquesta extensió ofereix un menú emergent configurable que mostra la majoria d'emojis, i en fer clic en un emoji es copia al porta-retalls."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Autor"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Traductor(s)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Col·laboradors"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Informa d'errors o idees"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Quant a"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "No s'ha pogut obrir la pàgina web"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Emoticones & cos"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Persones & roba"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Animals & natura"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Menjar & beguda"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Viatges & llocs"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Activitats & esports"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Objectes"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Símbols"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Banderes"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Escriu aquí per cercar…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Sense to de pell"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "To de pell clar"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "To de pell mitjanament clar"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "To de pell mitjà"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "To de pell mitjanament fosc"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "To de pell fosc"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Dones"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Homes"

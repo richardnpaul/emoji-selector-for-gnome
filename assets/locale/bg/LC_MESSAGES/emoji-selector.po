@@ -1,0 +1,199 @@
+# Bulgarian translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Общо оформление"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Показването на интерфейса отдолу е по-добро, ако използвате долен панел вместо подразбиращата се горна лента."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "От горе надолу"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "От долу нагоре"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Настройката не можа да бъде запазена"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Брой емоджита на ред"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Размер на емоджитата (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Оформление"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Клавишите-модификатори трябва да са между ъглови скоби"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Стойността по подразбиране е %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Не използвайте клавишна комбинация, която вече съществува."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Използване на клавишна комбинация за превключване на менюто"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Клавишна комбинация"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Това не е валидна клавишна комбинация"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Списък на валидните имена на клавиши"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Винаги показване на иконата в панела"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Ако отваряте менюто с клавишната комбинация, не е нужно иконата да се показва винаги."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Клавишни комбинации"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Това разширение предоставя настройваемо изскачащо меню с повечето емоджита; щракването върху емоджи го копира в клипборда."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Автор"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Преводач(и)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Сътрудници"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Докладване на грешки или идеи"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Относно"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Уеб страницата не можа да бъде отворена"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Усмивки и тяло"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Хора и облекло"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Животни и природа"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Храна и напитки"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Пътуване и места"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Дейности и спорт"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Предмети"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Символи"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Знамена"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Въведете за търсене…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Без тон на кожата"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Светъл тон на кожата"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Средно светъл тон на кожата"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Среден тон на кожата"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Средно тъмен тон на кожата"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Тъмен тон на кожата"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Жени"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Мъже"

@@ -1,0 +1,199 @@
+# Amharic translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: am\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "አጠቃላይ አቀማመጥ"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "ከነባሪው የላይኛው አሞሌ ይልቅ የታችኛውን ፓነል የሚጠቀሙ ከሆነ በይነገጹን ከታች ማሳየት የተሻለ ነው።"
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "ከላይ ወደ ታች"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "ከታች ወደ ላይ"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "ቅንብሩን ማስቀመጥ አልተቻለም"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "በእያንዳንዱ መስመር ያሉ ኢሞጂዎች ብዛት"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "የኢሞጂዎች መጠን (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "አቀማመጥ"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "የመቀየሪያ ቁልፎች በማዕዘን ቅንፎች ውስጥ መሆን አለባቸው"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "ነባሪው ዋጋ %s ነው"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "ቀድሞ ያለ የቁልፍ ሰሌዳ አቋራጭ አይጠቀሙ።"
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "ምናሌውን ለመክፈት እና ለመዝጋት የቁልፍ ሰሌዳ አቋራጭ ይጠቀሙ"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "የቁልፍ ሰሌዳ አቋራጭ"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "ይህ ትክክለኛ የቁልፍ ሰሌዳ አቋራጭ አይደለም"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "የትክክለኛ ቁልፍ ስሞች ዝርዝር"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "አዶውን ሁልጊዜ በፓነሉ ውስጥ አሳይ"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "ምናሌውን በቁልፍ ሰሌዳ አቋራጭ ከከፈቱ አዶውን ሁልጊዜ ማሳየት አያስፈልግዎትም።"
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "የቁልፍ ሰሌዳ ማሰሪያዎች"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ይህ ቅጥያ አብዛኞቹን ኢሞጂዎች የሚያሳይ ሊበጅ የሚችል ብቅ-ባይ ምናሌ ያቀርባል፤ ኢሞጂ ላይ ጠቅ ማድረግ ወደ ቅንጥብ ሰሌዳው ይቀዳዋል።"
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "ደራሲ"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "ተርጓሚ(ዎች)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "አስተዋጽዖ አበርካቾች"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "ስህተቶችን ወይም ሐሳቦችን ሪፖርት ያድርጉ"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "ስለ"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "የድር ገጹን መክፈት አልተቻለም"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "ፊቶች & አካል"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "ሰዎች & ልብስ"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "እንስሳት & ተፈጥሮ"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "ምግብ & መጠጥ"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "ጉዞ & ቦታዎች"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "እንቅስቃሴዎች & ስፖርት"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "ዕቃዎች"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "ምልክቶች"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "ባንዲራዎች"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "ለመፈለግ እዚህ ይተይቡ…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "የቆዳ ቀለም የለም"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "ቀላል የቆዳ ቀለም"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "መካከለኛ ቀላል የቆዳ ቀለም"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "መካከለኛ የቆዳ ቀለም"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "መካከለኛ ጥቁር የቆዳ ቀለም"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "ጥቁር የቆዳ ቀለም"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "ሴቶች"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "ወንዶች"

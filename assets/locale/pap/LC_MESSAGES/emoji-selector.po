@@ -1,0 +1,199 @@
+# Papiamento translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pap\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Diseño general"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Ta mihó pa mustra e interfas for di bou si bo ta usa un panel na bou en vez di e barra di riba ku ta default."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Di riba pa bou"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Di bou pa riba"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "No por a warda e konfigurashon"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Number di emoji pa liña"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Tamaño di emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Diseño"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Teklanan modifikador mester ta entre chevron"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "E balor default ta %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "No usa un kombinashon di tekla ku ya ta existí."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Usa un kombinashon di tekla pa habri òf sera e menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Kombinashon di tekla"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Esaki no ta un kombinashon di tekla válido"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lista di nòmber di tekla válido"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Mustra e ikono semper den e panel"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Si bo habri e menu ku e kombinashon di tekla, bo no tin ku mustra e ikono semper."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Kombinashonnan di tekla"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "E ekstenshon aki ta ofresé un menu konfigurabel ku ta mustra mayoria emoji; si bo klik riba un emoji, e ta kopia den e klipbord."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Outor"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Tradutor(nan)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Kontribuidónan"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Raportá fayonan òf idea"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Tokante"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "No por a habri e página web"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smiley i Kurpa"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Hende i Paña"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Animalnan i Naturalesa"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Kuminda i Bebida"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Biahe i Lugánan"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Aktividatnan i Deporte"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Kosnan"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Símbolonan"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bandera"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Skirbi aki pa buska…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Sin koló di piel"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Koló di piel kla"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Koló di piel mediano kla"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Koló di piel mediano"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Koló di piel mediano skur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Koló di piel skur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Muhénan"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Hombernan"
