@@ -28,8 +28,9 @@ export class Session {
     this.#uuid = uuid;
     this.#iconDir = iconDir;
     this.#catalogue = buildCatalogue(EMOJIS_CHARACTERS, EMOJIS_KEYWORDS);
-    this.#menu = this.#createMenu();
+    this.#menu = this.#newMenu();
     try {
+      this.#addToPanel(this.#menu);
       this.#syncKeybinding();
       this.#watchSettings();
     } catch (error) {
@@ -59,21 +60,47 @@ export class Session {
     // The number of columns and the position are laid out when the menu is created.
     for (const key of ['nbcols', 'position'] as const) {
       settings.onChanged(key, () => {
-        this.#menu.destroy();
-        this.#menu = this.#createMenu();
+        this.#rebuildMenu();
       });
     }
   }
 
-  #createMenu(): EmojiMenu {
-    const menu = new EmojiMenu(this.#settings, this.#catalogue, this.#iconDir);
+  #newMenu(): EmojiMenu {
+    return new EmojiMenu(this.#settings, this.#catalogue, this.#iconDir);
+  }
+
+  /** Puts the menu in the panel, or destroys it if the panel refuses it. */
+  #addToPanel(menu: EmojiMenu): void {
     try {
       Main.panel.addToStatusArea(this.#uuid, menu.button, 0, 'right');
     } catch (error) {
       menu.destroy();
       throw error;
     }
-    return menu;
+  }
+
+  /**
+   * Replaces the menu with one laid out for the new settings. If the new one cannot be built, the old one
+   * stays; if it cannot be put in the panel (the old one is gone by then, since the panel has one place
+   * for it), the session ends, which leaves nothing half-working.
+   */
+  #rebuildMenu(): void {
+    let next: EmojiMenu;
+    try {
+      next = this.#newMenu();
+    } catch (error) {
+      console.error('Cannot rebuild the menu, keeping the old one', error);
+      return;
+    }
+    this.#menu.destroy();
+    try {
+      this.#addToPanel(next);
+    } catch (error) {
+      console.error('Cannot put the rebuilt menu in the panel, stopping', error);
+      this.end();
+      return;
+    }
+    this.#menu = next;
   }
 
   /** The shortcut is bound exactly when the settings say so. */

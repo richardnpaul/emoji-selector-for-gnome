@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-"
+"gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2023-04-23 10:03+0200\n"
+"Last-Translator: Kryštof Černý <cleerline1mc@gmail.com>\n"
+"Language-Team: \n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Základní rozvržení"
+
+#: src/prefs.ts
+msgid ""
+"Displaying the interface from the bottom is better if you use a bottom panel "
+"instead of the default top bar."
+msgstr ""
+"Zobrazení rozhraní odspodu je vhodnější, pokud místo výchozí horní lišty "
+"používáte spodní panel."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Shora dolů"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Zespoda nahoru"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Nastavení se nepodařilo uložit"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Počet emotikonů na řádek"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Velikost emotikonů (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Rozvržení"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Klávesy modifikátorů musí být v lomených závorkách"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Výchozí hodnota je %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Nepoužívejte klávesovou zkratku, která je již použita."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Použít klávesovou zkratku pro přepnutí menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Klávesová zkratka"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Toto není platná klávesová zkratka"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Seznam platných názvů kláves"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Vždy zobrazit ikonu na panelu"
+
+#: src/prefs.ts
+msgid ""
+"If you access the menu with the keyboard shortcut, you don't need to always "
+"display the icon."
+msgstr ""
+"Pokud vyvoláváte menu pomocí klávesové zkratky, nepotřebujete mít vždy "
+"zobrazenou ikonu."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Přiřazení kláves"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Menu emotikonů"
+
+#: src/prefs.ts
+msgid ""
+"This extension provides a configurable popup menu displaying most emojis, "
+"clicking on an emoji copies it to the clipboard."
+msgstr ""
+"Toto rozšíření poskytuje nastavitelnou vyskakovací nabídku zobrazující "
+"většinu emoji; kliknutím na emoji se zkopíruje do schránky."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Autor"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "Kryštof Černý"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Překladatelé"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Přispěvatelé"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Nahlásit chyby nebo nápady"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "O rozšíření"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Webovou stránku se nepodařilo otevřít"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Tváře a tělo"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Lidé a oblečení"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Zvířata a příroda"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Jídlo a pití"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Cestování a místa"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Aktivity a sporty"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Předměty"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Symboly"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Vlajky"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Pište sem pro vyhledávání…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Bez barvy pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Světlá barva pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Středně světlá barva pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Střední barva pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Středně tmavá barva pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Tmavá barva pleti"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Žena"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Muž"

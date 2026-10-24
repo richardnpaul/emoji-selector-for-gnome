@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "noEmit": false,
-    "outDir": "dist/emoji-selector@maestroschan.fr",
+    "outDir": "dist/extension",
     "rootDir": "src",
     "removeComments": false,
     "sourceMap": false,

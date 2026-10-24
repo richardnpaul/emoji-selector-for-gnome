@@ -85,9 +85,18 @@ export class PreferencesPage extends Widget {
 }
 notifying(PreferencesPage, ['icon_name']);
 
+export class Toast extends Widget {}
+notifying(Toast, ['title', 'use_markup']);
+
 export class PreferencesWindow extends Widget {
+	toasts = [];
+
 	add(page) {
 		this.children.push(page);
+	}
+
+	add_toast(toast) {
+		this.toasts.push(toast);
 	}
 
 	get_display() {

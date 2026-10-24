@@ -113,10 +113,6 @@ describe('settings schema', () => {
 });
 
 describe('metadata.json', () => {
-	it('names the directory it lives in', () => {
-		expect(path.basename(EXTENSION_DIR)).toBe(METADATA.uuid);
-	});
-
 	it('points at a public https repository', () => {
 		expect(METADATA.url).toMatch(/^https:\/\/(github\.com|gitlab\.com|gitlab\.gnome\.org)\//);
 	});

@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-"
+"gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr ""
+
+#: src/prefs.ts
+msgid ""
+"Displaying the interface from the bottom is better if you use a bottom panel "
+"instead of the default top bar."
+msgstr ""
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr ""
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr ""
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr ""
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr ""
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr ""
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr ""
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr ""
+
+#: src/prefs.ts
+msgid ""
+"If you access the menu with the keyboard shortcut, you don't need to always "
+"display the icon."
+msgstr ""
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr ""
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr ""
+
+#: src/prefs.ts
+msgid ""
+"This extension provides a configurable popup menu displaying most emojis, "
+"clicking on an emoji copies it to the clipboard."
+msgstr ""
+
+#: src/prefs.ts
+msgid "Author"
+msgstr ""
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr ""
+
+#: src/prefs.ts
+msgid "About"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr ""
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr ""
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr ""
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr ""
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr ""
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr ""
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr ""
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr ""
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr ""
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr ""
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr ""
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr ""
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr ""
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr ""
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr ""
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr ""
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr ""
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr ""
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr ""

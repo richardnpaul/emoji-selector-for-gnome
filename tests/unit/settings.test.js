@@ -1,10 +1,10 @@
-import { EXTENSION_DIR } from '../support/paths.js';
+import { EXTENSION_DIR, METADATA } from '../support/paths.js';
 import { FakeSettings, parseSchema } from '../support/fakes/settings.js';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import { EmojiSettings } from '../../src/lib/settings.ts';
 
-const SCHEMA = parseSchema(`${EXTENSION_DIR}/schemas/org.gnome.shell.extensions.emoji-selector.gschema.xml`);
+const SCHEMA = parseSchema(`${EXTENSION_DIR}/schemas/${METADATA['settings-schema']}.gschema.xml`);
 
 describe('EmojiSettings', () => {
 	const create = () => {
@@ -65,6 +65,33 @@ describe('EmojiSettings', () => {
 			settings.gender = 1;
 			settings.recentlyUsed = ['z'];
 			expect([raw.get_int('skin-tone'), raw.get_int('gender'), raw.get_strv('recently-used')]).toEqual([4, 1, ['z']]);
+		});
+
+		it.each([
+			['skin-tone', (settings) => (settings.skinTone = 3)],
+			['gender', (settings) => (settings.gender = 1)],
+			['recently-used', (settings) => (settings.recentlyUsed = ['z'])],
+		])('says so, and keeps the stored value, when the key %s is locked', (key, write) => {
+			const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+			const { raw, settings } = create();
+			const before = JSON.stringify([settings.skinTone, settings.gender, settings.recentlyUsed]);
+			raw.lock(key);
+			write(settings);
+			expect(JSON.stringify([settings.skinTone, settings.gender, settings.recentlyUsed])).toBe(before);
+			expect(warn).toHaveBeenCalledExactlyOnceWith(
+				`Cannot save the setting '${key}': it is locked, or the value is not allowed`,
+			);
+			warn.mockRestore();
+		});
+
+		it('says nothing when the write is accepted', () => {
+			const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+			const { settings } = create();
+			settings.skinTone = 1;
+			settings.gender = 1;
+			settings.recentlyUsed = ['z'];
+			expect(warn).not.toHaveBeenCalled();
+			warn.mockRestore();
 		});
 
 		it('leaves the stored value alone when GSettings refuses an out-of-range one', () => {

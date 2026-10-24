@@ -4,7 +4,6 @@ description: Reviews this GNOME Shell extension against the extensions.gnome.org
 tools: Read, Grep, Glob, Bash, WebFetch
 model: sonnet
 effort: high
-memory: project
 ---
 
 You are the **EGO review gatekeeper** for the Emoji Selector extension. You reproduce what a GNOME Shell

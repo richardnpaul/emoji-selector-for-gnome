@@ -1,0 +1,199 @@
+# Italian translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Layout generale"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Visualizzare l'interfaccia dal basso è preferibile se si usa un pannello inferiore invece della barra superiore predefinita."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Dall'alto verso il basso"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Dal basso verso l'alto"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Impossibile salvare l'impostazione"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Numero di emoji per riga"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Dimensione delle emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Layout"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "I tasti modificatori devono essere racchiusi tra parentesi angolari"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Il valore predefinito è %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Non usare una scorciatoia da tastiera già esistente."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Usa una scorciatoia da tastiera per attivare o disattivare il menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Scorciatoia da tastiera"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Questa non è una scorciatoia da tastiera valida"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Elenco dei nomi di tasto validi"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Mostra sempre l'icona nel pannello"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Se si accede al menu con la scorciatoia da tastiera, non è necessario mostrare sempre l'icona."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Scorciatoie da tastiera"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Questa estensione fornisce un menu a comparsa configurabile che mostra la maggior parte delle emoji; facendo clic su un'emoji, questa viene copiata negli appunti."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Autore"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Traduttori"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Collaboratori"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Segnala errori o idee"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Informazioni"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Impossibile aprire la pagina web"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Faccine e corpo"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Persone e abbigliamento"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Animali e natura"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Cibo e bevande"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Viaggi e luoghi"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Attività e sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Oggetti"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Simboli"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bandiere"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Digita qui per cercare…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Nessun tono della pelle"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Tono della pelle chiaro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Tono della pelle medio-chiaro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Tono della pelle medio"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Tono della pelle medio-scuro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Tono della pelle scuro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Donne"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Uomini"

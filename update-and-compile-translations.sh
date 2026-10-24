@@ -9,7 +9,6 @@
 set -euo pipefail
 
 readonly DOMAIN='emoji-selector'
-readonly UUID='emoji-selector@maestroschan.fr'
 
 if (($# != 0)); then
 	echo "Usage: $0" >&2
@@ -25,7 +24,7 @@ for tool in xgettext msgmerge msgfmt grep; do
 	fi
 done
 
-locale_dir="$UUID/locale"
+locale_dir="assets/locale"
 template="$locale_dir/$DOMAIN.pot"
 
 fresh_template=$(mktemp)
@@ -33,7 +32,9 @@ trap 'rm -f -- "${fresh_template:?}"' EXIT
 
 echo "Generating $template..."
 # (An unusable GIT_DIR stops xgettext from asking git for file dates, and from complaining about names it cannot parse.)
-GIT_DIR=/nonexistent xgettext --files-from=POTFILES.in --from-code=UTF-8 --add-location=file --output="$fresh_template"
+GIT_DIR=/nonexistent xgettext --files-from=POTFILES.in --from-code=UTF-8 --add-location=file \
+	--package-name='Emoji Selector' --msgid-bugs-address='https://github.com/richardnpaul/emoji-selector-for-gnome/issues' \
+	--output="$fresh_template"
 
 without_date() {
 	grep -v '^"POT-Creation-Date:' -- "$1"

@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-"
+"gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2020-12-09 14:44+0100\n"
+"Last-Translator: Óscar Fernández Díaz <oscfdezdz@tuta.io>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Distribución general"
+
+#: src/prefs.ts
+#, fuzzy
+#| msgid ""
+#| "Displaying the interface from the bottom is better if you use a bottom "
+#| "panel instead of the default top bar."
+msgid ""
+"Displaying the interface from the bottom is better if you use a bottom panel "
+"instead of the default top bar."
+msgstr ""
+"Mostrar la interfaz desde abajo puede ser de utilidad si usas un panel "
+"inferior en vez de la barra superior predeterminada."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "De arriba a abajo"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "De abajo a arriba"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr ""
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Número de emojis por linea"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Tamaño de los emojis (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Distribución"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Las teclas modificadoras deben estar entre los cheurones"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "El valor por defecto es %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "No use un atajo de teclado que ya existe."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Usar un atajo de teclado para mostrar el menú"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr ""
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr ""
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lista de nombres clave válidos"
+
+#: src/prefs.ts
+#, fuzzy
+#| msgid "Always show the icon"
+msgid "Always show the icon in the panel"
+msgstr "Mostrar siempre el icono"
+
+#: src/prefs.ts
+msgid ""
+"If you access the menu with the keyboard shortcut, you don't need to always "
+"display the icon."
+msgstr ""
+"Si accedes al menú con el atajo de teclado, puede que no necesites que se "
+"muestre siempre el icono."
+
+#: src/prefs.ts
+#, fuzzy
+#| msgid "Keybinding"
+msgid "Keyboard bindings"
+msgstr "Atajos de teclado"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr ""
+
+#: src/prefs.ts
+#, fuzzy
+#| msgid ""
+#| "This extension provides a parametrable popup menu displaying most emojis, "
+#| "clicking on an emoji copies it to the clipboard."
+msgid ""
+"This extension provides a configurable popup menu displaying most emojis, "
+"clicking on an emoji copies it to the clipboard."
+msgstr ""
+"Esta extensión proporciona un menú desplegable configurable que muestra la "
+"mayoría de los emojis, al hacer clic en un emoji lo copia al portapapeles."
+
+#: src/prefs.ts
+#, fuzzy
+#| msgid "Author:"
+msgid "Author"
+msgstr "Autor:"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "créditos-traductor"
+
+#: src/prefs.ts
+#, fuzzy
+#| msgid "Translator(s):"
+msgid "Translator(s)"
+msgstr "Traductor(es):"
+
+#: src/prefs.ts
+#, fuzzy
+#| msgid "Contributors:"
+msgid "Contributors"
+msgstr "Colaboradores:"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Informar errores o ideas"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Acerca de"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr ""
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Emoticonos & Cuerpos"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Personas & Vestimentas"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Animales & Naturaleza"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Comidas & Bebidas"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Viajes & Lugares"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Actividades & Deportes"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Objetos"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Símbolos"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Banderas"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Escriba aquí para buscar…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Sin tonalidad de piel"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Tonalidad clara"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Tonalidad ligeramente clara"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Tonalidad media"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Tonalidad ligeramente oscura"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Tonalidad oscura"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Mujer"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Hombre"
+
+#~ msgid "Modifications will be effective after reloading the extension."
+#~ msgstr "Los cambios tendrán efecto tras recargar la extensión."
+
+#, javascript-format
+#~ msgid "version %s"
+#~ msgstr "versión %s"
+
+#~ msgid "Help"
+#~ msgstr "Ayuda"
+
+#~ msgid "Apply"
+#~ msgstr "Aplicar"
+
+#, javascript-format
+#~ msgid "Incorrect number of keywords for category '%s':"
+#~ msgstr "Número incorrecto de palabras clave para la categoría '%s':"
+
+#~ msgid "Please report this bug"
+#~ msgstr "Por favor, informe de este error"
+
+#~ msgid "Settings"
+#~ msgstr "Ajustes"
+
+#~ msgid "Default value is:"
+#~ msgstr "El valor por defecto es"
+
+#~ msgid "Use dark font"
+#~ msgstr "Usar color oscuro de fuente"
+
+#~ msgid ""
+#~ "This is useful if your system doesn't support color emojis and your GNOME "
+#~ "Shell theme has a white menu background."
+#~ msgstr ""
+#~ "De gran utilidad si su sistema no soporta emojis de colores y su tema de "
+#~ "GNOME Shell tiene un fondo de menú claro."
+
+#~ msgid "Appearance"
+#~ msgstr "Apariencia"

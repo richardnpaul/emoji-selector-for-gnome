@@ -1,0 +1,199 @@
+# Hebrew translations for the Emoji Selector package.
+# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "פריסה כללית"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "הצגת הממשק מלמטה מתאימה יותר אם אתם משתמשים בלוח תחתון במקום בסרגל העליון המוגדר כברירת מחדל."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "מלמעלה למטה"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "מלמטה למעלה"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "לא ניתן היה לשמור את ההגדרה"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "מספר האימוג'ים בשורה"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "גודל האימוג'ים (בפיקסלים)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "פריסה"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "מקשי שינוי חייבים להיות בין סוגריים זוויתיים"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "ערך ברירת המחדל הוא %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "אל תשתמשו בקיצור מקשים שכבר קיים."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "שימוש בקיצור מקשים להצגה והסתרה של התפריט"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "קיצור מקשים"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "זה אינו קיצור מקשים תקין"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "רשימת שמות מקשים תקינים"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "הצגת הסמל בלוח תמיד"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "אם אתם פותחים את התפריט בקיצור מקשים, אין צורך להציג את הסמל תמיד."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "קיצורי מקשים"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ההרחבה מספקת תפריט קופץ הניתן להגדרה המציג את רוב האימוג'ים. לחיצה על אימוג'י מעתיקה אותו ללוח הגזירים."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "מחבר"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "מתרגמים"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "תורמים"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "דיווח על באגים או רעיונות"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "אודות"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "לא ניתן היה לפתוח את דף האינטרנט"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "סמיילים וגוף"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "אנשים ולבוש"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "בעלי חיים וטבע"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "אוכל ושתייה"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "נסיעות ומקומות"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "פעילויות וספורט"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "חפצים"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "סמלים"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "דגלים"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "הקלידו כאן לחיפוש…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "ללא גוון עור"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "גוון עור בהיר"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "גוון עור בינוני־בהיר"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "גוון עור בינוני"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "גוון עור בינוני־כהה"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "גוון עור כהה"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "נשים"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "גברים"

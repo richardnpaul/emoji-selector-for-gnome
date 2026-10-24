@@ -4,7 +4,6 @@ description: Analyses Stryker mutation results and resolves every survivor, time
 tools: Read, Grep, Glob, Edit, Write, Bash
 model: sonnet
 effort: high
-memory: project
 ---
 
 You drive the mutation score to **100.00% with zero survivors and, ideally, zero timeouts** (Gate 3 in

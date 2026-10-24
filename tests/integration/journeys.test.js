@@ -7,10 +7,11 @@ import { EMOJIS_CHARACTERS } from '../../src/data/emojisCharacters.ts';
 import { EMOJIS_KEYWORDS } from '../../src/data/emojisKeywords.ts';
 import { ButtonEvent, KeyEvent } from '../support/fakes/toolkit.js';
 import { Actor } from '../support/fakes/toolkit.js';
+import { METADATA } from '../support/paths.js';
 import { createSettings } from '../support/settings.js';
 import { clipboard, extensionState, glib, main, shellGlobal } from '../support/shell-state.js';
 
-const UUID = 'emoji-selector@maestroschan.fr';
+const UUID = METADATA.uuid;
 const MEDIUM_TONE = '\u{1F3FD}';
 const WOMAN_SIGN = '‍♀️';
 const SMILEYS = 0;

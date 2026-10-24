@@ -55,7 +55,7 @@ repos:
         args: [--ignore-words-list=afterall]
         # The emoji tables and gettext files hold other languages and generated text, and the
         # security references are third-party example patterns.
-        exclude: ^(package-lock\.json|tests/fixtures/.*|\.agents/skills/security-review/references/.*|emoji-selector@maestroschan\.fr/locale/.*|src/data/.*)$
+        exclude: ^(package-lock\.json|tests/fixtures/.*|\.agents/skills/security-review/references/.*|assets/locale/.*|translations/(human|machine)/.*|translations/comparison\.md|src/data/.*)$
 
   - repo: https://github.com/rhysd/actionlint
     rev: 914e7df21a07ef503a81201c76d2b11c789d3fca # frozen: v1.7.12
@@ -98,7 +98,7 @@ repos:
         exclude: ^\.pre-commit-config\.yaml$
       - id: gsettings-schema
         name: gsettings schema compiles (strict)
-        entry: glib-compile-schemas --strict --dry-run emoji-selector@maestroschan.fr/schemas
+        entry: glib-compile-schemas --strict --dry-run assets/schemas
         language: system
         files: \.gschema\.xml$
         pass_filenames: false

@@ -1,7 +1,7 @@
-// Behaviour of the three maintainer scripts (build-a-zip.sh, install.sh,
+// Behaviour of the two maintainer scripts (build-a-zip.sh,
 // update-and-compile-translations.sh), run for real in a sandbox copy of the project so that the
 // working tree is never touched. The sandbox path contains a space on purpose.
-import { spawn, spawnSync } from 'node:child_process';
+import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import {
 	chmodSync,
@@ -22,11 +22,12 @@ import path from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { EXTENSION_DIR, METADATA } from '../support/paths.js';
+import { readCatalogue } from '../support/po.js';
 
 const ROOT = path.resolve(EXTENSION_DIR, '..');
 const UUID = METADATA.uuid;
 const DOMAIN = METADATA['gettext-domain'];
-const SCRIPTS = ['build-a-zip.sh', 'install.sh', 'update-and-compile-translations.sh'];
+const SCRIPTS = ['build-a-zip.sh', 'update-and-compile-translations.sh', 'new-catalogue.sh'];
 // Every shell script the project owns (the safe-shell rules apply to all of them).
 const ALL_SHELL_SCRIPTS = [
 	...readdirSync(ROOT).filter((name) => name.endsWith('.sh')),
@@ -49,13 +50,13 @@ const COMPILED = {
 describe('maintainer scripts', () => {
 	let base;
 	let repo;
-	const compiled = () => path.join(repo, 'dist', UUID);
+	const compiled = () => path.join(repo, 'dist', 'extension');
 
 	beforeEach(() => {
 		base = mkdtempSync(path.join(os.tmpdir(), 'emoji-scripts-'));
 		repo = path.join(base, 'my repo');
 		mkdirSync(repo);
-		cpSync(EXTENSION_DIR, path.join(repo, UUID), { recursive: true });
+		cpSync(EXTENSION_DIR, path.join(repo, 'assets'), { recursive: true });
 		cpSync(path.join(ROOT, 'POTFILES.in'), path.join(repo, 'POTFILES.in'));
 		cpSync(path.join(ROOT, 'src'), path.join(repo, 'src'), { recursive: true });
 		// What `npm run build:ts` writes (the real compiler is exercised by project-rules.tooling.test.js).
@@ -103,9 +104,9 @@ describe('maintainer scripts', () => {
 			writeFileSync(path.join(compiled(), '.extension.js.swp'), 'junk');
 			writeFileSync(path.join(compiled(), 'extension.d.ts'), 'junk');
 			writeFileSync(path.join(compiled(), 'lib/emoji.js.map'), 'junk');
-			writeFileSync(path.join(repo, UUID, 'extension.js'), '// a stale legacy file, not shipped\n');
-			writeFileSync(path.join(repo, UUID, 'notes.txt'), 'junk');
-			writeFileSync(path.join(repo, UUID, 'locale/de/LC_MESSAGES/de.po~'), 'junk');
+			writeFileSync(path.join(repo, 'assets', 'extension.js'), '// a stale legacy file, not shipped\n');
+			writeFileSync(path.join(repo, 'assets', 'notes.txt'), 'junk');
+			writeFileSync(path.join(repo, 'assets', 'locale/de/LC_MESSAGES/de.po~'), 'junk');
 			const result = run('build-a-zip.sh');
 			expect(result.stderr).toBe('');
 			expect(result.status).toBe(0);
@@ -127,21 +128,21 @@ describe('maintainer scripts', () => {
 		});
 
 		it('leaves out translation sources and the compiled schema, which the EGO builds itself', () => {
-			writeFileSync(path.join(repo, UUID, 'schemas/gschemas.compiled'), 'compiled');
+			writeFileSync(path.join(repo, 'assets', 'schemas/gschemas.compiled'), 'compiled');
 			run('build-a-zip.sh');
 			const entries = zipEntries(zipPath());
 			expect(entries.some((e) => /\.pot?$/.test(e))).toBe(false);
 			expect(entries).not.toContain('schemas/gschemas.compiled');
-			const languages = directoriesIn(path.join(repo, UUID, 'locale'));
+			const languages = directoriesIn(path.join(repo, 'assets', 'locale'));
 			expect(entries.filter((e) => e.endsWith('.mo')).sort()).toEqual(
 				languages.map((language) => `locale/${language}/LC_MESSAGES/emoji-selector.mo`).sort(),
 			);
 		});
 
 		it('does not modify the project it builds from', () => {
-			const before = fingerprint(path.join(repo, UUID)) + fingerprint(compiled());
+			const before = fingerprint(path.join(repo, 'assets')) + fingerprint(compiled());
 			expect(run('build-a-zip.sh').status).toBe(0);
-			expect(fingerprint(path.join(repo, UUID)) + fingerprint(compiled())).toBe(before);
+			expect(fingerprint(path.join(repo, 'assets')) + fingerprint(compiled())).toBe(before);
 		});
 
 		it('writes to the directory it is given, creating it, and replaces an earlier zip', () => {
@@ -167,10 +168,10 @@ describe('maintainer scripts', () => {
 		});
 
 		it('fails clearly, and builds nothing, when the extension directory is missing', () => {
-			rmSync(path.join(repo, UUID), { recursive: true });
+			rmSync(path.join(repo, 'assets'), { recursive: true });
 			const result = run('build-a-zip.sh');
 			expect(result.status).not.toBe(0);
-			expect(result.stderr).toContain(UUID);
+			expect(result.stderr).toContain('assets');
 			expect(existsSync(zipPath())).toBe(false);
 		});
 
@@ -193,7 +194,7 @@ describe('maintainer scripts', () => {
 		it('fails, and leaves an earlier zip alone, when a shipped file is missing', () => {
 			expect(run('build-a-zip.sh').status).toBe(0);
 			const before = readFileSync(zipPath());
-			rmSync(path.join(repo, UUID, 'metadata.json'));
+			rmSync(path.join(repo, 'assets', 'metadata.json'));
 			const result = run('build-a-zip.sh');
 			expect(result.status).not.toBe(0);
 			expect(result.stderr).toContain('metadata.json');
@@ -223,111 +224,8 @@ describe('maintainer scripts', () => {
 		});
 	});
 
-	describe('install.sh', () => {
-		const extensions = () => path.join(base, 'ext dir');
-		const install = (args = [], env = {}) => run('install.sh', args, { EXTENSIONS_DIR: extensions(), ...env });
-
-		it('installs the built extension, with its schema compiled where it is installed', () => {
-			const result = install();
-			expect(result.stderr).toBe('');
-			expect(result.status).toBe(0);
-			const target = path.join(extensions(), UUID);
-			expect(existsSync(path.join(target, 'metadata.json'))).toBe(true);
-			expect(existsSync(path.join(target, 'extension.js'))).toBe(true);
-			expect(statSync(path.join(target, 'schemas/gschemas.compiled')).size).toBeGreaterThan(0);
-			expect(walk(target).some((file) => /\.pot?$/.test(file))).toBe(false);
-			expect(result.stdout).toContain(target);
-		});
-
-		it('leaves the project itself untouched', () => {
-			const before = fingerprint(repo);
-			install();
-			expect(fingerprint(repo)).toBe(before);
-		});
-
-		it('replaces an earlier install completely, without touching other extensions', () => {
-			const target = path.join(extensions(), UUID);
-			mkdirSync(target, { recursive: true });
-			writeFileSync(path.join(target, 'stale.js'), 'old');
-			mkdirSync(path.join(extensions(), 'other@example.org'));
-			writeFileSync(path.join(extensions(), 'other@example.org', 'keep.js'), 'mine');
-			expect(install().status).toBe(0);
-			expect(existsSync(path.join(target, 'stale.js'))).toBe(false);
-			expect(readFileSync(path.join(extensions(), 'other@example.org', 'keep.js'), 'utf8')).toBe('mine');
-		});
-
-		it('installs under ~/.local/share/gnome-shell/extensions by default', () => {
-			const result = run('install.sh', [], { HOME: path.join(base, 'a home') });
-			expect(result.status).toBe(0);
-			expect(existsSync(path.join(base, 'a home/.local/share/gnome-shell/extensions', UUID, 'metadata.json'))).toBe(
-				true,
-			);
-		});
-
-		it('refuses a relative target, which would depend on where it is run from', () => {
-			const result = install([], { EXTENSIONS_DIR: 'relative/dir' });
-			expect(result.status).not.toBe(0);
-			expect(result.stderr).toMatch(/absolute/i);
-		});
-
-		it('refuses --system unless run as root, and then installs nothing', () => {
-			const isRoot = process.getuid() === 0;
-			const result = install(['--system']);
-			// Root may install for every user (here into EXTENSIONS_DIR); anyone else is refused.
-			expect({
-				installed: result.status === 0,
-				explainedItNeedsRoot: /root/i.test(result.stderr),
-				createdDirectory: existsSync(extensions()),
-			}).toEqual(
-				isRoot
-					? { installed: true, explainedItNeedsRoot: false, createdDirectory: true }
-					: { installed: false, explainedItNeedsRoot: true, createdDirectory: false },
-			);
-		});
-
-		it('refuses to replace the project itself when EXTENSIONS_DIR is its working tree', () => {
-			const before = fingerprint(repo);
-			const result = install([], { EXTENSIONS_DIR: repo });
-			expect(result.status).not.toBe(0);
-			expect(result.stderr).toMatch(/working tree|sources/i);
-			expect(fingerprint(repo)).toBe(before);
-		});
-
-		it('leaves a usable install and no stray directory when several installs run at once', async () => {
-			const attempts = Array.from(
-				{ length: 6 },
-				() =>
-					new Promise((resolve) => {
-						const child = spawn('bash', [path.join(repo, 'install.sh')], {
-							cwd: base,
-							env: { PATH: process.env.PATH, HOME: path.join(base, 'home'), EXTENSIONS_DIR: extensions() },
-						});
-						child.on('close', (status) => resolve(status));
-					}),
-			);
-			const statuses = await Promise.all(attempts);
-			expect(statuses).toContain(0);
-			expect(readdirSync(extensions())).toEqual([UUID]);
-			expect(readdirSync(path.join(extensions(), UUID)).filter((entry) => entry.startsWith('.'))).toEqual([]);
-			expect(existsSync(path.join(extensions(), UUID, 'metadata.json'))).toBe(true);
-		});
-
-		it('rejects unknown options', () => {
-			const result = install(['--bogus']);
-			expect(result.status).toBe(2);
-			expect(result.stderr).toMatch(/usage/i);
-		});
-
-		it('fails, installing nothing, when the build fails', () => {
-			rmSync(path.join(repo, UUID, 'metadata.json'));
-			const result = install();
-			expect(result.status).not.toBe(0);
-			expect(existsSync(path.join(extensions(), UUID))).toBe(false);
-		});
-	});
-
 	describe('update-and-compile-translations.sh', () => {
-		const locale = () => path.join(repo, UUID, 'locale');
+		const locale = () => path.join(repo, 'assets', 'locale');
 		const po = (lang) => path.join(locale(), lang, 'LC_MESSAGES', `${DOMAIN}.po`);
 		const mo = (lang) => path.join(locale(), lang, 'LC_MESSAGES', `${DOMAIN}.mo`);
 		const update = (env = {}) => run('update-and-compile-translations.sh', [], env);
@@ -435,6 +333,78 @@ describe('maintainer scripts', () => {
 		});
 	});
 
+	describe('new-catalogue.sh', () => {
+		const locale = () => path.join(repo, 'assets', 'locale');
+		const po = (lang) => path.join(locale(), lang, 'LC_MESSAGES', `${DOMAIN}.po`);
+		const create = (...args) => run('new-catalogue.sh', args);
+
+		it('creates the catalogue of a language from the template: every message, none translated', () => {
+			const result = create('ko');
+			expect(result.stderr).toBe('');
+			expect(result.status).toBe(0);
+			expect(result.stdout).toBe(`Created assets/locale/ko/LC_MESSAGES/${DOMAIN}.po\n`);
+			const text = readFileSync(po('ko'), 'utf8');
+			expect(text).toContain('"Language: ko\\n"');
+			expect(text).toContain('"Plural-Forms: nplurals=1; plural=0;\\n"');
+			const { entries } = readCatalogue(po('ko'));
+			const template = readCatalogue(path.join(locale(), `${DOMAIN}.pot`)).entries.map((entry) => entry.msgid);
+			expect(entries.map((entry) => entry.msgid)).toEqual(template);
+			expect(entries.filter((entry) => entry.msgstr !== '')).toEqual([]);
+		});
+
+		it('accepts a language with a territory', () => {
+			expect(create('pt_PT').status).toBe(0);
+			expect(readFileSync(po('pt_PT'), 'utf8')).toContain('"Language: pt_PT\\n"');
+		});
+
+		it('says so when msginit does not know the plural forms of the language, and still creates the catalogue', () => {
+			const result = create('ak');
+			expect(result.status).toBe(0);
+			expect(result.stderr).toMatch(/Plural-Forms/);
+			expect(readFileSync(po('ak'), 'utf8')).toContain('"Language: ak\\n"');
+		});
+
+		it('does not touch the other catalogues, the template or the compiled files', () => {
+			const before = fingerprint(locale());
+			expect(create('ko').status).toBe(0);
+			rmSync(path.join(locale(), 'ko'), { recursive: true });
+			expect(fingerprint(locale())).toBe(before);
+		});
+
+		it('refuses to overwrite a catalogue that exists, and leaves it alone', () => {
+			const before = readFileSync(po('de'), 'utf8');
+			const result = create('de');
+			expect(result.status).not.toBe(0);
+			expect(result.stderr).toContain('already exists');
+			expect(readFileSync(po('de'), 'utf8')).toBe(before);
+		});
+
+		it.each(['zh_Hans', 'EN', 'e', 'english', 'de_de', 'de/../x', '../de', '', 'de ', '-l'])(
+			'refuses the name %j, which no locale of a real user matches, and creates nothing',
+			(name) => {
+				const before = fingerprint(locale());
+				const result = create(name);
+				expect(result.status).toBe(2);
+				expect(result.stderr).toMatch(/usage|name/i);
+				expect(fingerprint(locale())).toBe(before);
+			},
+		);
+
+		it.each([[[]], [['de', 'fr']]])('rejects the arguments %j', (args) => {
+			const result = create(...args);
+			expect(result.status).toBe(2);
+			expect(result.stderr).toMatch(/usage/i);
+		});
+
+		it('fails, creating nothing, when the template is missing', () => {
+			rmSync(path.join(locale(), `${DOMAIN}.pot`));
+			const result = create('ko');
+			expect(result.status).not.toBe(0);
+			expect(result.stderr).toContain('.pot');
+			expect(existsSync(path.join(locale(), 'ko'))).toBe(false);
+		});
+	});
+
 	describe('with a tool missing', () => {
 		// A PATH holding only the commands the scripts need, minus the one under test.
 		const TOOLS = [
@@ -449,6 +419,7 @@ describe('maintainer scripts', () => {
 			'mktemp',
 			'mv',
 			'msgfmt',
+			'msginit',
 			'msgmerge',
 			'rm',
 			'sed',
@@ -473,15 +444,15 @@ describe('maintainer scripts', () => {
 			['build-a-zip.sh', 'find'],
 			['build-a-zip.sh', 'sed'],
 			['build-a-zip.sh', 'sort'],
-			['install.sh', 'unzip'],
-			['install.sh', 'glib-compile-schemas'],
 			['update-and-compile-translations.sh', 'xgettext'],
 			['update-and-compile-translations.sh', 'msgmerge'],
 			['update-and-compile-translations.sh', 'msgfmt'],
 			['update-and-compile-translations.sh', 'grep'],
+			['new-catalogue.sh', 'msginit'],
 		])('%s names the missing %s and changes nothing', (script, tool) => {
 			const before = fingerprint(repo);
-			const result = run(script, [], { PATH: withoutTool(tool), EXTENSIONS_DIR: path.join(base, 'ext') });
+			const args = script === 'new-catalogue.sh' ? ['ko'] : [];
+			const result = run(script, args, { PATH: withoutTool(tool), EXTENSIONS_DIR: path.join(base, 'ext') });
 			expect(result.status).not.toBe(0);
 			expect(result.stderr).toContain(tool);
 			expect(fingerprint(repo)).toBe(before);
@@ -496,18 +467,15 @@ describe('maintainer scripts', () => {
 			expect(source).toMatch(/^set -euo pipefail$/m);
 		});
 
-		it.each(['build-a-zip.sh', 'install.sh'])(
-			'%s sets its cleanup trap before it creates anything to clean up',
-			(script) => {
-				const lines = readFileSync(path.join(ROOT, script), 'utf8')
-					.split('\n')
-					.filter((line) => !line.trim().startsWith('#'));
-				const firstTrap = lines.findIndex((line) => line.startsWith('trap '));
-				const firstCreation = lines.findIndex((line) => /\b(mktemp|mkdir)\b/.test(line) && !line.includes('trap'));
-				expect(firstTrap).toBeGreaterThan(-1);
-				expect(firstTrap).toBeLessThan(firstCreation);
-			},
-		);
+		it.each(['build-a-zip.sh'])('%s sets its cleanup trap before it creates anything to clean up', (script) => {
+			const lines = readFileSync(path.join(ROOT, script), 'utf8')
+				.split('\n')
+				.filter((line) => !line.trim().startsWith('#'));
+			const firstTrap = lines.findIndex((line) => line.startsWith('trap '));
+			const firstCreation = lines.findIndex((line) => /\b(mktemp|mkdir)\b/.test(line) && !line.includes('trap'));
+			expect(firstTrap).toBeGreaterThan(-1);
+			expect(firstTrap).toBeLessThan(firstCreation);
+		});
 
 		it.each(ALL_SHELL_SCRIPTS)('%s never removes a path that could be empty or relative', (script) => {
 			const source = readFileSync(path.join(ROOT, script), 'utf8');

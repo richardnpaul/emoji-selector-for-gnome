@@ -93,7 +93,7 @@ describe('GSettings schema values', () => {
 			cpSync(SCHEMA_DIR, scratch, { recursive: true });
 			expect(run('glib-compile-schemas', ['--strict', scratch]).status).toBe(0);
 			const script = path.join(ROOT, 'tests/integration/real/inspect-settings.js');
-			const real = run('gjs', ['-m', script, scratch, JSON.stringify(PROBES)], {
+			const real = run('gjs', ['-m', script, scratch, JSON.stringify(PROBES), METADATA['settings-schema']], {
 				env: { ...process.env, GSETTINGS_BACKEND: 'memory' },
 			});
 			expect(real.status, real.stderr).toBe(0);

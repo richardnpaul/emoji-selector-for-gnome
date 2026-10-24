@@ -1,0 +1,199 @@
+# Arabic translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "التخطيط العام"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "عرض الواجهة من الأسفل أفضل إذا كنت تستخدم لوحة سفلية بدلاً من الشريط العلوي الافتراضي."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "من الأعلى إلى الأسفل"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "من الأسفل إلى الأعلى"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "تعذّر حفظ الإعداد"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "عدد الرموز التعبيرية في كل سطر"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "حجم الرموز التعبيرية (بكسل)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "التخطيط"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "يجب وضع مفاتيح التعديل بين قوسين زاويين"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "القيمة الافتراضية هي %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "لا تستخدم اختصار لوحة مفاتيح موجودًا بالفعل."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "استخدم اختصار لوحة المفاتيح لتبديل القائمة"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "اختصار لوحة المفاتيح"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "هذا ليس اختصار لوحة مفاتيح صالحًا"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "قائمة بأسماء المفاتيح الصالحة"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "أظهر الأيقونة في اللوحة دائمًا"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "إذا كنت تفتح القائمة باختصار لوحة المفاتيح، فلا حاجة إلى إظهار الأيقونة دائمًا."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "اختصارات لوحة المفاتيح"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "توفر هذه الإضافة قائمة منبثقة قابلة للضبط تعرض معظم الرموز التعبيرية، والنقر على أحدها ينسخه إلى الحافظة."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "المؤلف"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "المترجمون"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "المساهمون"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "أبلغ عن أخطاء أو أفكار"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "حول"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "تعذّر فتح صفحة الويب"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "الوجوه والجسم"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "الأشخاص والملابس"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "الحيوانات والطبيعة"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "الطعام والشراب"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "السفر والأماكن"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "الأنشطة والرياضة"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "الأشياء"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "الرموز"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "الأعلام"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "اكتب هنا للبحث…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "بدون لون بشرة"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "لون بشرة فاتح"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "لون بشرة فاتح متوسط"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "لون بشرة متوسط"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "لون بشرة داكن متوسط"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "لون بشرة داكن"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "نساء"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "رجال"

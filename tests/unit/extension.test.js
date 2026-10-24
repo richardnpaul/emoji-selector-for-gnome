@@ -5,9 +5,10 @@ import Shell from 'gi://Shell';
 import EmojiSelectorExtension from '../../src/extension.ts';
 import { clipboard, extensionState, glib, main } from '../support/shell-state.js';
 import { Actor } from '../support/fakes/toolkit.js';
+import { METADATA } from '../support/paths.js';
 import { createSettings } from '../support/settings.js';
 
-const UUID = 'emoji-selector@maestroschan.fr';
+const UUID = METADATA.uuid;
 
 describe('the extension', () => {
 	let raw;
@@ -175,6 +176,55 @@ describe('the extension', () => {
 			expect(raw.connectionCount).toBe(0);
 			expect(Actor.registry.every((actor) => actor.destroyed)).toBe(true);
 			expect(glib.activeSources).toBe(0);
+		});
+	});
+
+	describe('when the menu cannot be rebuilt after a settings change', () => {
+		const liveButtons = () =>
+			Actor.registry.filter((actor) => actor.constructor.name === 'PanelMenuButton' && !actor.destroyed);
+
+		it('keeps the old menu, and says why, when the new one cannot be built', () => {
+			const error = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+			enable();
+			const old = menuButton();
+			const getInt = vi.spyOn(raw, 'get_int').mockImplementation(() => {
+				throw new Error('boom');
+			});
+			raw.set_int('nbcols', 12);
+			getInt.mockRestore();
+			expect(error).toHaveBeenCalledExactlyOnceWith('Cannot rebuild the menu, keeping the old one', expect.any(Error));
+			expect(menuButton()).toBe(old);
+			expect(old.destroyed).toBe(false);
+			expect(liveButtons()).toEqual([old]);
+			keybinding().handler();
+			expect(old.menu.isOpen).toBe(true);
+			raw.set_boolean('always-show', false);
+			expect(old.visible).toBe(true);
+			error.mockRestore();
+		});
+
+		it('stops cleanly, and says why, when the new menu cannot be put in the panel', () => {
+			const error = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+			enable();
+			const { addToStatusArea } = main.panel;
+			main.panel.addToStatusArea = () => {
+				throw new Error('no room');
+			};
+			try {
+				raw.set_int('nbcols', 12);
+			} finally {
+				main.panel.addToStatusArea = addToStatusArea;
+			}
+			expect(error).toHaveBeenCalledExactlyOnceWith(
+				'Cannot put the rebuilt menu in the panel, stopping',
+				expect.any(Error),
+			);
+			expect(liveButtons()).toEqual([]);
+			expect(main.panel.statusArea.size).toBe(0);
+			expect(main.wm.keybindings.size).toBe(0);
+			expect(raw.connectionCount).toBe(0);
+			expect(() => extension.disable()).not.toThrow();
+			error.mockRestore();
 		});
 	});
 

@@ -54,9 +54,9 @@ export class SkinTonesBar {
       style: `background-color: ${colour};`,
     });
     button.connect('clicked', () => {
-      this.#uncheckTones();
-      button.set_checked(true);
       this.#settings.skinTone = tone;
+      // Shows what is stored: the write is refused when the setting is locked.
+      this.update();
     });
     return button;
   }

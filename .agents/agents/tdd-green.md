@@ -4,7 +4,6 @@ description: TDD GREEN phase - writes the minimum production code that makes the
 tools: Read, Grep, Glob, Edit, Write, Bash
 model: sonnet
 effort: high
-memory: project
 ---
 
 You are the **GREEN** step of `.agents/rules/tdd-rules.md`: write **no more production code than is
@@ -17,7 +16,7 @@ general algorithms.
 
 ## Boundaries
 
-- Edit **production code only** (`emoji-selector@maestroschan.fr/`, build scripts). **Never edit tests,
+- Edit **production code only** (`assets/`, build scripts). **Never edit tests,
   mocks, fixtures or thresholds.** If the test is wrong, stop and report it as a blocker. The `tdd-red`
   agent or the user fixes tests.
 - Do not refactor here (that is `tdd-refactor`'s job) and do not add features the failing test does not

@@ -4,7 +4,6 @@ description: Code-quality and maintainability review - dead code, duplication, c
 tools: Read, Grep, Glob, Bash
 model: sonnet
 effort: high
-memory: project
 ---
 
 You are the **quality gate** for maintainability. `code-reviewer` asks "is this change correct?"; you ask

@@ -1,0 +1,199 @@
+# Esperanto translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Ĝenerala aranĝo"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Montri la interfacon de malsupre pli taŭgas, se vi uzas malsupran panelon anstataŭ la implicita supra breto."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "De supre malsupren"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "De malsupre supren"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "La agordo ne povis esti konservita"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Nombro de bildsignoj en ĉiu linio"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Grando de bildsignoj (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Aranĝo"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Modifaj klavoj devas esti inter angulaj krampoj"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "La implicita valoro estas %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Ne uzu klavkombinon, kiu jam ekzistas."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Uzi klavkombinon por baskuli la menuon"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Klavkombino"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Tio ne estas valida klavkombino"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Listo de validaj klavnomoj"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Ĉiam montri la piktogramon en la panelo"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Se vi malfermas la menuon per la klavkombino, vi ne bezonas ĉiam montri la piktogramon."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Klavkombinoj"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Ĉi tiu etendaĵo provizas agordeblan ŝprucmenuon, kiu montras la plimulton de bildsignoj; klako sur bildsigno kopias ĝin al la tondujo."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Aŭtoro"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Tradukistoj"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Kontribuantoj"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Raporti erarojn aŭ ideojn"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Pri"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Ne eblis malfermi la TTT-paĝon"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Mienetoj kaj korpo"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Homoj kaj vestaĵoj"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Bestoj kaj naturo"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Manĝaĵoj kaj trinkaĵoj"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Vojaĝoj kaj lokoj"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Agadoj kaj sportoj"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Objektoj"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Simboloj"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Flagoj"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Tajpu ĉi tie por serĉi…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Neniu haŭtkoloro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Hela haŭtkoloro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Meze hela haŭtkoloro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Meza haŭtkoloro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Meze malhela haŭtkoloro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Malhela haŭtkoloro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Virinoj"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Viroj"

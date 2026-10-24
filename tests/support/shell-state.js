@@ -13,7 +13,7 @@ export const clipboard = toolkit.Clipboard.get_default();
 /** What the Extension base class provides to the extension under test; tests set these. */
 export const extensionState = {
 	settings: null,
-	path: '/fake/extensions/emoji-selector@maestroschan.fr',
+	path: '/fake/extensions/emoji-selector@example.org',
 	translate: (text) => text,
 };
 

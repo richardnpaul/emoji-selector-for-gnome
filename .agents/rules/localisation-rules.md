@@ -20,7 +20,7 @@ These rules govern localisation across all code, configuration, templates, and U
   - Error messages, alerts, dialogue prompts, confirmation modals, and desktop notifications.
   - Accessibility labels (e.g., `accessible_name`, `accessible_description`).
   - Panel status menu items, toggle switch descriptions, and log messages presented to users.
-- All user-facing strings **MUST** be wrapped in the gettext translation function `_("...")` and extracted into the gettext template ([`emoji-selector@maestroschan.fr/locale/emoji-selector.pot`](../../emoji-selector@maestroschan.fr/locale/emoji-selector.pot)) and language catalogs (`emoji-selector@maestroschan.fr/locale/<lang>/LC_MESSAGES/emoji-selector.po`). Source files scanned by `xgettext` are listed in `POTFILES.in` and must be kept current.
+- All user-facing strings **MUST** be wrapped in the gettext translation function `_("...")` and extracted into the gettext template ([`assets/locale/emoji-selector.pot`](../../assets/locale/emoji-selector.pot)) and language catalogs (`assets/locale/<lang>/LC_MESSAGES/emoji-selector.po`). Source files scanned by `xgettext` are listed in `POTFILES.in` and must be kept current.
 
 ## 3. String Interpolation and Dynamic Text
 

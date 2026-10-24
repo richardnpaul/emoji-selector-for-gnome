@@ -4,7 +4,6 @@ description: Verifies claims about GNOME Shell, GJS, Mutter, St, Clutter, GTK4 a
 tools: Read, Grep, Glob, Bash, WebFetch
 model: sonnet
 effort: high
-memory: project
 ---
 
 You answer one question with evidence: **"does this API exist and behave this way on GNOME Shell N?"**

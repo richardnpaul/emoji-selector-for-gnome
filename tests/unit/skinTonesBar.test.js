@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { SkinTonesBar } from '../../src/lib/skinTonesBar.ts';
 import { Actor } from '../support/fakes/toolkit.js';
@@ -68,6 +68,18 @@ describe('SkinTonesBar', () => {
 			buttons[tone].click();
 			expect(settings.skinTone).toBe(tone);
 			expect(checked(buttons)).toEqual([0, 1, 2, 3, 4, 5].map((i) => i === tone));
+		});
+
+		it('shows the stored tone, not the clicked one, when the setting is locked', () => {
+			const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+			raw.set_int('skin-tone', 2);
+			const buttons = mounted(new SkinTonesBar(settings, false));
+			raw.lock('skin-tone');
+			buttons[4].click();
+			expect(settings.skinTone).toBe(2);
+			expect(checked(buttons)).toEqual([false, false, true, false, false, false]);
+			expect(warn).toHaveBeenCalledOnce();
+			warn.mockRestore();
 		});
 
 		it('keeps a tone selected when it is clicked again', () => {

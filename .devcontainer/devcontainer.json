@@ -5,7 +5,7 @@
     "context": "."
   },
   "remoteUser": "vscode",
-  "mounts": ["source=claude-config-${devcontainerId},target=/home/vscode/.claude,type=volume"],
+  "mounts": ["source=claude-config-dir-emoji-selector,target=/home/vscode/.claude,type=volume"],
   "updateRemoteUserUID": true,
   "containerEnv": {
     "SHELL": "/bin/bash",

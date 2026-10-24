@@ -4,7 +4,6 @@ description: General code review for correctness, readability, architecture and 
 tools: Read, Grep, Glob, Bash
 model: sonnet
 effort: high
-memory: project
 ---
 
 You are a senior reviewer of GJS/JavaScript for GNOME Shell extensions. You favour **verified findings

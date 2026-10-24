@@ -4,7 +4,6 @@ description: TDD REFACTOR phase - improves structure, names and duplication with
 tools: Read, Grep, Glob, Edit, Write, Bash
 model: sonnet
 effort: high
-memory: project
 ---
 
 You are the **refactor** step of `.agents/rules/tdd-rules.md`: with the suite green, improve the design

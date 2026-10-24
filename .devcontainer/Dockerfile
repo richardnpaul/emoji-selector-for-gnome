@@ -15,6 +15,8 @@ ARG USER_GID=1000
 # mesa-*: software rendering so headless Mutter works without a GPU
 # xorg-x11-server-Xvfb/dbus-*: headless Gtk and private session buses
 # python3-dbusmock: fake logind/upower etc. on the system bus for a headless Shell
+# glibc-langpack-*: real locales, so that tests can run the real gettext as a user of that language would
+# (tests/integration/catalogues.tooling.test.js, which checks this list)
 # gcc/python3-devel: PyYAML and tree-sitter have no wheel for this Python and are built from source
 # (These system packages follow the Fedora repositories at build time: dnf has no lockfile.)
 RUN dnf -y --setopt=install_weak_deps=False install \
@@ -27,6 +29,14 @@ RUN dnf -y --setopt=install_weak_deps=False install \
         git \
         gjs \
         glib2-devel \
+        glibc-langpack-ar \
+        glibc-langpack-de \
+        glibc-langpack-es \
+        glibc-langpack-fr \
+        glibc-langpack-he \
+        glibc-langpack-ja \
+        glibc-langpack-pt \
+        glibc-langpack-zh \
         gnome-shell \
         gtk4 \
         jq \

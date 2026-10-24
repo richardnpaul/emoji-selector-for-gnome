@@ -52,6 +52,7 @@ export class FakeSettings extends SignalEmitter {
 	#enforce;
 	#values = new Map();
 	#written = new Set();
+	#locked = new Set();
 
 	/**
 	 * @param {object} schema from parseSchema
@@ -89,6 +90,16 @@ export class FakeSettings extends SignalEmitter {
 		return structuredClone(this.#values.get(name));
 	}
 
+	/** As an administrator's lock (a dconf profile) makes a key: every write is refused, as `set_*` returns false. */
+	lock(name) {
+		this.#key(name, this.#schema.keys.get(name)?.type);
+		this.#locked.add(name);
+	}
+
+	is_writable(name) {
+		return this.#schema.keys.has(name) && !this.#locked.has(name);
+	}
+
 	#write(name, type, value) {
 		this.#key(name, type);
 		const valid =
@@ -98,6 +109,9 @@ export class FakeSettings extends SignalEmitter {
 			(type === 'as' && Array.isArray(value) && value.every((v) => typeof v === 'string'));
 		if (!valid) {
 			throw new TypeError(`Invalid value for '${name}' (${type}): ${JSON.stringify(value)}`);
+		}
+		if (this.#locked.has(name)) {
+			return false;
 		}
 		const { range, choices } = this.#schema.keys.get(name);
 		if (

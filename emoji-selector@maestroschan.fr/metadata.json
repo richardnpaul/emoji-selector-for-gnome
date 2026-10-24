@@ -1,9 +1,0 @@
-{
-  "description": "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard. A right-click, or Shift+Enter, adds it after what the clipboard holds. An appropriate font like 'Twitter Color Emoji' or 'JoyPixels Color' should be installed on your system for a better visual result.",
-  "name": "Emoji Selector",
-  "shell-version": ["45", "46", "47", "48", "49", "50", "51"],
-  "url": "https://github.com/maoschanz/emoji-selector-for-gnome",
-  "uuid": "emoji-selector@maestroschan.fr",
-  "gettext-domain": "emoji-selector",
-  "settings-schema": "org.gnome.shell.extensions.emoji-selector"
-}

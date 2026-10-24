@@ -10,7 +10,7 @@ import GLib from 'gi://GLib';
 import Gtk from 'gi://Gtk?version=4.0';
 import { programArgs } from 'system';
 
-const UUID = 'emoji-selector@maestroschan.fr';
+const UUID = GLib.getenv('UNDER_TEST');
 const root = `${GLib.getenv('XDG_DATA_HOME')}/gnome-shell/extensions/${UUID}`;
 const metadata = JSON.parse(
 	new TextDecoder().decode(Gio.File.new_for_path(`${root}/metadata.json`).load_contents(null)[1]),
@@ -86,10 +86,17 @@ const useShortcut = rows['Use a keyboard shortcut to toggle the menu'];
 const entry = rows['Keyboard shortcut'];
 const alwaysShow = rows['Always show the icon in the panel'];
 report.shortcut = { initialText: entry.text, initialSwitch: useShortcut.active, applyButton: entry.show_apply_button };
+const toasts = [];
+const addToast = window.add_toast.bind(window);
+window.add_toast = (toast) => {
+	toasts.push(toast.title);
+	addToast(toast);
+};
 const apply = (text) => {
+	toasts.length = 0;
 	entry.text = text;
 	entry.emit('apply');
-	return { stored: settings.get_strv('emoji-keybinding'), error: entry.has_css_class('error') };
+	return { stored: settings.get_strv('emoji-keybinding'), error: entry.has_css_class('error'), toasts: [...toasts] };
 };
 report.shortcut.valid = apply('<Control><Alt>e');
 report.shortcut.invalid = apply('not a shortcut');

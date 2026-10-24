@@ -9,8 +9,8 @@ searching and copying emoji to the clipboard. It is being modernised for **GNOME
 (`metadata.json` `shell-version`), with a test suite targeting 100% coverage and 100% mutation score.
 
 **Layout:** the code is TypeScript in `src/` (`extension.ts`, `prefs.ts`, `lib/`, and the emoji tables in
-`data/`), compiled by `npm run build:ts` to ESM in `dist/emoji-selector@maestroschan.fr/`. What is not code
-(metadata, schema, stylesheet, icons, translations) lives in `emoji-selector@maestroschan.fr/`;
+`data/`), compiled by `npm run build:ts` to ESM in `dist/extension/`. What is not code
+(metadata, schema, stylesheet, icons, translations) lives in `assets/`;
 `build-a-zip.sh` packages both. The uuid and upstream (`maoschanz/emoji-selector-for-gnome`) belong to the
 original author; this is a working fork.
 

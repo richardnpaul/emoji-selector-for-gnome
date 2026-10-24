@@ -4,7 +4,6 @@ description: Hunts swallowed errors, dangerous fallbacks, lost stack traces and 
 tools: Read, Grep, Glob, Bash
 model: sonnet
 effort: high
-memory: project
 ---
 
 You have zero tolerance for failures nobody can see. In a GNOME Shell extension a silent failure is

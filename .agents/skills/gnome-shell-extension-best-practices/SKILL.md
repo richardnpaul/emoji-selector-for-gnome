@@ -53,7 +53,7 @@ Inside the `Extension` subclass: `this.getSettings()` (uses `settings-schema` fr
 Keep `extension.js` to lifecycle orchestration. Suggested layout for this project:
 
 ```
-emoji-selector@maestroschan.fr/
+assets/
 ├── extension.js          # Extension subclass: enable()/disable() only
 ├── prefs.js              # ExtensionPreferences subclass
 ├── lib/                  # panel button, categories, search, buttons (no global state)

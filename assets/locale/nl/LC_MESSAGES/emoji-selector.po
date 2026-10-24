@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-"
+"gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2022-01-04 18:09+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: Dutch <vistausss@outlook.com>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Indeling"
+
+#: src/prefs.ts
+msgid ""
+"Displaying the interface from the bottom is better if you use a bottom panel "
+"instead of the default top bar."
+msgstr ""
+"Het interface van onderaf weergeven is beter als u een onderpaneel gebruikt "
+"in plaats van de standaard bovenbalk."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Van boven naar beneden"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Van beneden naar boven"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "De instelling kon niet worden opgeslagen"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Aantal emoji's per regel"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Emojigrootte (in px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Indeling"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Wijzigingstoetsen moeten tussen punthaken staan"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "De standaardwaarde is ‘%s’"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Deze sneltoets is al in gebruik."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Sneltoets gebruiken om menu te tonen/verbergen"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Sneltoets"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Dit is geen geldige sneltoets"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lijst met geldige toetsnamen"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Pictogram altijd tonen in het paneel"
+
+#: src/prefs.ts
+msgid ""
+"If you access the menu with the keyboard shortcut, you don't need to always "
+"display the icon."
+msgstr ""
+"Als je het menu opent met een sneltoets, dan hoeft het pictogram niet altijd "
+"te worden getoond."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Sneltoetsen"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emojiselectie"
+
+#: src/prefs.ts
+msgid ""
+"This extension provides a configurable popup menu displaying most emojis, "
+"clicking on an emoji copies it to the clipboard."
+msgstr ""
+"Deze extensie biedt een configureerbaar popupmenu met de meeste emoji; klik "
+"op een emoji om die naar het klembord te kopiëren."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Auteur"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "Heimen Stoffels <vistausss@fastmail.com>"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Vertalers"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Bijdragers"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Meld bugs of deel ideeën"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Over"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "De webpagina kon niet worden geopend"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smileys en lichaam"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Personen en kleding"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Dieren en natuur"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Eten en drinken"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Reizen en locaties"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Activiteiten en sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Objecten"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Symbolen"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Vlaggen"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Typ hier om te zoeken…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Geen huidskleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Lichte huidskleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Lichtere huidskleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Gemiddelde huidskleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Donkerder huidskleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Donkere huidskleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Vrouwen"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Mannen"

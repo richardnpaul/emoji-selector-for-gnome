@@ -1,4 +1,4 @@
-// Only installed by tests/integration/shell-real.tooling.test.js, into a throw-away profile.
+// Only installed by tests/integration/shell.real.test.js, into a throw-away profile.
 //
 // Runs inside the real GNOME Shell, next to Emoji Selector. When Emoji Selector is enabled or disabled
 // (by the test, over D-Bus) it looks at what the Shell now holds, drives the extension with a virtual
@@ -10,7 +10,8 @@ import St from 'gi://St';
 import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
-const UNDER_TEST = 'emoji-selector@maestroschan.fr';
+// (The test says which extension to drive, in the environment of the Shell.)
+const UNDER_TEST = GLib.getenv('UNDER_TEST');
 // The states of an extension in the Shell (js/ui/extensionSystem.js).
 const ACTIVE = 1;
 const INACTIVE = 2;
@@ -19,13 +20,13 @@ const ACTIVATING = 8;
 
 /** The settings of the extension under test, which live in the same process as the Shell. */
 function settingsOfExtension() {
-	const { path } = Main.extensionManager.lookup(UNDER_TEST);
+	const { path, metadata } = Main.extensionManager.lookup(UNDER_TEST);
 	const source = Gio.SettingsSchemaSource.new_from_directory(
 		`${path}/schemas`,
 		Gio.SettingsSchemaSource.get_default(),
 		false,
 	);
-	return new Gio.Settings({ settings_schema: source.lookup('org.gnome.shell.extensions.emoji-selector', true) });
+	return new Gio.Settings({ settings_schema: source.lookup(metadata['settings-schema'], true) });
 }
 const say = (name, value) => console.log(`DRIVER ${JSON.stringify({ name, value })}`);
 const sleep = (ms) =>

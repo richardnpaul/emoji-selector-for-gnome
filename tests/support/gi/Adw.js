@@ -9,4 +9,5 @@ export default {
 	PreferencesWindow: adw.PreferencesWindow,
 	SpinRow: adw.SpinRow,
 	SwitchRow: adw.SwitchRow,
+	Toast: adw.Toast,
 };

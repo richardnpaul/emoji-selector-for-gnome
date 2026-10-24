@@ -98,7 +98,7 @@ Every change to production, test, or configuration code **MUST** pass all five q
   - Compiles the TypeScript with plain `tsc` (no bundler, no minifier, comments kept): extensions.gnome.org requires readable code
   - Compiles the GSettings schema (`glib-compile-schemas`) for local use, and **excludes** `gschemas.compiled` from the zip
   - Compiles all gettext `.po` catalogues to `.mo` (`msgfmt -c`)
-  - Packages a valid zip bundle (`dist/emoji-selector@maestroschan.fr.zip`) containing only production files
+  - Packages a valid zip bundle (`dist/emoji-selector@richardnpaul.github.com.zip`) containing only production files
 - **EGO Review Validation**: `npm run shexli` (builds the zip, then runs `scripts/check-shexli.mjs`) must report **no findings: 0 errors and 0 warnings**, apart from the reviewed ones listed, each with its reason, in `scripts/lib/shexli-accepted.mjs` (an entry that no longer matches fails the check). **`shexli` exits 0 even when it reports warnings**, so the wrapper parses its JSON report and never trusts shexli's exit status, and it passes an **absolute** path (relative directory paths crash shexli 0.2.1).
 - **Headless Preferences Smoke Tests**: Both LTR and RTL preferences rendering must pass:
   - `npm run test:prefs` (standard LTR preferences UI test)
@@ -166,7 +166,7 @@ Within each iteration of the outer loop, agents **MUST** execute tasks in the fo
 1. **TDD Red-Green Cycle**: Run `npm test` during development to confirm failing and passing states.
 2. **Type Checking, Lint & Formatting**: Run `npm run typecheck`, `npm run lint`, `npm run format:check` and `pre-commit run --all-files`.
 3. **Full Coverage Verification**: Run `npm run test:coverage` to confirm that all 4 coverage dimensions remain at 100%.
-4. **Production Package, Smoke Tests & Shexli**: Run `npm run build:package`, `npm run shexli`, `npm run test:prefs`, `npm run test:prefs:rtl` and `npm run test:shell`.
+4. **Production Package, Smoke Tests & Shexli**: Run `npm run build:package`, `npm run shexli`, `npm run test:prefs`, `npm run test:prefs:rtl` and `npm run test:shell` (`npm run test:real` runs the three; they are not part of `npm run check`, and CI runs them in their own job).
 5. **Mutation Testing**: Run `npm run test:mutation` to prove complete mutant slaughter (100% score).
 6. **Inner Code Review Loop**: Iterate until 0 findings remain.
 7. **Inner Security & EGO Review Loop**: Iterate until 0 findings remain.
@@ -190,7 +190,7 @@ An agent **MUST NOT** conclude a task, report completion, or request review with
 - **Coverage**: Statements 100%, Branches 100%, Functions 100%, Lines 100%
 - **Mutation Score**: 100.00% (0 surviving mutants, 0 no-coverage, timeouts reported)
 - **Typecheck, Linter & Pre-commit**: 0 errors, 0 warnings
-- **Production Package & EGO Review**: `dist/emoji-selector@maestroschan.fr.zip` and `shexli` clean (0 errors, 0 warnings)
+- **Production Package & EGO Review**: `dist/emoji-selector@richardnpaul.github.com.zip` and `shexli` clean (0 errors, 0 warnings)
 - **Preferences & Real-Shell Smoke Tests**: LTR, RTL and headless-Shell passed
 - **Code Review** (code, quality, test, silent-failure): 0 outstanding findings
 - **Security & EGO Review** (security, extensions, agent-content when applicable): 0 outstanding findings

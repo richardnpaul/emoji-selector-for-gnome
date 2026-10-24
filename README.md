@@ -74,12 +74,21 @@ The better option is to install it from [here](https://extensions.gnome.org/exte
 **Not recommended at all:** installing the extension this way prevent any
 further update.
 
-Download and extract the sources, then open a terminal in the project's directory,
-and run `npm ci && npm run build:ts && ./install.sh` (the extension is written in
-TypeScript, which Node.js compiles). `install.sh` builds the extension exactly as it
-is uploaded to extensions.gnome.org and installs it in
-`~/.local/share/gnome-shell/extensions/` (`./install.sh --system`, run as root,
-installs it for every user instead). Needs `zip`, `unzip` and `glib-compile-schemas`.
+Download and extract the sources, then open a terminal in the project's directory and run:
+
+```sh
+npm ci && npm run build:package
+gnome-extensions install --force dist/emoji-selector@richardnpaul.github.com.zip
+```
+
+(The extension is written in TypeScript, which Node.js compiles; `build:package` builds exactly the
+zip that is uploaded to extensions.gnome.org, and needs `zip` as well. Each
+[GitHub release](https://github.com/richardnpaul/emoji-selector-for-gnome/releases) also has that zip, ready
+to install with the second command.) `gnome-extensions install` puts it in
+`~/.local/share/gnome-shell/extensions/` and compiles its schema; to install it for every user instead,
+unzip it into `/usr/share/gnome-shell/extensions/emoji-selector@richardnpaul.github.com/` as root and run
+`glib-compile-schemas` on its `schemas` directory. Then enable it with
+`gnome-extensions enable emoji-selector@richardnpaul.github.com`.
 
 You may need to restart the GNOME Shell environment (logout and login again, or
 <kbd>Alt</kbd>+<kbd>F2</kbd> -> `r` ->, <kbd>Enter</kbd>).
@@ -97,23 +106,30 @@ npm test                    # unit + integration tests          (also test:unit,
 npm run test:coverage       # the same, failing below 100% coverage
 npm run typecheck           # TypeScript, strict
 npm run test:mutation       # Stryker mutation tests (about 6 minutes), 100% required
+npm run test:real           # the two below, in the real GNOME (a minute; not part of `check`, CI runs them apart)
 npm run test:prefs          # the preferences in the real GTK 4 and libadwaita, under Xvfb (also test:prefs:rtl)
 npm run test:shell          # the built extension in a real, headless GNOME Shell, driven like a user would
 npm run lint                # ESLint, zero warnings allowed
 npm run format:check        # Prettier              (npm run format fixes)
-npm run check               # lint + format:check + test:coverage
+npm run check               # lint + format:check + typecheck + test:coverage
+npm run check:all           # check + test:real
 npm run shexli              # build the zip and run the extensions.gnome.org review linter
-npm run build:ts            # compile src/ to dist/emoji-selector@maestroschan.fr/
-npm run build:package       # build:ts, then dist/emoji-selector@maestroschan.fr.zip (only the files that ship)
+npm run build:ts            # compile src/ to dist/extension/
+npm run build:package       # build:ts, then dist/emoji-selector@richardnpaul.github.com.zip (only the files that ship)
 npm run build:locales       # extract strings, update every .po, compile the .mo files
 ```
 
-`EXTENSIONS_DIR=/some/absolute/dir ./install.sh` installs somewhere else than
-`~/.local/share/gnome-shell/extensions`; `build-a-zip.sh` (run `npm run build:ts` first)
-also needs `find`, `sed`, `sort`, `cp` and `xargs`.
+`build-a-zip.sh` (run `npm run build:ts` first) needs `find`, `sed`, `sort`, `cp` and `xargs`.
+
+**Translations.** `assets/locale/<language>/` holds a catalogue per language, named as a glibc locale is
+(`de`, `pt_BR`, `zh_CN`; never `zh_Hans`, which no user's locale matches). `./new-catalogue.sh <language>` creates the
+empty catalogue from the template, `./update-and-compile-translations.sh` (`npm run build:locales`) extracts the strings and
+updates and compiles every catalogue, and `translations/provenance.json` records who made each (a person, a language model, or a
+person's work completed by a model: see `translations/comparison.md`) and how much to trust it. The plan for many more languages, and for searching emoji in the user's
+own language, is in [`docs/language-support-plan.md`](docs/language-support-plan.md).
 
 **Layout.** `src/` is the TypeScript source (`extension.ts` and `prefs.ts`, the modules in
-`lib/`, the emoji tables in `data/`); `emoji-selector@maestroschan.fr/` keeps what is not code
+`lib/`, the emoji tables in `data/`); `assets/` keeps what is not code
 (metadata, GSettings schema, stylesheet, icons, translations).
 
 **Git hooks.** The dev container installs them. Anywhere else, run
@@ -128,6 +144,23 @@ and every push runs the tests with the coverage thresholds.
 push to `main` and every pull request, so `--no-verify` or a contributor outside the dev
 container cannot bypass them: all hooks plus `npm run check`; the mutation tests; the
 extensions.gnome.org review (shexli); and the tests in the real preferences and the real Shell.
+
+**Other Shell versions.** `.github/workflows/shell-matrix.yml` (on pull requests, by hand, and every Monday)
+builds the package, loads it into real GNOME Shells 47 to 51 in podman containers and checks that it becomes
+`ACTIVE` with no error in the journal. 45 and 46 have no image, so they are verified by reading the Shell
+sources only.
+
+**Releasing.** `.github/workflows/release.yml` runs on every push to `main`. If the `version` in
+`package.json` has no git tag yet, it runs `npm run check:all` and `npm run shexli` in the dev container,
+builds the package with an SBOM and checksums, attests their provenance, creates the GitHub release
+(tag `v<version>`), and submits the zip to extensions.gnome.org with `gnome-extensions upload`. So a
+release is a pull request that bumps the version. It can also be started by hand from the Actions tab
+(optionally forcing a version that is already tagged, or skipping the EGO submission). One-time setup in
+the repository settings: an environment named `extensions-gnome-org` holding the secrets `EGO_USERNAME`
+and `EGO_PASSWORD` (add required reviewers to it to approve each submission by hand; without the secrets
+the submission is skipped with a warning), and a branch protection that requires the CI checks, the
+mutation tests included, before merging to `main`. The version in `package.json` is the release's; EGO
+numbers its uploads itself, so `metadata.json` has no version.
 
 **Everything is pinned**: GitHub Actions by commit SHA, the container base image by digest,
 Python tools by hash, npm packages by lockfile, git hooks by commit SHA. Dependabot proposes

@@ -22,6 +22,9 @@ export default defineConfig({
 		setupFiles: [path.join(support, 'setup.js')],
 		environment: 'node',
 		include: ['tests/**/*.test.js'],
+		// The tests in the real GNOME (a real Shell, real GTK) are slower and need a display and a session
+		// bus: `npm run test:real` runs them (vitest.real.config.mjs), `npm run check` does not.
+		exclude: ['**/node_modules/**', '**/*.real.test.js'],
 		// Tests that start Xvfb/GJS/gettext processes are slow when the whole suite runs in parallel.
 		testTimeout: 30_000,
 		coverage: {

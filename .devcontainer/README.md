@@ -32,6 +32,9 @@ Mutter 51, Node 22). Includes `pre-commit`, `shexli` (pinned, see below),
   cannot be switched off from `devcontainer.json` (setting them to `false` is
   ignored). `github-cli` only supports `apt-get`, so it fails the build on
   Fedora. `git` and `gh` are installed by the Dockerfile instead.
+- **Locales.** The image installs a few `glibc-langpack-*` packages so that the real gettext can be run as a user of
+  that language would (`tests/integration/catalogues.tooling.test.js` checks the list). Other locales are not
+  installed: `locale -a` shows what exists.
 - No host display or X11 socket is forwarded; GTK code runs under `xvfb-run`.
 - Rootless Podman users: add `--userns=keep-id` to `runArgs` in
   `devcontainer.json` so the bind mount stays writable.

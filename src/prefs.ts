@@ -23,18 +23,24 @@ const CONTRIBUTORS = ['Jimmy Scionti', 'Ryan Gonzalez', 'xurizaemon', 'Fran Dié
 interface PreferencesHost {
   add(page: Adw.PreferencesPage): void;
   get_display(): Gdk.Display;
+  add_toast(toast: Adw.Toast): void;
 }
 
 /** The preferences window: where the menu is, how big it is, and the keyboard shortcut. */
 export default class EmojiSelectorPreferences extends ExtensionPreferences {
   override fillPreferencesWindow(window: PreferencesHost): Promise<void> {
     const settings = this.getSettings();
-    window.add(layoutPage(settings));
+    window.add(layoutPage(settings, window));
     window.add(shortcutPage(settings, window));
     // (The metadata is an open record; only the web page of the extension matters here.)
     window.add(aboutPage((this.metadata as { url?: string }).url, window));
     return Promise.resolve();
   }
+}
+
+/** A short message at the bottom of the window. */
+function toast(title: string): Adw.Toast {
+  return new Adw.Toast({ title, use_markup: false });
 }
 
 /** The text of a title or description, which libadwaita reads as Pango markup (`<Super>` is not). */
@@ -52,7 +58,7 @@ function spinRow(settings: Gio.Settings, key: string, title: string, range: { lo
   return row;
 }
 
-function layoutPage(settings: Gio.Settings): Adw.PreferencesPage {
+function layoutPage(settings: Gio.Settings, window: PreferencesHost): Adw.PreferencesPage {
   const group = new Adw.PreferencesGroup();
 
   const position = new Adw.ComboRow({
@@ -73,8 +79,13 @@ function layoutPage(settings: Gio.Settings): Adw.PreferencesPage {
   showPosition();
   position.connect('notify::selected', () => {
     const chosen = POSITIONS[position.selected];
-    if (chosen !== undefined) {
-      settings.set_string('position', chosen);
+    if (chosen === undefined || chosen === settings.get_string('position')) {
+      return;
+    }
+    if (!settings.set_string('position', chosen)) {
+      // Refused (the setting is locked): show what is stored.
+      showPosition();
+      window.add_toast(toast(_('The setting could not be saved')));
     }
   });
   const changed = settings.connect('changed::position', showPosition);
@@ -118,10 +129,15 @@ function shortcutPage(settings: Gio.Settings, window: PreferencesHost): Adw.Pref
     const [parsed, key] = Gtk.accelerator_parse(text);
     if (text !== '' && !(parsed && key !== 0)) {
       shortcut.add_css_class('error');
+      window.add_toast(toast(_('This is not a valid keyboard shortcut')));
       return;
     }
     shortcut.remove_css_class('error');
-    settings.set_strv('emoji-keybinding', text === '' ? [] : [text]);
+    if (!settings.set_strv('emoji-keybinding', text === '' ? [] : [text])) {
+      // Refused (the setting is locked): show what is stored.
+      shortcut.text = settings.get_strv('emoji-keybinding')[0] ?? '';
+      window.add_toast(toast(_('The setting could not be saved')));
+    }
   });
   const changed = settings.connect('changed::emoji-keybinding', () => {
     shortcut.text = settings.get_strv('emoji-keybinding')[0] ?? '';
@@ -191,6 +207,7 @@ function linkRow(window: PreferencesHost, title: string, uri: string): Adw.Actio
       Gio.AppInfo.launch_default_for_uri(uri, window.get_display().get_app_launch_context());
     } catch (error) {
       console.error(`Cannot open ${uri}`, error);
+      window.add_toast(toast(_('Could not open the web page')));
     }
   });
   return row;

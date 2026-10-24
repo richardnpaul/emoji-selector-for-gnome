@@ -1,7 +1,8 @@
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { Emoji } from '../../src/lib/emoji.ts';
 import { EmojiMenu } from '../../src/lib/emojiMenu.ts';
+import { Actor } from '../support/fakes/toolkit.js';
 import { clipboard, glib, shellGlobal, extensionState } from '../support/shell-state.js';
 import { createSettings } from '../support/settings.js';
 
@@ -366,6 +367,23 @@ describe('EmojiMenu', () => {
 	});
 
 	describe('destroy', () => {
+		it('destroys the button once, however often it is asked (the Shell refuses a gone actor)', () => {
+			create();
+			const destroy = vi.spyOn(menu.button, 'destroy');
+			menu.destroy();
+			menu.destroy();
+			expect(destroy).toHaveBeenCalledTimes(1);
+		});
+
+		it('leaves no button behind when the menu cannot be built', () => {
+			const getInt = vi.spyOn(raw, 'get_int').mockImplementation(() => {
+				throw new Error('boom');
+			});
+			expect(() => new EmojiMenu(settings, catalogue(), '/ext/icons')).toThrow('boom');
+			getInt.mockRestore();
+			expect(Actor.registry.filter((actor) => !actor.destroyed)).toEqual([]);
+		});
+
 		it('destroys the button, its menu and everything in it', () => {
 			create();
 			menu.categories[0].button.click();

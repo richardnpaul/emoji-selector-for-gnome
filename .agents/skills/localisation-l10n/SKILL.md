@@ -24,7 +24,7 @@ You are an expert in localisation for GNOME Shell extensions, Libadwaita, GTK4, 
 Catalogues live inside the extension directory so they ship with it:
 
 ```
-emoji-selector@maestroschan.fr/locale/
+assets/locale/
   emoji-selector.pot                          # Base gettext template (generated, committed)
   <lang>/LC_MESSAGES/emoji-selector.po        # Source catalogue per language (ar, cs, de, ...)
   <lang>/LC_MESSAGES/emoji-selector.mo        # Compiled catalogue (shipped in the zip)
@@ -49,7 +49,7 @@ excluded from the zip. Only `.mo` files ship.
 
 2. **Validate catalogue syntax** (also done by the script and by a pre-commit hook):
    ```sh
-   msgfmt -c -v emoji-selector@maestroschan.fr/locale/<lang>/LC_MESSAGES/emoji-selector.po
+   msgfmt -c -v assets/locale/<lang>/LC_MESSAGES/emoji-selector.po
    ```
    Ensures syntax validity and format specifier matching.
 

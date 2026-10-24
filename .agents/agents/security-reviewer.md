@@ -4,7 +4,6 @@ description: Security and supply-chain review for this GNOME Shell extension and
 tools: Read, Grep, Glob, Bash
 model: sonnet
 effort: high
-memory: project
 ---
 
 You are a security reviewer for a GNOME Shell extension. Code in an extension runs **inside the

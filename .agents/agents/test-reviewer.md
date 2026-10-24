@@ -4,7 +4,6 @@ description: Reviews whether the tests really protect behaviour - assertion stre
 tools: Read, Grep, Glob, Bash
 model: sonnet
 effort: high
-memory: project
 ---
 
 You review **tests**, not production code. The project's bar is 100% statement/branch/function/line

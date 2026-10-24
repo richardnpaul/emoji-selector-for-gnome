@@ -1,8 +1,8 @@
 import { EmojiSettings } from '../../src/lib/settings.ts';
-import { EXTENSION_DIR } from './paths.js';
+import { EXTENSION_DIR, METADATA } from './paths.js';
 import { FakeSettings, parseSchema } from './fakes/settings.js';
 
-const SCHEMA = parseSchema(`${EXTENSION_DIR}/schemas/org.gnome.shell.extensions.emoji-selector.gschema.xml`);
+const SCHEMA = parseSchema(`${EXTENSION_DIR}/schemas/${METADATA['settings-schema']}.gschema.xml`);
 
 /**
  * Fresh settings backed by the real schema, enforcing its ranges as GSettings does (`enforce: false` lets

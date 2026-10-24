@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020,2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-"
+"gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2021-02-28 15:17+0100\n"
+"Last-Translator: Albano Battistella<albano_battistella@hotmail.com>\n"
+"Language-Team:italian\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Layout generale"
+
+#: src/prefs.ts
+msgid ""
+"Displaying the interface from the bottom is better if you use a bottom panel "
+"instead of the default top bar."
+msgstr ""
+"Visualizzare l'interfaccia dal basso è preferibile se si usa un pannello "
+"inferiore invece della barra superiore predefinita."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Dall'alto verso il basso"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Dal basso verso l'alto"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Impossibile salvare l'impostazione"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Numero di emoji per riga"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Dimensione degli emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Layout"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "I tasti di modifica devono essere compresi tra parentesi uncinate"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Il valore predefinito è %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Non utilizzare una scorciatoia da tastiera già esistente."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Usa una scorciatoia da tastiera per mostrare il menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Scorciatoia da tastiera"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Questa non è una scorciatoia da tastiera valida"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Elenco dei nomi di tasto validi"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Mostra sempre l'icona nel pannello"
+
+#: src/prefs.ts
+msgid ""
+"If you access the menu with the keyboard shortcut, you don't need to always "
+"display the icon."
+msgstr ""
+"Se accedi al menu con la scorciatoia da tastiera, non devi sempre "
+"visualizzare l'icona."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Scorciatoie da tastiera"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid ""
+"This extension provides a configurable popup menu displaying most emojis, "
+"clicking on an emoji copies it to the clipboard."
+msgstr ""
+"Questa estensione fornisce un menu a comparsa configurabile che mostra la "
+"maggior parte delle emoji; facendo clic su un'emoji, questa viene copiata "
+"negli appunti."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Autore"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "Albano Battistella, Danilo Del Busso"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Traduttori"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Collaboratori"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Segnala bug o idee"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Informazioni"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Impossibile aprire la pagina web"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Emoticon & Volti"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Persone & Abiti"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Animali & Natura"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Cibo & Bevande"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Viaggi & Luoghi"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Attività & Sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Oggetti"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Simboli"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bandiere"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Digita qui per effettuare una ricerca…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Nessun tono della pelle"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Tonalità della pelle chiara"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Tono della pelle medio-leggero"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Tonalità della pelle media"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Tono della pelle medio scuro"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Tonalità della pelle scura"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Donne"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Uomini"

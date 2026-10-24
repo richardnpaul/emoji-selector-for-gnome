@@ -4,12 +4,12 @@ import { launcher } from '../support/gi/Gio.js';
 import path from 'node:path';
 
 import EmojiSelectorPreferences from '../../src/prefs.ts';
-import { EXTENSION_DIR } from '../support/paths.js';
+import { EXTENSION_DIR, METADATA } from '../support/paths.js';
 import { parseSchema } from '../support/fakes/settings.js';
 import { extensionState } from '../support/shell-state.js';
 import { createSettings } from '../support/settings.js';
 
-const SCHEMA = parseSchema(path.join(EXTENSION_DIR, 'schemas/org.gnome.shell.extensions.emoji-selector.gschema.xml'));
+const SCHEMA = parseSchema(path.join(EXTENSION_DIR, `schemas/${METADATA['settings-schema']}.gschema.xml`));
 const URL = 'https://example.org/emoji-selector';
 
 describe('the preferences window', () => {
@@ -17,7 +17,7 @@ describe('the preferences window', () => {
 	let settings;
 	let window;
 
-	async function open(metadata = { uuid: 'emoji-selector@maestroschan.fr', url: URL }) {
+	async function open(metadata = { uuid: METADATA.uuid, url: URL }) {
 		window = new Adw.PreferencesWindow();
 		await new EmojiSelectorPreferences(metadata).fillPreferencesWindow(window);
 		return window;
@@ -74,6 +74,21 @@ describe('the preferences window', () => {
 			expect(settings.position).toBe('bottom');
 			position().selected = 0;
 			expect(settings.position).toBe('top');
+		});
+
+		it('goes back to the stored position, and says so, when the setting is locked', () => {
+			raw.lock('position');
+			position().selected = 1;
+			expect(position().selected).toBe(0);
+			expect(settings.position).toBe('top');
+			expect(window.toasts.map((toast) => [toast.title, toast.use_markup])).toEqual([
+				['«The setting could not be saved»', false],
+			]);
+		});
+
+		it('says nothing when the chosen position is the stored one', () => {
+			position().selected = 0;
+			expect(window.toasts).toEqual([]);
 		});
 
 		it('follows the setting when it changes elsewhere', () => {
@@ -183,11 +198,44 @@ describe('the preferences window', () => {
 				expect(raw.get_strv('emoji-keybinding')).toEqual(['<Super>e']);
 			});
 
+			it('tells why with a message, not only with the red outline, when it refuses a shortcut', () => {
+				entry().text = 'not a shortcut';
+				entry().emit('apply');
+				expect(window.toasts.map((toast) => [toast.title, toast.use_markup])).toEqual([
+					['«This is not a valid keyboard shortcut»', false],
+				]);
+			});
+
+			it('shows no message for a shortcut that is fine, or cleared', () => {
+				entry().text = '<Super>e';
+				entry().emit('apply');
+				entry().text = '';
+				entry().emit('apply');
+				expect(window.toasts).toEqual([]);
+			});
+
 			it('refuses modifiers without a key', () => {
 				entry().text = '<Super>';
 				entry().emit('apply');
 				expect(raw.get_strv('emoji-keybinding')).toEqual(['<Super>period']);
 				expect(entry().has_css_class('error')).toBe(true);
+			});
+
+			it('shows the stored shortcut again, and says so, when the setting is locked', () => {
+				raw.lock('emoji-keybinding');
+				entry().text = '<Super>e';
+				entry().emit('apply');
+				expect(raw.get_strv('emoji-keybinding')).toEqual(['<Super>period']);
+				expect(entry().text).toBe('<Super>period');
+				expect(window.toasts.map((toast) => toast.title)).toEqual(['«The setting could not be saved»']);
+			});
+
+			it('shows an empty entry when the locked setting holds no shortcut', () => {
+				raw.set_strv('emoji-keybinding', []);
+				raw.lock('emoji-keybinding');
+				entry().text = '<Super>e';
+				entry().emit('apply');
+				expect(entry().text).toBe('');
 			});
 
 			it('stores no shortcut at all when applied empty', () => {
@@ -259,10 +307,13 @@ describe('the preferences window', () => {
 				]);
 			});
 
-			it('logs, and does not throw, when the page cannot be opened', () => {
+			it('logs, says so with a message, and does not throw, when the page cannot be opened', () => {
 				const error = vi.spyOn(console, 'error').mockImplementation(() => undefined);
 				launcher.failWith = new Error('no browser');
 				expect(() => link().emit('activated')).not.toThrow();
+				expect(window.toasts.map((toast) => [toast.title, toast.use_markup])).toEqual([
+					['«Could not open the web page»', false],
+				]);
 				expect(error).toHaveBeenCalledWith(
 					'Cannot open https://raw.githubusercontent.com/GNOME/gtk/master/gdk/keynames.txt',
 					launcher.failWith,
@@ -301,7 +352,7 @@ describe('the preferences window', () => {
 		});
 
 		it('has no such link when the extension has no web page', async () => {
-			await open({ uuid: 'emoji-selector@maestroschan.fr' });
+			await open({ uuid: METADATA.uuid });
 			expect(row(ABOUT, '«Report bugs or ideas»')).toBeUndefined();
 		});
 	});

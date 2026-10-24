@@ -12,4 +12,4 @@ tests/fixtures/emoji-data.json
 src/data/
 
 # Translations (gettext tools own their format)
-emoji-selector@maestroschan.fr/locale/
+assets/locale/

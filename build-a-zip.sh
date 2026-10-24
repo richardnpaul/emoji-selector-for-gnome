@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Builds the zip that is uploaded to extensions.gnome.org (and that install.sh installs).
+# Builds the zip that is uploaded to extensions.gnome.org (and that `gnome-extensions install` installs).
 #
 # Usage: ./build-a-zip.sh [OUTPUT_DIR]       (default: ./dist)
 #
@@ -12,7 +12,7 @@
 # the source tree is modified, and an earlier zip is only replaced once the new one is complete.
 set -euo pipefail
 
-readonly UUID='emoji-selector@maestroschan.fr'
+readonly UUID='emoji-selector@richardnpaul.github.com'
 readonly REQUIRED_COMPILED=(extension.js prefs.js)
 readonly REQUIRED_ASSETS=(metadata.json stylesheet.css)
 readonly COMPILED_PATHS='\./([A-Za-z]+\.js|(lib|data)/[A-Za-z]+\.js)'
@@ -44,8 +44,8 @@ for tool in zip find sed sort cp xargs; do
 done
 
 root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
-assets_dir="$root/$UUID"
-compiled_dir="$root/dist/$UUID"
+assets_dir="$root/assets"
+compiled_dir="$root/dist/extension"
 if [[ ! -d $assets_dir ]]; then
 	echo "Extension directory not found: $assets_dir" >&2
 	exit 1

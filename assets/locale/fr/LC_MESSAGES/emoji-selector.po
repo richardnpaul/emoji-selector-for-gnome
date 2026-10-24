@@ -1,0 +1,211 @@
+#
+# Romain F. T. <rrroschan@gmail.com>, 2018-2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unnamed project\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-"
+"gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2019-03-20 23:18+0100\n"
+"Last-Translator: Romain F. T. <rrroschan@gmail.com>\n"
+"Language-Team: French <none>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Gtranslator 3.32.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Disposition générale"
+
+#: src/prefs.ts
+msgid ""
+"Displaying the interface from the bottom is better if you use a bottom panel "
+"instead of the default top bar."
+msgstr ""
+"Afficher l'interface depuis le bas est préférable si vous utilisez un "
+"panneau inférieur plutôt que la barre supérieure par défaut."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "De haut en bas"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "De bas en haut"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Le paramètre n'a pas pu être enregistré"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Nombre d'émojis par ligne"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Taille des émojis (en pixels)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Disposition"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Les touches modificatrices doivent être entre chevrons"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "La valeur par défaut est %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Ne pas utiliser un raccourci qui existe déjà."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Utiliser un raccourci clavier pour le menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Raccourci clavier"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Ce n'est pas un raccourci clavier valide"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Liste de noms de touches valides"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Toujours afficher l'icône dans le panneau"
+
+#: src/prefs.ts
+msgid ""
+"If you access the menu with the keyboard shortcut, you don't need to always "
+"display the icon."
+msgstr ""
+"Si vous accédez au menu avec le raccourci clavier, vous n'avez pas besoin de "
+"toujours en afficher l'icône."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Raccourcis clavier"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Sélecteur d'émojis"
+
+#: src/prefs.ts
+msgid ""
+"This extension provides a configurable popup menu displaying most emojis, "
+"clicking on an emoji copies it to the clipboard."
+msgstr ""
+"Cette extension fournit un menu contextuel configurable affichant la plupart "
+"des émojis ; cliquer sur un émoji le copie dans le presse-papiers."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Auteur"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "Romain F. T."
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Traducteurs"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Contributeurs"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Rapporter des bugs ou des idées"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "À propos"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Impossible d'ouvrir la page web"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Émoticônes & corps humain"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Personnes & vêtements"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Animaux & nature"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Nourriture & boisson"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Voyage & lieux"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Activités & sports"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Objets"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Symboles"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Drapeaux"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Taper ici pour rechercher…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Pas de teinte"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Teinte pâle"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Teinte moyennement pâle"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Teinte moyenne"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Teinte moyennement sombre"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Teinte sombre"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Femmes"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Hommes"

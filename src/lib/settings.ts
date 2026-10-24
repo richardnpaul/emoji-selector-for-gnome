@@ -48,7 +48,7 @@ export class EmojiSettings {
   }
 
   set skinTone(tone: number) {
-    this.#settings.set_int('skin-tone', tone);
+    this.#saved('skin-tone', this.#settings.set_int('skin-tone', tone));
   }
 
   get gender(): number {
@@ -56,7 +56,7 @@ export class EmojiSettings {
   }
 
   set gender(gender: number) {
-    this.#settings.set_int('gender', gender);
+    this.#saved('gender', this.#settings.set_int('gender', gender));
   }
 
   get alwaysShow(): boolean {
@@ -72,7 +72,17 @@ export class EmojiSettings {
   }
 
   set recentlyUsed(emojis: string[]) {
-    this.#settings.set_strv('recently-used', emojis);
+    this.#saved('recently-used', this.#settings.set_strv('recently-used', emojis));
+  }
+
+  /**
+   * GSettings refuses a write by returning false rather than by throwing: the key is locked by an
+   * administrator, or the value is outside what the schema allows.
+   */
+  #saved(key: SettingKey, saved: boolean): void {
+    if (!saved) {
+      console.warn(`Cannot save the setting '${key}': it is locked, or the value is not allowed`);
+    }
   }
 
   /** Calls `callback` whenever `key` changes. All such handlers are removed by disconnectAll(). */

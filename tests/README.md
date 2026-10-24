@@ -7,6 +7,7 @@ npm run test:integration          # tests/integration
 npm run test:coverage             # + V8 coverage, fails below 100% (statements/branches/functions/lines)
 npm run test:mutation             # Stryker, fails below 100% mutation score (~6 min)
 npm run test:mutation:incremental # opt-in cache; re-run without it before trusting a result
+npm run test:real                 # test:prefs + test:shell (not part of check; CI runs them in their own job)
 npm run test:prefs                # the preferences in the real GTK 4 + libadwaita under Xvfb (test:prefs:rtl: right-to-left only)
 npm run test:shell                # the built extension in a real, headless GNOME Shell 51
 UPDATE_GOLDEN=1 npm run test:unit # regenerate tests/fixtures/emoji-data.json (then review the diff)
@@ -17,13 +18,13 @@ Run them in the devcontainer: the tooling tests need `glib-compile-schemas`, `ms
 
 ## Current status
 
-| Gate             | Result                                                                                                                                                  |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tests            | 500 passing (21 files, `test:prefs` and `test:shell` included)                                                                                          |
-| Coverage         | 100% statements, branches, functions, lines (`src/` and `scripts/`)                                                                                     |
-| Mutation score   | **100.00%**: 7,722 mutants (about 6,750 in the emoji tables, killed by the golden file; about 970 in the logic), 0 survived, 0 timed out, 0 no-coverage |
-| Lint / format    | ESLint 0 warnings (strict type-aware TypeScript), Prettier clean, all pre-commit hooks pass                                                             |
-| `npm run shexli` | no findings, apart from two reviewed ones (`scripts/lib/shexli-accepted.mjs`)                                                                           |
+| Gate             | Result                                                                                                                                                    |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tests            | 485 passing in the everyday run (plus 22 in the real GNOME: `test:prefs` and `test:shell`)                                                                |
+| Coverage         | 100% statements, branches, functions, lines (`src/` and `scripts/`)                                                                                       |
+| Mutation score   | **100.00%**: 7,769 mutants (about 6,750 in the emoji tables, killed by the golden file; about 1,020 in the logic), 0 survived, 0 timed out, 0 no-coverage |
+| Lint / format    | ESLint 0 warnings (strict type-aware TypeScript), Prettier clean, all pre-commit hooks pass                                                               |
+| `npm run shexli` | no findings, apart from two reviewed ones (`scripts/lib/shexli-accepted.mjs`)                                                                             |
 
 ## How the code is tested
 
@@ -44,7 +45,7 @@ tested, not assumed:
 | API names and constants  | `real-tools.tooling.test.js` loads the **real Clutter/St/Meta/Shell/GLib typelibs** in GJS and checks that (1) every `Clutter.*`/`St.*`/`Meta.*`/`Shell.*`/`GLib.*` name the Shell-side sources use exists, (2) the fakes' constants have the real values, (3) the fakes define no constant the real library lacks.          |
 | Types                    | `npm run typecheck` checks the sources against the generated `@girs/*` declarations of GNOME Shell 50 (strict, `noUncheckedIndexedAccess`), which would have caught the invented `Clutter.KP_Enter` of the old code.                                                                                                         |
 | `Gio.Settings`           | Keys, types and defaults are **parsed from the real `gschema.xml`**, and ranges and choices are enforced as real GSettings does (a refused write returns false and emits nothing; writing the value a key already holds emits nothing, as probed against the real library). `bind` follows the object until it is destroyed. |
-| Adw / Gtk                | `prefs-real.tooling.test.js` builds and installs the package, opens the **real preferences in real libadwaita** (with the Extensions app's own prefs module) and drives the real widgets; its expectations mirror `unit/prefs.test.js`, which runs the same scenarios on `support/fakes/adw.js`.                             |
+| Adw / Gtk                | `prefs.real.test.js` builds and installs the package, opens the **real preferences in real libadwaita** (with the Extensions app's own prefs module) and drives the real widgets; its expectations mirror `unit/prefs.test.js`, which runs the same scenarios on `support/fakes/adw.js`.                                     |
 | `GLib` main loop         | Source ids are tracked. `remove()` of a string throws, and of an unknown id or `null` counts as a GLib _critical_ that tests assert is zero. A timeout callback that returns nothing is removed, as in GJS.                                                                                                                  |
 | `St.Clipboard`           | Separate buffers per `St.ClipboardType`, a read snapshot taken when asked, and a log of every read and write, so tests prove which buffer is used and that nothing touches the clipboard unprompted. `test:shell` copies with a real click.                                                                                  |
 | St / Clutter / PopupMenu | Parenting, destruction, signal ids, `connect`/`disconnect` pairing, and `PopupMenu.destroy()` closing the menu first, as the Shell source does. A registry of every actor lets tests prove none outlives `disable()`; `test:shell` checks the same in the real stage.                                                        |
@@ -71,25 +72,30 @@ tests/
     source-contract.tooling.test.js   no code to spawn, eval, use the network, touch files or D-Bus; the
                                       clipboard module is the only one that touches the clipboard; code ⇄ schema
                                       key agreement
+    catalogues.tooling.test.js        catalogue names and headers; real gettext finds the right catalogue for the locales of
+                                      nine kinds of user; provenance.json; placeholders; machine-made and merged catalogues
+                                      complete; a merged catalogue differs from the human one only where the report says
     real-tools.tooling.test.js        real glib-compile-schemas, msgfmt (all catalogues), shipped .mo == .po,
                                       template matches the sources, real API names and constants, icons,
                                       stylesheet classes, no binaries
-    scripts.tooling.test.js           build-a-zip.sh, install.sh and update-and-compile-translations.sh run
+    scripts.tooling.test.js           build-a-zip.sh and update-and-compile-translations.sh run
                                       for real in a sandbox copy (paths with spaces, missing tools, invalid
                                       input, concurrent installs, idempotence), plus the safe-shell rules
     project-rules.tooling.test.js     the docs only name npm scripts that exist; the 100% thresholds and the
                                       mutate/coverage scope cannot be weakened quietly; the package supports
                                       Shell 45-51 and compiles to exactly what is shipped; everything is
                                       locked (actions by SHA, image digest, hashes, lockfiles, hook SHAs)
-    prefs-real.tooling.test.js        (test:prefs) the installed preferences in real libadwaita, LTR and RTL
-    shell-real.tooling.test.js        (test:shell) the installed extension in a headless Shell 51
+    prefs.real.test.js                (test:prefs) the installed preferences in real libadwaita, LTR and RTL
+    shell.real.test.js                (test:shell) the installed extension in a headless Shell 51
     real/                             GJS scripts run by the tests above: API inspection, the preferences
                                       harness, run-shell.sh (private system bus + fake logind, no root) and
                                       shell-driver/, a test-only extension that types and clicks with virtual
                                       input devices inside the Shell and reports what it sees
 ```
 
-Tests named `*.tooling.test.js` read the sources as text or run external tools. They are excluded from
+Tests named `*.real.test.js` run in the real GNOME (a real Shell, real GTK under Xvfb). They are slower, need the
+container's session tooling and add no coverage, so `npm test`, `npm run check` and the pre-push hook leave them out:
+`npm run test:real` (or `check:all`) runs them, and CI does in its own job `real-gnome`. Tests named `*.tooling.test.js` read the sources as text or run external tools. They are excluded from
 mutation testing automatically (`vitest.stryker.config.mjs`), because Stryker instruments the sources and
 these tests cannot kill mutants anyway.
 

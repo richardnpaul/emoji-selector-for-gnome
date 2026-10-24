@@ -13,7 +13,7 @@ these through symlinks in `.claude/` (`agents` and `skills` point back here).
 
 ## Agent roster
 
-Principle of least privilege: an agent gets only the tools its job needs. Reviewers cannot write files.
+Principle of least privilege: an agent gets only the tools its job needs, and none has the `memory:` field: with it Claude Code gives an agent a persistent notes directory that it writes itself, reloads into its prompt on every run, and that automatically enables Write and Edit; for agents that read untrusted text, that would be a way to persist an injection (and would contradict "reviewers cannot write files"). Reviewers cannot write files.
 `Bash` is granted where a reviewer must run `git`, linters or `shexli`, and is _instruction-limited_ to
 read-only commands, since the tool cannot enforce that.
 
@@ -62,7 +62,7 @@ Agent designs are original to this repository but adapt ideas and some wording f
 | [github/awesome-copilot](https://github.com/github/awesome-copilot)                   | MIT, (c) GitHub, Inc.        | Split TDD red/green/refactor agents, `trojan-skill-hunter` threat taxonomy, `doublecheck` "links not verdicts", review-depth levels              |
 
 The skills and rules that were already present when this directory was introduced (security-review,
-code-review-and-quality, transformation-priority-premise, continual-learning, localisation-l10n, the two
+code-review-and-quality, transformation-priority-premise, localisation-l10n, the two
 GNOME skills, and the four rules) were copied in from the author's `gnome-shell-extensions-sync`
 project. They carry no source or licence notes, so **their upstream origin and licence are unrecorded**;
 confirm both before this repository is published or the skills are redistributed.

@@ -22,9 +22,6 @@ export interface SearchScope {
   categoriesToSearch(): readonly SearchableCategory[];
 }
 
-// Shown in the slots that the recently used emojis do not fill, for it is obvious which one it is.
-const PADDING_EMOJI = '🐧';
-
 // From the most important criterion to very general string matching: the recently used emojis
 // matching the text, an exact match with an emoji name, a match in the names, a match in any keyword.
 const SEARCH_PRIORITIES: readonly SearchPriority[] = ['recent', 'exact-name', 'name', 'keyword'];
@@ -80,13 +77,8 @@ export class EmojiSearchItem {
   /** Shows the recently used emojis if the entry is empty, and otherwise the results of the search. */
   refresh(): void {
     const text = this.entry.get_text().toLowerCase();
-    if (text === '') {
-      // The slots that the stored list does not fill (it can be shorter than the number of columns).
-      const recentlyUsed = this.#recentlyUsed();
-      this.#show(this.recents.map((_button, i) => recentlyUsed[i] ?? PADDING_EMOJI));
-    } else {
-      this.#show(this.#search(text));
-    }
+    // (Slots left over, when there are fewer emojis than slots, stay blank.)
+    this.#show(text === '' ? this.#recentlyUsed() : this.#search(text));
   }
 
   /** Makes `emoji` the most recently used one. */

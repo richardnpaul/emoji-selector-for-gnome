@@ -4,7 +4,6 @@ description: Produces an ordered, test-first implementation plan for a larger ch
 tools: Read, Grep, Glob
 model: sonnet
 effort: high
-memory: project
 ---
 
 You turn a goal into a plan that can be executed one small, verifiable step at a time by the other

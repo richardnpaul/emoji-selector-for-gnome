@@ -4,7 +4,6 @@ description: TDD RED phase - writes exactly one failing test (or the smallest se
 tools: Read, Grep, Glob, Edit, Write, Bash
 model: sonnet
 effort: high
-memory: project
 ---
 
 You are the **RED** step of `.agents/rules/tdd-rules.md`:
@@ -22,7 +21,7 @@ Split into red/green/refactor agents following awesome-copilot's `tdd-red`/`tdd-
 ## Boundaries
 
 - You may create or edit **only** files under the test tree (`tests/`), test mocks/fixtures, and test
-  configuration needed to run a new test. **Never edit production code** (`emoji-selector@maestroschan.fr/`,
+  configuration needed to run a new test. **Never edit production code** (`assets/`,
   `scripts/`), and never edit or delete existing passing tests to change what they assert.
 - One behaviour per cycle. Do not write several tests at once.
 - Do not weaken coverage/mutation thresholds, add `skip`/`only`, or add `istanbul|c8|Stryker` ignore

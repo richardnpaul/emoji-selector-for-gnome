@@ -1,4 +1,4 @@
-// Builds the extension for real (TypeScript compiler, packaging script, installer) in a temporary
+// Builds the extension for real (TypeScript compiler, packaging script, `gnome-extensions install`: the steps the README gives) in a temporary
 // directory and returns where it was installed, so that tests can run it in the real GNOME libraries
 // without touching the working tree.
 import { spawnSync } from 'node:child_process';
@@ -24,23 +24,24 @@ function run(command, args, options) {
 export function buildAndInstall(base) {
 	const repo = path.join(base, 'package source');
 	mkdirSync(repo, { recursive: true });
-	cpSync(EXTENSION_DIR, path.join(repo, UUID), { recursive: true });
-	for (const script of ['build-a-zip.sh', 'install.sh']) {
-		cpSync(path.join(ROOT, script), path.join(repo, script));
-		chmodSync(path.join(repo, script), 0o755);
-	}
+	cpSync(EXTENSION_DIR, path.join(repo, 'assets'), { recursive: true });
+	cpSync(path.join(ROOT, 'build-a-zip.sh'), path.join(repo, 'build-a-zip.sh'));
+	chmodSync(path.join(repo, 'build-a-zip.sh'), 0o755);
 	run(
 		path.join(ROOT, 'node_modules/.bin/tsc'),
-		['-p', 'tsconfig.build.json', '--outDir', path.join(repo, 'dist', UUID)],
+		['-p', 'tsconfig.build.json', '--outDir', path.join(repo, 'dist', 'extension')],
 		{
 			cwd: ROOT,
 		},
 	);
+	const env = { PATH: process.env.PATH, HOME: path.join(base, 'home') };
+	const zips = path.join(base, 'zips');
+	run('bash', [path.join(repo, 'build-a-zip.sh'), zips], { cwd: base, env });
 	const xdgDataHome = path.join(base, 'data home');
-	const extensions = path.join(xdgDataHome, 'gnome-shell', 'extensions');
-	run('bash', [path.join(repo, 'install.sh')], {
+	run('gnome-extensions', ['install', '--force', path.join(zips, `${UUID}.zip`)], {
 		cwd: base,
-		env: { PATH: process.env.PATH, HOME: path.join(base, 'home'), EXTENSIONS_DIR: extensions },
+		env: { ...env, XDG_DATA_HOME: xdgDataHome },
 	});
+	const extensions = path.join(xdgDataHome, 'gnome-shell', 'extensions');
 	return { xdgDataHome, installed: path.join(extensions, UUID) };
 }

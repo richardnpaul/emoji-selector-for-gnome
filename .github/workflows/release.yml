@@ -1,0 +1,193 @@
+# Builds the extension, publishes a GitHub release, and submits the package to extensions.gnome.org (EGO).
+#
+# A release happens when the version in package.json has no git tag yet, on a push to main (or when started by hand,
+# optionally forcing a release of a version that is already tagged). The package is built and checked in the dev
+# container image, the same toolchain as ci.yml, and the job that does so has no secrets and cannot write to the
+# repository. Only the two jobs after it can: `release` can write the release, and `publish-ego` holds the EGO
+# credentials, in a GitHub environment (which can also require a manual approval before it runs).
+#
+# Mutation testing is not repeated here: it is a required check of ci.yml (see the branch protection).
+# Everything is pinned like in ci.yml: actions by commit SHA, the runner image, the container base image by
+# digest, and every dependency by lockfile.
+name: Release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      force_release:
+        description: 'Release even if the version in package.json is already tagged'
+        type: boolean
+        default: false
+      submit_to_ego:
+        description: 'Submit the package to extensions.gnome.org'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  IMAGE: emoji-selector-dev:release
+
+jobs:
+  build:
+    name: Check, build and attest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      id-token: write # to sign the attestations
+      attestations: write
+    outputs:
+      should_release: ${{ steps.version.outputs.should_release }}
+      version: ${{ steps.version.outputs.version }}
+      tag: ${{ steps.version.outputs.tag }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0 # the tags
+          persist-credentials: false
+
+      - name: Decide whether this version is new
+        id: version
+        env:
+          FORCE_RELEASE: ${{ inputs.force_release }}
+        run: |
+          version=$(jq -r .version package.json)
+          tag="v${version}"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+          if ! git rev-parse --verify --quiet "refs/tags/${tag}" >/dev/null; then
+            echo "New version ${version} (tag ${tag})."
+            echo "should_release=true" >> "$GITHUB_OUTPUT"
+          elif [ "${FORCE_RELEASE}" = "true" ]; then
+            echo "Tag ${tag} exists, and a release is forced."
+            echo "should_release=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Tag ${tag} exists: nothing to release (bump the version in package.json)."
+            echo "should_release=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - if: steps.version.outputs.should_release == 'true'
+        uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+      - if: steps.version.outputs.should_release == 'true'
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7.4.0
+        with:
+          context: .devcontainer
+          load: true
+          tags: ${{ env.IMAGE }}
+          cache-from: type=gha,scope=devcontainer
+
+      - name: Check, package, review (shexli), SBOM and checksums
+        if: steps.version.outputs.should_release == 'true'
+        # The container user (uid 1000) must be able to write to the checkout. SKIP: this run is not a commit.
+        run: |
+          chmod -R a+rwX "$GITHUB_WORKSPACE"
+          docker run --rm --volume "$GITHUB_WORKSPACE:/work" --workdir /work "$IMAGE" bash -euo pipefail -c '
+            git config --global --add safe.directory /work
+            npm ci
+            npm run check:all
+            npm run shexli
+            npm run sbom
+            cd dist
+            sha256sum -- *.zip sbom.cdx.json > checksums.txt
+          '
+
+      - name: Attest the build provenance of the package
+        if: steps.version.outputs.should_release == 'true'
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: dist/*.zip
+
+      - name: Attest the SBOM of the package
+        if: steps.version.outputs.should_release == 'true'
+        uses: actions/attest-sbom@c604332985a26aa8cf1bdc465b92731239ec6b9e # v4.1.0
+        with:
+          subject-path: dist/*.zip
+          sbom-path: dist/sbom.cdx.json
+
+      - name: Keep the files for the jobs that publish them
+        if: steps.version.outputs.should_release == 'true'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: release-files
+          path: |
+            dist/*.zip
+            dist/sbom.cdx.json
+            dist/checksums.txt
+          if-no-files-found: error
+
+  release:
+    name: GitHub release
+    needs: build
+    if: needs.build.outputs.should_release == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write # to create the tag and the release
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-files
+          path: release-files
+      - name: Create the release (or replace the files of a forced one)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ needs.build.outputs.tag }}
+          TARGET: ${{ github.sha }}
+        run: |
+          if gh release view "${TAG}" >/dev/null 2>&1; then
+            gh release upload "${TAG}" release-files/* --clobber
+          else
+            gh release create "${TAG}" release-files/* --target "${TARGET}" --title "${TAG}" --generate-notes
+          fi
+
+  publish-ego:
+    name: Submit to extensions.gnome.org
+    needs: [build, release]
+    if: needs.build.outputs.should_release == 'true' && (github.event_name == 'push' || inputs.submit_to_ego)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    # Holds EGO_USERNAME and EGO_PASSWORD as environment secrets. Add required reviewers to this environment in
+    # the repository settings to approve each submission by hand.
+    environment: extensions-gnome-org
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-files
+          path: release-files
+      - uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+      - uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7.4.0
+        with:
+          context: .devcontainer
+          load: true
+          tags: ${{ env.IMAGE }}
+          cache-from: type=gha,scope=devcontainer
+      - name: Upload the package with gnome-extensions
+        env:
+          EGO_USERNAME: ${{ secrets.EGO_USERNAME }}
+          EGO_PASSWORD: ${{ secrets.EGO_PASSWORD }}
+        run: |
+          if [ -z "${EGO_USERNAME}" ] || [ -z "${EGO_PASSWORD}" ]; then
+            echo "::warning title=Not submitted to extensions.gnome.org::EGO_USERNAME or EGO_PASSWORD is not set in the 'extensions-gnome-org' environment."
+            exit 0
+          fi
+          chmod -R a+rwX "$GITHUB_WORKSPACE"
+          # The password goes in through a pipe, not the command line, where every process could read it.
+          printf '%s' "${EGO_PASSWORD}" | docker run --rm --interactive --env EGO_USERNAME \
+            --volume "$GITHUB_WORKSPACE:/work" --workdir /work "$IMAGE" \
+            bash -euo pipefail -c '
+              gnome-extensions upload --accept-tos --user "$EGO_USERNAME" --password-file - release-files/*.zip
+            '

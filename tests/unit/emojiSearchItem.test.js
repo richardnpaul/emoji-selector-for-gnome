@@ -98,10 +98,20 @@ describe('EmojiSearchItem', () => {
 			expect(labels()).toEqual(['😂', '❤️', '😍']);
 		});
 
-		it('pads with penguins when fewer emoji are stored than columns', () => {
+		it('leaves the slots that the stored list does not fill blank, and out of the focus chain', () => {
 			settings.recentlyUsed = ['a'];
 			create(3);
-			expect(labels()).toEqual(['a', '🐧', '🐧']);
+			expect(labels()).toEqual(['a', '', '']);
+			expect(item.recents.map((button) => button.actor.can_focus)).toEqual([true, false, false]);
+			expect(item.recents.map((button) => button.actor.track_hover)).toEqual([true, false, false]);
+		});
+
+		it('copies nothing from a blank slot', () => {
+			settings.recentlyUsed = [];
+			create(3);
+			expect(item.recents[0].onButtonPress({ get_button: () => 1 })).toBe(false);
+			expect(item.entry.clutter_text.emit('key-press-event', new KeyEvent(0xff0d))).toBe(false);
+			expect(copy).not.toHaveBeenCalled();
 		});
 
 		it('shows only as many as there are columns', () => {
@@ -169,12 +179,12 @@ describe('EmojiSearchItem', () => {
 				expect(settings.recentlyUsed).toEqual(['n', 'a']);
 			});
 
-			it('does not store the penguins that pad the display', () => {
+			it('stores only the emoji that were used, however many slots there are', () => {
 				settings.recentlyUsed = ['a'];
 				create(3);
 				item.recordUse('n');
 				expect(settings.recentlyUsed).toEqual(['n', 'a']);
-				expect(labels()).toEqual(['n', 'a', '🐧']);
+				expect(labels()).toEqual(['n', 'a', '']);
 			});
 
 			it('ignores an empty emoji', () => {

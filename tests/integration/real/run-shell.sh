@@ -3,21 +3,21 @@
 # shell-driver) installed under XDG_DATA_HOME, enables and disables the extension twice over D-Bus, and
 # leaves the Shell's log where the test can read it.
 #
-# Usage: run-shell.sh XDG_DATA_HOME LOG_FILE
+# Usage: run-shell.sh XDG_DATA_HOME LOG_FILE UUID   (UUID: the extension to drive, installed in XDG_DATA_HOME)
 #
 # Needs no root and touches nothing outside its own temporary directory: the system bus it gives the
 # Shell is a private one, with a fake logind on it (the Shell refuses to start without logind).
 set -euo pipefail
 
-UNDER_TEST='emoji-selector@maestroschan.fr'
 DRIVER='emoji-test-driver@example.org'
 
-if (($# != 2)); then
-	echo "Usage: $0 XDG_DATA_HOME LOG_FILE" >&2
+if (($# != 3)); then
+	echo "Usage: $0 XDG_DATA_HOME LOG_FILE UUID" >&2
 	exit 2
 fi
 data_home=$1
 log_file=$2
+UNDER_TEST=$3
 if [[ $data_home != /* || $log_file != /* ]]; then
 	echo "Both paths must be absolute." >&2
 	exit 2

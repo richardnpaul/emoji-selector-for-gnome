@@ -65,6 +65,14 @@ describe('quality gates', () => {
 		expect(vitestConfig.test.coverage.exclude).toBeUndefined();
 	});
 
+	it('leave the tests in the real GNOME out of the everyday gate, and run them in their own CI job', () => {
+		expect(vitestConfig.test.exclude).toContain('**/*.real.test.js');
+		expect(PACKAGE.scripts['check:all']).toBe('npm run check && npm run test:real');
+		expect(PACKAGE.scripts.check).not.toContain('real');
+		const ci = readFileSync(path.join(ROOT, '.github/workflows/ci.yml'), 'utf8');
+		expect(ci).toMatch(/real-gnome:[\s\S]*npm run test:real/);
+	});
+
 	it('are run by a hook before pushing, thresholds included', () => {
 		const config = readFileSync(path.join(ROOT, '.pre-commit-config.yaml'), 'utf8');
 		expect(config).toMatch(/entry: npm run test:coverage\n(?:.*\n)*?\s+stages: \[pre-push\]/);
@@ -102,6 +110,11 @@ describe('the package', () => {
 		}
 	}, 60_000);
 
+	it.each(['build-a-zip.sh'])('%s names the uuid of metadata.json', (script) => {
+		const text = readFileSync(path.join(ROOT, script), 'utf8');
+		expect(/readonly UUID='([^']+)'/.exec(text)[1]).toBe(METADATA.uuid);
+	});
+
 	it('only accepts findings of the review linter with a reason', () => {
 		expect(ACCEPTED_FINDINGS.length).toBeGreaterThan(0);
 		for (const entry of ACCEPTED_FINDINGS) {
@@ -123,24 +136,57 @@ describe('supply chain: everything is locked', () => {
 		Object.entries(dependencies).filter(([, version]) => !/^\d+\.\d+\.\d+(-[\w.]+)?$/.test(version));
 
 	describe('GitHub Actions', () => {
-		it('has a workflow', () => {
-			expect(workflows()).toContain('ci.yml');
+		it('has the workflows', () => {
+			expect(workflows()).toEqual(expect.arrayContaining(['ci.yml', 'release.yml', 'shell-matrix.yml']));
 		});
 
-		it.each(['ci.yml'])('%s pins every action to a full commit SHA, with its version in a comment', (name) => {
-			const uses = [...read(`.github/workflows/${name}`).matchAll(/^\s*(?:-\s+)?uses:\s*(\S+?)@(\S+)(.*)$/gm)];
-			expect(uses.length).toBeGreaterThan(0);
-			for (const [, action, ref, rest] of uses) {
-				expect(ref, action).toMatch(SHA);
-				expect(rest, `${action} needs "# vX.Y.Z"`).toMatch(/#\s*v\d+\.\d+\.\d+/);
-			}
-		});
+		it.each(['ci.yml', 'release.yml', 'shell-matrix.yml'])(
+			'%s pins every action to a full commit SHA, with its version in a comment',
+			(name) => {
+				const uses = [...read(`.github/workflows/${name}`).matchAll(/^\s*(?:-\s+)?uses:\s*(\S+?)@(\S+)(.*)$/gm)];
+				expect(uses.length).toBeGreaterThan(0);
+				for (const [, action, ref, rest] of uses) {
+					expect(ref, action).toMatch(SHA);
+					expect(rest, `${action} needs "# vX.Y.Z"`).toMatch(/#\s*v\d+\.\d+\.\d+/);
+				}
+			},
+		);
 
-		it.each(['ci.yml'])('%s runs with read-only token permissions and no persisted credentials', (name) => {
-			const text = read(`.github/workflows/${name}`);
+		it('gives the release workflow write access, and the EGO credentials, only to the jobs that need them', () => {
+			const text = read('.github/workflows/release.yml');
 			expect(text).toMatch(/^permissions:\n\s+contents: read$/m);
-			const checkouts = text.split('actions/checkout@').slice(1);
-			expect(checkouts.length).toBeGreaterThan(0);
+			const jobs = Object.fromEntries(
+				text
+					.split(/^ {2}(?=[a-z-]+:\n {4}name:)/m)
+					.slice(1)
+					.map((job) => [job.slice(0, job.indexOf(':')), job]),
+			);
+			expect(Object.keys(jobs)).toEqual(['build', 'release', 'publish-ego']);
+			const writes = Object.entries(jobs).filter(([, job]) => /: write/.test(job));
+			expect(writes.map(([name]) => name)).toEqual(['build', 'release']);
+			expect(jobs.build).not.toMatch(/contents: write/);
+			expect(jobs.release).toMatch(/contents: write/);
+			const usingSecrets = Object.entries(jobs).filter(([, job]) => /secrets\.(?!GITHUB_TOKEN)/.test(job));
+			expect(usingSecrets.map(([name]) => name)).toEqual(['publish-ego']);
+			expect(jobs['publish-ego']).toMatch(/environment: \S+/);
+		});
+
+		it.each(['ci.yml', 'shell-matrix.yml'])(
+			'%s runs with read-only token permissions and no persisted credentials',
+			(name) => {
+				const text = read(`.github/workflows/${name}`);
+				expect(text).toMatch(/^permissions:\n\s+contents: read$/m);
+				const checkouts = text.split('actions/checkout@').slice(1);
+				expect(checkouts.length).toBeGreaterThan(0);
+				for (const checkout of checkouts) {
+					expect(checkout.split(/\n\s*-\s+(?:name|uses|run):/)[0]).toMatch(/persist-credentials: false/);
+				}
+			},
+		);
+
+		it('never keeps the git credentials when the release workflow checks out', () => {
+			const checkouts = read('.github/workflows/release.yml').split('actions/checkout@').slice(1);
+			expect(checkouts).toHaveLength(2);
 			for (const checkout of checkouts) {
 				expect(checkout.split(/\n\s*-\s+(?:name|uses|run):/)[0]).toMatch(/persist-credentials: false/);
 			}

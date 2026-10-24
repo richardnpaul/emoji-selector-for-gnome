@@ -49,6 +49,7 @@ export class EmojiMenu implements CategoryHost, SearchScope {
   readonly #clipboard = new Clipboard();
   #activeCategory = -1;
   #focusTimer: number | null = null;
+  #destroyed = false;
 
   /** `catalogue` has the emojis of each category, `iconDir` is where the extension's icons are. */
   constructor(settings: EmojiSettings, catalogue: readonly (readonly Emoji[])[], iconDir: string) {
@@ -66,41 +67,47 @@ export class EmojiMenu implements CategoryHost, SearchScope {
     this.button.add_child(box);
     this.button.visible = settings.alwaysShow;
 
-    const columns = settings.columns;
-    this.categories = categoryLabels().map(
-      ([name, icon, picker], id) =>
-        new EmojiCategory(
-          context,
-          this,
-          { id, name, icon: categoryIcon(icon, iconDir), emojis: catalogue[id] ?? [], picker },
-          columns,
-        ),
-    );
+    try {
+      const columns = settings.columns;
+      this.categories = categoryLabels().map(
+        ([name, icon, picker], id) =>
+          new EmojiCategory(
+            context,
+            this,
+            { id, name, icon: categoryIcon(icon, iconDir), emojis: catalogue[id] ?? [], picker },
+            columns,
+          ),
+      );
 
-    this.headerItem = new PopupMenu.PopupBaseMenuItem({ reactive: false, can_focus: false });
-    this.categories.forEach((category) => {
-      this.headerItem.add_child(category.button);
-    });
-    this.searchItem = new EmojiSearchItem(context, this, columns);
+      this.headerItem = new PopupMenu.PopupBaseMenuItem({ reactive: false, can_focus: false });
+      this.categories.forEach((category) => {
+        this.headerItem.add_child(category.button);
+      });
+      this.searchItem = new EmojiSearchItem(context, this, columns);
 
-    const menu = this.#popup;
-    if (settings.position === 'top') {
-      menu.addMenuItem(this.headerItem);
-      menu.addMenuItem(this.searchItem.searchItem);
-      menu.addMenuItem(this.searchItem.recentsItem);
+      const menu = this.#popup;
+      if (settings.position === 'top') {
+        menu.addMenuItem(this.headerItem);
+        menu.addMenuItem(this.searchItem.searchItem);
+        menu.addMenuItem(this.searchItem.recentsItem);
+      }
+      this.categories.forEach((category) => {
+        menu.addMenuItem(category.item);
+      });
+      if (settings.position === 'bottom') {
+        menu.addMenuItem(this.searchItem.recentsItem);
+        menu.addMenuItem(this.searchItem.searchItem);
+        menu.addMenuItem(this.headerItem);
+      }
+
+      menu.connect('open-state-changed', (_menu: unknown, open: boolean) => {
+        this.#onOpenStateChanged(open);
+      });
+    } catch (error) {
+      // Nothing else knows this button yet, and it has already put its popup in the Shell's layer.
+      this.button.destroy();
+      throw error;
     }
-    this.categories.forEach((category) => {
-      menu.addMenuItem(category.item);
-    });
-    if (settings.position === 'bottom') {
-      menu.addMenuItem(this.searchItem.recentsItem);
-      menu.addMenuItem(this.searchItem.searchItem);
-      menu.addMenuItem(this.headerItem);
-    }
-
-    menu.connect('open-state-changed', (_menu: unknown, open: boolean) => {
-      this.#onOpenStateChanged(open);
-    });
   }
 
   toggle(): void {
@@ -136,9 +143,15 @@ export class EmojiMenu implements CategoryHost, SearchScope {
     return this.#activeCategory === -1 ? this.categories : this.categories.filter((c) => c.id === this.#activeCategory);
   }
 
-  /** (Destroying the button closes its menu, which stops the pending focus.) */
+  /**
+   * (Destroying the button closes its menu, which stops the pending focus.) Done once: the Shell refuses
+   * to touch an actor that is already gone.
+   */
   destroy(): void {
-    this.button.destroy();
+    if (!this.#destroyed) {
+      this.#destroyed = true;
+      this.button.destroy();
+    }
   }
 
   get #popup(): PopupMenu.PopupMenu {
