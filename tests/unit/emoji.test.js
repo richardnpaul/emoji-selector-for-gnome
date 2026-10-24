@@ -184,4 +184,119 @@ describe('Emoji', () => {
 			expect(used('🧜', ['HAS_GENDER'], `🧜${WOMAN_SIGN}`)).toBe(true);
 		});
 	});
+	describe('names and keywords in the language of the user', () => {
+		const grinning = () => new Emoji('😀', ['grinning face', 'grin', 'HAS_TONE']);
+
+		it('is named in English until it is given a name in another language', () => {
+			const emoji = grinning();
+			expect(emoji.displayName).toBe('grinning face');
+			emoji.localise('');
+			expect(emoji.displayName).toBe('grinning face');
+		});
+
+		it('is named in the language it is given, which does not change its English name', () => {
+			const emoji = grinning();
+			emoji.localise('visage souriant|sourire|content');
+			expect(emoji.displayName).toBe('visage souriant');
+			expect(emoji.name).toBe('grinning face');
+			expect(emoji.keywords).toEqual(['grinning face', 'grin', 'HAS_TONE']);
+		});
+
+		it('can be named in another language later, which replaces the first', () => {
+			const emoji = grinning();
+			emoji.localise('visage souriant|sourire');
+			emoji.localise('lächelndes gesicht|lächeln');
+			expect(emoji.displayName).toBe('lächelndes gesicht');
+			expect(emoji.hasKeyword('sourire')).toBe(false);
+			expect(emoji.hasKeyword('lachel')).toBe(true);
+		});
+
+		it('is not named by an empty name, whatever follows it', () => {
+			const emoji = grinning();
+			emoji.localise('|sourire||content|');
+			expect(emoji.displayName).toBe('sourire');
+			expect(emoji.hasKeyword('content')).toBe(true);
+			emoji.localise('|');
+			expect(emoji.displayName).toBe('grinning face');
+		});
+
+		it('has no keywords of another language before it is given any', () => {
+			const emoji = grinning();
+			for (const text of ['stryker', 'was here', 'souriant']) {
+				expect(emoji.hasKeyword(text), text).toBe(false);
+			}
+		});
+
+		it('is named in English again by an empty entry', () => {
+			const emoji = grinning();
+			emoji.localise('visage souriant|sourire');
+			emoji.localise('');
+			expect(emoji.displayName).toBe('grinning face');
+			expect(emoji.hasKeyword('sourire')).toBe(false);
+			expect(emoji.isNamed('visage souriant')).toBe(false);
+		});
+
+		it('is named by a name alone, without keywords', () => {
+			const emoji = grinning();
+			emoji.localise('visage souriant');
+			expect(emoji.displayName).toBe('visage souriant');
+			expect(emoji.hasKeyword('sourire')).toBe(false);
+		});
+
+		describe('matching (the text is already folded)', () => {
+			it('finds the exact name, in English and in the other language', () => {
+				const emoji = grinning();
+				emoji.localise('Visage Souriant|sourire');
+				expect(emoji.isNamed('grinning face')).toBe(true);
+				expect(emoji.isNamed('visage souriant')).toBe(true);
+				expect(emoji.isNamed('visage')).toBe(false);
+				expect(emoji.isNamed('grin')).toBe(false);
+				expect(emoji.isNamed('sourire')).toBe(false);
+			});
+
+			it('finds part of the name, in English and in the other language', () => {
+				const emoji = grinning();
+				emoji.localise('visage souriant|sourire');
+				expect(emoji.nameHas('inning')).toBe(true);
+				expect(emoji.nameHas('souri')).toBe(true);
+				expect(emoji.nameHas('sourire')).toBe(false);
+				expect(emoji.nameHas('grin')).toBe(true);
+				expect(emoji.nameHas('cat')).toBe(false);
+			});
+
+			it('finds part of any keyword, which includes the name, in English and in the other language', () => {
+				const emoji = grinning();
+				emoji.localise('visage souriant|sourire|content');
+				expect(emoji.hasKeyword('grin')).toBe(true);
+				expect(emoji.hasKeyword('face')).toBe(true);
+				expect(emoji.hasKeyword('visage')).toBe(true);
+				expect(emoji.hasKeyword('sourire')).toBe(true);
+				expect(emoji.hasKeyword('cont')).toBe(true);
+				expect(emoji.hasKeyword('chat')).toBe(false);
+			});
+
+			it('ignores the case and the accents of the words, not only of the text', () => {
+				const emoji = new Emoji('☕', ['Hot Beverage', 'Café']);
+				emoji.localise('Boisson Chaude|Café|Thé');
+				expect(emoji.hasKeyword('cafe')).toBe(true);
+				expect(emoji.hasKeyword('the')).toBe(true);
+				expect(emoji.isNamed('boisson chaude')).toBe(true);
+				expect(emoji.isNamed('hot beverage')).toBe(true);
+			});
+
+			it('does not find the markers of its tags', () => {
+				const emoji = new Emoji('👋', ['waving hand', 'HAS_TONE', 'HAS_GENDER', 'IS_GENDERED']);
+				for (const text of ['has', 'tone', 'gender', 'is_', '_']) {
+					expect(emoji.hasKeyword(text), text).toBe(false);
+				}
+			});
+
+			it('finds nothing when it has no keywords', () => {
+				const emoji = new Emoji('', []);
+				expect(emoji.hasKeyword('x')).toBe(false);
+				expect(emoji.nameHas('x')).toBe(false);
+				expect(emoji.isNamed('x')).toBe(false);
+			});
+		});
+	});
 });

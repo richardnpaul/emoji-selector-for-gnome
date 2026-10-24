@@ -5,6 +5,7 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 import { EmojiButton, type EmojiContext } from './emojiButton.js';
 import type { SearchPriority } from './emojiCategory.js';
+import { fold } from './fold.js';
 
 /** What the search needs from a category. */
 export interface SearchableCategory {
@@ -76,7 +77,7 @@ export class EmojiSearchItem {
 
   /** Shows the recently used emojis if the entry is empty, and otherwise the results of the search. */
   refresh(): void {
-    const text = this.entry.get_text().toLowerCase();
+    const text = fold(this.entry.get_text());
     // (Slots left over, when there are fewer emojis than slots, stay blank.)
     this.#show(text === '' ? this.#recentlyUsed() : this.#search(text));
   }

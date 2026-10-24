@@ -59,16 +59,25 @@ one API surface for all seven (no per-version branches were needed).
 
 ```
 tests/
-  support/        fakes (toolkit, settings, adw), gi/ and shell/ aliases, real-package.js (build + install)
+  support/        fakes (toolkit, settings, adw), gi/ and shell/ aliases, names/ (a little French and a
+                  wrong-sized list standing for the generated emoji names), real-package.js (build + install)
   fixtures/       emoji-data.json, the reviewed golden copy of the emoji tables
   unit/           one file per module (emoji, emojiButton, emojiCategory, emojiSearchItem, emojiMenu,
-                  skinTonesBar, clipboard, catalogue, settings, extension, prefs, the emoji data) and the
+                  skinTonesBar, clipboard, catalogue, settings, extension, prefs, fold, localNames, the emoji
+                  data) and the
                   scripts/lib helpers (shexli)
   integration/
     journeys.test.js                  the real extension on the fake runtime, through the actors a user
                                       sees: search → copy, recents-first (#119, also for toned emoji), skin
                                       tone / gender, hover, no unprompted clipboard use, every actor
                                       destroyed, repeated enable/disable, restart
+    names.journeys.test.js            the extension in another language: the names load in the background, a
+                                      search finds an emoji by its name in the language of the user (accents and
+                                      case ignored) and still by its English one, the hover label, data that does not
+                                      fit is ignored and logged, nothing happens after disable
+    names.tooling.test.js             the generator of the emoji names on small data, then on the real CLDR and the
+                                      real table (a text per emoji, flags and keycaps named, size, which languages
+                                      have names)
     source-contract.tooling.test.js   no code to spawn, eval, use the network, touch files or D-Bus; the
                                       clipboard module is the only one that touches the clipboard; code ⇄ schema
                                       key agreement
@@ -87,7 +96,8 @@ tests/
                                       Shell 45-51 and compiles to exactly what is shipped; everything is
                                       locked (actions by SHA, image digest, hashes, lockfiles, hook SHAs)
     prefs.real.test.js                (test:prefs) the installed preferences in real libadwaita, LTR and RTL
-    shell.real.test.js                (test:shell) the installed extension in a headless Shell 51
+    shell.real.test.js                (test:shell) the installed extension in a headless Shell 51, in a few
+                                      languages (texts) and with users searching in theirs (`chat` under French)
     real/                             GJS scripts run by the tests above: API inspection, the preferences
                                       harness, run-shell.sh (private system bus + fake logind, no root) and
                                       shell-driver/, a test-only extension that types and clicks with virtual

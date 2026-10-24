@@ -139,21 +139,36 @@ To confirm with the maintainer: is that the intended meaning?
 
 ## Track B: emoji names and search in the user's language
 
-- **Data:** Unicode CLDR emoji annotations (`cldr-annotations-full`, version 49.0.0, licence Unicode-3.0, about 58
-  MB unpacked), a pinned dev dependency used only at build time; the shipped package contains none of it except the
-  generated data, with the Unicode licence notice.
-- **Build step:** reduce each locale to the emoji in our table (a name and keywords per emoji), one small module per
-  locale under the compiled output. Generated at build time, not committed.
-- **Runtime:** read the user's languages with `GLib.get_language_names()`, load the first match with a dynamic
-  `import()`, and keep nothing else in memory. English remains searchable always, so existing habits keep working.
-  No file-access API is needed, so the source contract (no `Gio.File`) is unchanged.
-- **Search:** compare after folding case and diacritics, so `cafe` finds `café`. The hover label shows the localised
-  name. Skin-tone and gender markers are unaffected.
-- **Alias map:** `nb` to `no`, `zh_CN` to `zh`, `zh_TW` to `zh-Hant`, `pt` to `pt`/`pt-PT` by territory, and so on,
-  tested against the real expansion lists.
-- **Size:** about 112 locales may add several MB to the zip, up from 174 KB. Measure first; check the extensions.gnome.org
-  upload limit; if too large, ship the most-used locales and document the rest.
-- **Gaps** (no CLDR data): `bo ht iu lg ln mg pap sm st tpi eo` search in English.
+Built as follows (the measurements are those of CLDR 49).
+
+- **Data:** the Unicode CLDR annotations, `cldr-annotations-full` for the emojis and `cldr-annotations-derived-full`
+  for the flags, keycaps and others that CLDR names by a rule (without it 265 of our 1,513 emojis have no name), both
+  version 49.0.0, licence Unicode-3.0, pinned dev dependencies used only at build time. The package ships none of
+  them except the generated data and the licence text (`data/names/UNICODE-LICENSE.txt`).
+- **Build step:** `translations/tools/names.mjs` (`npm run build:names`, after `build:ts`) writes
+  `dist/extension/data/names/<language>.js`: one text per emoji of the table, in its order, `name|keyword|keyword`
+  or empty, and the language it inherits from (`export const parent`). A language with no parent ships if CLDR
+  names at least half of our emojis. A regional variant (`fr-CA`, `de-CH`, `pt-PT`, `zh-Hant-HK`...) only says what
+  differs from its parent, so it is written as CLDR has it and ships if its parent does and it names anything; the
+  parent is what CLDR's supplemental data says (`zh-Hant` has none, `es-MX` inherits from `es-419`) and otherwise the
+  locale without its last subtag. English and its variants are not written: the table is in English. 133 files ship, one
+  emoji to a line, so that no reviewer takes them for minified code. The build fails if fewer than 100 languages
+  come out or if the CLDR files are not as expected, and `build-a-zip.sh` refuses a package without them.
+- **Runtime:** `GLib.get_language_names()` gives the locales of the user; `nameDataKeys` turns them into CLDR keys
+  (`zh_TW` is `zh-Hant`, `nb` is `no`, `pt_PT` is `pt-PT`, `sr@latin` is `sr-Latn`; English has none; a key that is
+  not made of letters, digits and hyphens is dropped, as it becomes a file name); `loadLocalNames` tries them in
+  order with a dynamic `import()` and the first that loads wins, with the emojis it does not name taken from the
+  languages it inherits from. The session does this after building the menu, so
+  the menu is never waiting for it; until it is done, and for a language without data, the extension works in English.
+  The data must have one entry per emoji, or it is ignored and the error logged.
+- **Search:** both the text typed and the words (English and the user's language) are folded by `fold`: lower case,
+  no accents (U+0300 to U+036F, so `cafe` finds `café` but the vowel signs of Hindi stay) and plain spaces (French
+  puts a narrow no-break space before a colon). English is always searched too, so existing habits keep working. The
+  hover label shows the name in the user's language.
+- **Size:** the zip is 3.4 MB, up from 312 KB, under the 5 MiB that extensions.gnome.org allows by default; a test fails
+  if the generated data grows beyond 3.5 MB compressed.
+- **Without names** (13 interface languages whose users search in English): `ckb eo ht ku lg ln mg oc pap sm st su
+tpi`. A test lists them, so a change in the data shows up.
 
 ## Phases
 
@@ -185,11 +200,12 @@ Each phase is test-first, keeps coverage and mutation at 100%, and ends with the
    - **Words left in English** because they are the usual loanword (for instance "Layout" in Danish) are listed
      per catalogue in `sameAsEnglish`; no other string may be identical to the English.
    - The package is 312 KB with all the catalogues, up from 174 KB.
-4. **Other-language runs** of `test:prefs` and `test:shell`; README language table and credits.
-5. **Track B pipeline:** CLDR to per-locale modules; golden tests for a few locales; size measurement.
-6. **Track B runtime:** language list, loader and search folding behind fakes; a real-Shell test that types `chat`
-   under French and finds the cat.
-7. **Compliance:** CLDR attribution in the package, full mutation run, size check, review pass, release notes.
+4. **Other-language runs** of `test:prefs` and `test:shell`; README language table and credits. Done.
+5. **Track B pipeline. Done:** CLDR to a module per language, tested on small data and on the real data and table.
+6. **Track B runtime. Done:** `fold`, the names on `Emoji`, the loader, the session, the extension, journeys with
+   fixtures, and a real-Shell test (`test:shell`) in which French users type `chat`, German users `katze` and
+   Spanish users `gato`, and find the cat.
+7. **Compliance:** the Unicode licence is in the package; full mutation run, review pass and release notes still to do.
 
 ## Risks and open questions
 

@@ -3,8 +3,9 @@
 #
 # Usage: ./build-a-zip.sh [OUTPUT_DIR]       (default: ./dist)
 #
-# Run `npm run build:ts` first: the extension is written in TypeScript, and the zip holds the
-# JavaScript that the compiler writes to dist/<uuid>/, together with the assets that live in <uuid>/
+# Run `npm run build:ts` and `npm run build:names` first: the extension is written in TypeScript, and the zip holds the
+# JavaScript that the compiler writes to dist/extension/ (and the emoji names that build:names writes to
+# dist/extension/data/names/, with the Unicode licence), together with the assets that live in <uuid>/
 # (metadata, schema, stylesheet, icons and compiled translations).
 #
 # Only an explicit list of files ships: the source translations (.po/.pot), the compiled schema
@@ -13,9 +14,9 @@
 set -euo pipefail
 
 readonly UUID='emoji-selector@richardnpaul.github.com'
-readonly REQUIRED_COMPILED=(extension.js prefs.js)
+readonly REQUIRED_COMPILED=(extension.js prefs.js data/names/UNICODE-LICENSE.txt data/names/de.js data/names/fr.js)
 readonly REQUIRED_ASSETS=(metadata.json stylesheet.css)
-readonly COMPILED_PATHS='\./([A-Za-z]+\.js|(lib|data)/[A-Za-z]+\.js)'
+readonly COMPILED_PATHS='\./([A-Za-z]+\.js|(lib|data)/[A-Za-z]+\.js|data/names/([A-Za-z0-9-]+\.js|UNICODE-LICENSE\.txt))'
 readonly ASSET_PATHS='\./(metadata\.json|stylesheet\.css|schemas/[A-Za-z0-9.-]+\.gschema\.xml|locale/[A-Za-z0-9_-]+/LC_MESSAGES/emoji-selector\.mo|icons/[A-Za-z0-9-]+\.svg)'
 
 partial_file=''
@@ -51,12 +52,12 @@ if [[ ! -d $assets_dir ]]; then
 	exit 1
 fi
 if [[ ! -d $compiled_dir ]]; then
-	echo "Compiled extension not found: $compiled_dir (run 'npm run build:ts' first)" >&2
+	echo "Compiled extension not found: $compiled_dir (run 'npm run build:ts' and 'npm run build:names' first)" >&2
 	exit 1
 fi
 for file in "${REQUIRED_COMPILED[@]}"; do
 	if [[ ! -f $compiled_dir/$file ]]; then
-		echo "Missing $file in $compiled_dir (run 'npm run build:ts' first)" >&2
+		echo "Missing $file in $compiled_dir (run 'npm run build:ts' and 'npm run build:names' first)" >&2
 		exit 1
 	fi
 done

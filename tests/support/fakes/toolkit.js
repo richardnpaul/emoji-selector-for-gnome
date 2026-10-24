@@ -282,12 +282,19 @@ export function createGLib() {
 				return known;
 			},
 		},
+		/** Test control: the locales of the user. */
+		languageNames: ['C'],
+		/** As GLib lists the locales of the user, from the most specific to the least. */
+		get_language_names() {
+			return glib.languageNames;
+		},
 		criticals: 0,
 		/** Test control: forget every source, as a fresh Shell would have none. */
 		reset() {
 			sources.clear();
 			nextId = 1;
 			glib.criticals = 0;
+			glib.languageNames = ['C'];
 		},
 		/** Test control: run (and, unless they ask to continue, remove) every pending timeout. */
 		runTimeouts() {

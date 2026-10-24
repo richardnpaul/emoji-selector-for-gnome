@@ -65,6 +65,16 @@ describe('EmojiButton', () => {
 		});
 	});
 
+	describe('hover in another language', () => {
+		it('tells the name in the language of the user', () => {
+			const onHover = vi.fn();
+			const emoji = new Emoji('😀', ['grinning face', 'grin']);
+			emoji.localise('visage souriant|sourire');
+			new EmojiButton(context, emoji, onHover).actor.setHover(true);
+			expect(onHover).toHaveBeenLastCalledWith('visage souriant');
+		});
+	});
+
 	describe('what gets copied', () => {
 		it('is the emoji with the chosen skin tone', () => {
 			settings.skinTone = 2;

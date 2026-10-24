@@ -177,6 +177,31 @@ export default class Driver extends Extension {
 		};
 	}
 
+	/**
+	 * Types `word` in the search and reports what it finds once the results stop changing: the names of the emojis in the
+	 * user's language load in the background, and the search shows them when they arrive.
+	 */
+	async #search(indicator, word) {
+		// (The first keys of a new virtual keyboard are lost, so start with a harmless one.)
+		this.#keyboard.notify_keyval(GLib.get_monotonic_time(), Clutter.KEY_Shift_L, Clutter.KeyState.PRESSED);
+		this.#keyboard.notify_keyval(GLib.get_monotonic_time(), Clutter.KEY_Shift_L, Clutter.KeyState.RELEASED);
+		await sleep(200);
+		indicator.menu.open();
+		await sleep(400);
+		const entry = find(indicator.menu.box, (actor) => actor.name === 'searchEntry')[0];
+		// (The keysym of a letter of the alphabet is its code.)
+		const keys = [...word].map((letter) => letter.codePointAt(0));
+		await this.#type(entry, word, keys);
+		let results = this.#emojiButtons(indicator).map((button) => button.label);
+		for (let steady = 0, poll = 0; steady < 2 && poll < 20; poll++) {
+			await sleep(300);
+			const now = this.#emojiButtons(indicator).map((button) => button.label);
+			steady = now.join() === results.join() ? steady + 1 : 0;
+			results = now;
+		}
+		say('searched', { text: entry.get_text(), results });
+	}
+
 	async #enabled() {
 		const round = ++this.#round;
 		const indicator = Main.panel.statusArea[UNDER_TEST];
@@ -184,6 +209,10 @@ export default class Driver extends Extension {
 		if (round === 1) {
 			say('texts', this.#texts(indicator));
 			if (GLib.getenv('DRIVER_MODE') === 'texts') {
+				return;
+			}
+			if (GLib.getenv('DRIVER_MODE') === 'search') {
+				await this.#search(indicator, GLib.getenv('DRIVER_QUERY'));
 				return;
 			}
 		}

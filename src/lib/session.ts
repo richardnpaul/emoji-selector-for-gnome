@@ -4,12 +4,20 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
 import { EMOJIS_CHARACTERS } from '../data/emojisCharacters.js';
 import { EMOJIS_KEYWORDS } from '../data/emojisKeywords.js';
-import { buildCatalogue } from './catalogue.js';
+import { buildCatalogue, pairUp } from './catalogue.js';
 import type { Emoji } from './emoji.js';
 import { EmojiMenu } from './emojiMenu.js';
+import { type ImportNameData, loadLocalNames } from './localNames.js';
 import type { EmojiSettings } from './settings.js';
 
 const KEYBINDING = 'emoji-keybinding';
+
+/** Where the names of the emojis in the language of the user come from. */
+export interface LocalNameSource {
+  /** The locales of the user, from the most specific to the least (what `GLib.get_language_names()` gives). */
+  readonly localeNames: readonly string[];
+  readonly importNameData: ImportNameData;
+}
 
 /**
  * Everything the extension has while it is enabled: the menu in the panel, the keyboard shortcut, and the
@@ -22,8 +30,9 @@ export class Session {
   readonly #catalogue: Emoji[][];
   #menu: EmojiMenu;
   #keybindingAdded = false;
+  #ended = false;
 
-  constructor(settings: EmojiSettings, uuid: string, iconDir: string) {
+  constructor(settings: EmojiSettings, uuid: string, iconDir: string, names: LocalNameSource) {
     this.#settings = settings;
     this.#uuid = uuid;
     this.#iconDir = iconDir;
@@ -38,12 +47,40 @@ export class Session {
       this.end();
       throw error;
     }
+    void this.#localise(names);
   }
 
   end(): void {
+    this.#ended = true;
     this.#removeKeybinding();
     this.#settings.disconnectAll();
     this.#menu.destroy();
+  }
+
+  /**
+   * Names the emojis in the language of the user, once the data is loaded (which the menu does not wait
+   * for: it works in English until then). The names are looked up when the search runs or an emoji is
+   * hovered, so no widget needs to be rebuilt.
+   */
+  async #localise(names: LocalNameSource): Promise<void> {
+    const loaded = await loadLocalNames(names.localeNames, names.importNameData);
+    if (loaded === null || this.#ended) {
+      return;
+    }
+    const { key, data } = loaded;
+    const emojis = this.#catalogue.flat();
+    let named: [Emoji, string][];
+    try {
+      named = pairUp(emojis, data, () => new Error(`'${key}' has ${data.length} names for ${emojis.length} emojis`));
+    } catch (error) {
+      console.error("Ignoring the emoji names of the user's language", error);
+      return;
+    }
+    for (const [emoji, entry] of named) {
+      emoji.localise(entry);
+    }
+    // A search typed while the names were loading shows its results in English until now.
+    this.#menu.searchItem.refresh();
   }
 
   #watchSettings(): void {

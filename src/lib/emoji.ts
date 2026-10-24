@@ -1,7 +1,11 @@
+import { fold } from './fold.js';
+
 // None, woman, man (appended after the emoji, so the sequence ends in a gender sign).
 const GENDER_SIGNS = ['', '\u200D\u2640\uFE0F', '\u200D\u2642\uFE0F'];
 const PEOPLE = ['👩', '👨'] as const;
 const SKIN_TONES = ['', '🏻', '🏼', '🏽', '🏾', '🏿'];
+
+const TAG_MARKERS = ['HAS_TONE', 'HAS_GENDER', 'IS_GENDERED'];
 
 const TRAILING_GENDER_SIGN = /\u200D[\u2640\u2642]\uFE0F$/;
 const SKIN_TONE_MODIFIERS = /[\u{1F3FB}-\u{1F3FF}]/gu;
@@ -9,7 +13,8 @@ const SKIN_TONE_MODIFIERS = /[\u{1F3FB}-\u{1F3FF}]/gu;
 /**
  * An emoji of the catalogue: its base character, its keywords (the first is its
  * name) and, derived from the marker keywords, how a skin tone and a gender are
- * applied to it.
+ * applied to it. It can also be given its name and keywords in the language of the
+ * user, which the search finds as well as the English ones.
  */
 export class Emoji {
   readonly baseCharacter: string;
@@ -17,6 +22,10 @@ export class Emoji {
   readonly canHaveTone: boolean;
   readonly canHaveGender: boolean;
   readonly isGendered: boolean;
+  /** The name and keywords, in English, folded for comparison; the markers of the tags are no words. */
+  readonly #words: readonly string[];
+  #localName: string | null = null;
+  #localWords: readonly string[] = [];
 
   constructor(baseCharacter: string, keywords: readonly string[]) {
     this.baseCharacter = baseCharacter;
@@ -24,10 +33,45 @@ export class Emoji {
     this.canHaveTone = keywords.includes('HAS_TONE');
     this.canHaveGender = keywords.includes('HAS_GENDER');
     this.isGendered = keywords.includes('IS_GENDERED');
+    this.#words = keywords.filter((keyword) => !TAG_MARKERS.includes(keyword)).map(fold);
   }
 
   get name(): string {
     return this.keywords[0] ?? '';
+  }
+
+  /** The name to show: in the language of the user if there is one, and otherwise in English. */
+  get displayName(): string {
+    return this.#localName ?? this.name;
+  }
+
+  /**
+   * Gives the name and the keywords in the language of the user, as `name|keyword|keyword`; an empty
+   * entry (no translation) leaves the emoji with its English ones. Replaces an earlier entry.
+   */
+  localise(entry: string): void {
+    const words = entry.split('|').filter((word) => word !== '');
+    this.#localName = words[0] ?? null;
+    this.#localWords = words.map(fold);
+  }
+
+  /** Whether the name, in English or in the user's language, is exactly `text` (which is folded). */
+  isNamed(text: string): boolean {
+    return this.#names().some((name) => name === text);
+  }
+
+  /** Whether the name, in English or in the user's language, contains `text` (which is folded). */
+  nameHas(text: string): boolean {
+    return this.#names().some((name) => name.includes(text));
+  }
+
+  /** Whether any keyword (the name is the first), in English or in the user's language, contains `text` (which is folded). */
+  hasKeyword(text: string): boolean {
+    return [...this.#words, ...this.#localWords].some((word) => word.includes(text));
+  }
+
+  #names(): string[] {
+    return [this.#words[0], this.#localWords[0]].filter((name) => name !== undefined);
   }
 
   /**

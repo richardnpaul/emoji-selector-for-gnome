@@ -45,6 +45,11 @@ const COMPILED = {
 	'prefs.js': '// prefs\n',
 	'lib/emoji.js': '// lib\n',
 	'data/emojisCharacters.js': '// data\n',
+	'data/names/fr.js': '// names\n',
+	'data/names/de.js': '// names\n',
+	'data/names/zh-Hant-HK.js': '// names\n',
+	'data/names/es-419.js': '// names\n',
+	'data/names/UNICODE-LICENSE.txt': 'licence\n',
 };
 
 describe('maintainer scripts', () => {
@@ -104,6 +109,9 @@ describe('maintainer scripts', () => {
 			writeFileSync(path.join(compiled(), '.extension.js.swp'), 'junk');
 			writeFileSync(path.join(compiled(), 'extension.d.ts'), 'junk');
 			writeFileSync(path.join(compiled(), 'lib/emoji.js.map'), 'junk');
+			writeFileSync(path.join(compiled(), 'data/names/fr.js.map'), 'junk');
+			writeFileSync(path.join(compiled(), 'data/names/notes.txt'), 'junk');
+			writeFileSync(path.join(compiled(), 'data/names/de_DE.js'), 'junk');
 			writeFileSync(path.join(repo, 'assets', 'extension.js'), '// a stale legacy file, not shipped\n');
 			writeFileSync(path.join(repo, 'assets', 'notes.txt'), 'junk');
 			writeFileSync(path.join(repo, 'assets', 'locale/de/LC_MESSAGES/de.po~'), 'junk');
@@ -120,10 +128,14 @@ describe('maintainer scripts', () => {
 					'metadata.json',
 					'stylesheet.css',
 					'data/emojisCharacters.js',
+					'data/names/fr.js',
+					'data/names/zh-Hant-HK.js',
+					'data/names/es-419.js',
+					'data/names/UNICODE-LICENSE.txt',
 				]),
 			);
 			const allowed =
-				/^(?:[A-Za-z]+\.js|(?:lib|data)\/\w+\.js|metadata\.json|stylesheet\.css|schemas\/[\w.-]+\.gschema\.xml|locale\/[\w-]+\/LC_MESSAGES\/emoji-selector\.mo|icons\/[\w-]+\.svg)$/;
+				/^(?:[A-Za-z]+\.js|(?:lib|data)\/\w+\.js|data\/names\/(?:[A-Za-z0-9-]+\.js|UNICODE-LICENSE\.txt)|metadata\.json|stylesheet\.css|schemas\/[\w.-]+\.gschema\.xml|locale\/[\w-]+\/LC_MESSAGES\/emoji-selector\.mo|icons\/[\w-]+\.svg)$/;
 			expect(entries.filter((entry) => !allowed.test(entry))).toEqual([]);
 		});
 
@@ -190,6 +202,18 @@ describe('maintainer scripts', () => {
 			expect(result.stderr).toContain(file);
 			expect(existsSync(zipPath())).toBe(false);
 		});
+
+		it.each(['data/names/fr.js', 'data/names/de.js', 'data/names/UNICODE-LICENSE.txt'])(
+			'fails, rather than ship a package without emoji names, when %s is missing',
+			(file) => {
+				rmSync(path.join(compiled(), file));
+				const result = run('build-a-zip.sh');
+				expect(result.status).toBe(1);
+				expect(result.stderr).toContain(`Missing ${file}`);
+				expect(result.stderr).toContain('npm run build:names');
+				expect(existsSync(zipPath())).toBe(false);
+			},
+		);
 
 		it('fails, and leaves an earlier zip alone, when a shipped file is missing', () => {
 			expect(run('build-a-zip.sh').status).toBe(0);

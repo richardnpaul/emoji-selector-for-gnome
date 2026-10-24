@@ -126,6 +126,26 @@ describe('EmojiCategory', () => {
 			expect(category({ emojis }).search('o', [], [], 10, 'recent')).toEqual([]);
 		});
 
+		it('finds the emoji by their names and keywords in the language of the user, accents ignored', () => {
+			const emojis = [
+				new Emoji('A', ['sun', 'bright']),
+				new Emoji('B', ['cat', 'pet']),
+				new Emoji('C', ['hot beverage']),
+			];
+			emojis[0].localise('soleil|lumière');
+			emojis[1].localise('chat|animal');
+			emojis[2].localise('boisson chaude|café');
+			const search = (text, priority) => category({ emojis }).search(text, [], [], 10, priority);
+			expect(search('soleil', 'exact-name')).toEqual(['A']);
+			expect(search('sole', 'name')).toEqual(['A']);
+			expect(search('lumiere', 'keyword')).toEqual(['A']);
+			expect(search('cafe', 'keyword')).toEqual(['C']);
+			expect(search('cafe', 'name')).toEqual([]);
+			expect(search('animal', 'recent')).toEqual([]);
+			expect(category({ emojis }).search('animal', [], ['B'], 10, 'recent')).toEqual(['B']);
+			expect(search('sun', 'exact-name')).toEqual(['A']);
+		});
+
 		it('skips emoji that are already among the results', () => {
 			expect(find('sun', { found: ['A', 'E'] })).toEqual(['B', 'C']);
 			expect(find('sun', { found: ['A'], priority: 'exact-name' })).toEqual([]);
@@ -172,6 +192,15 @@ describe('EmojiCategory', () => {
 			expect(cat.item.label.text).toBe('sun');
 			first.setHover(false);
 			expect(cat.item.label.text).toBe('Flags');
+		});
+
+		it('shows the name in the language of the user when there is one', () => {
+			const emojis = [new Emoji('A', ['sun', 'bright'])];
+			emojis[0].localise('soleil|lumière');
+			const cat = category({ emojis });
+			cat.build();
+			rowButtons(rows(cat)[0])[0].setHover(true);
+			expect(cat.item.label.text).toBe('soleil');
 		});
 
 		it('builds only once', () => {

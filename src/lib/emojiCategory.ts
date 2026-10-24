@@ -101,8 +101,8 @@ export class EmojiCategory {
   }
 
   /**
-   * The base characters of the emojis of this category matching `text`, at most `needed` of them,
-   * leaving out those already in `found`.
+   * The base characters of the emojis of this category matching `text` (folded, see `fold`), at most
+   * `needed` of them, leaving out those already in `found`.
    */
   search(
     text: string,
@@ -181,15 +181,13 @@ export class EmojiCategory {
   #matches(emoji: Emoji, text: string, recentlyUsed: readonly string[], priority: SearchPriority): boolean {
     switch (priority) {
       case 'recent':
-        return (
-          emoji.keywords.some((keyword) => keyword.includes(text)) && recentlyUsed.some((used) => emoji.isUsedAs(used))
-        );
+        return emoji.hasKeyword(text) && recentlyUsed.some((used) => emoji.isUsedAs(used));
       case 'exact-name':
-        return emoji.name === text;
+        return emoji.isNamed(text);
       case 'name':
-        return emoji.name.includes(text);
+        return emoji.nameHas(text);
       case 'keyword':
-        return emoji.keywords.some((keyword) => keyword.includes(text));
+        return emoji.hasKeyword(text);
     }
   }
 }

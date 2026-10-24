@@ -216,11 +216,14 @@ describe('EmojiSearchItem', () => {
 			expect(category.search).toHaveBeenCalledTimes(4);
 		});
 
-		it('searches the lower-cased text', () => {
+		it('searches the text in lower case, without accents', () => {
 			const category = fakeCategory({});
 			create(2, [category]);
 			type('SmILe');
 			expect(category.search.mock.calls.map((call) => call[0])).toEqual(['smile', 'smile', 'smile', 'smile']);
+			category.search.mockClear();
+			type('Café');
+			expect(category.search.mock.calls.map((call) => call[0])).toEqual(['cafe', 'cafe', 'cafe', 'cafe']);
 		});
 
 		it('looks for recent matches first, then exact names, names, then any keyword', () => {

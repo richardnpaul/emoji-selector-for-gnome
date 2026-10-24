@@ -1,4 +1,4 @@
-// Builds the extension for real (TypeScript compiler, packaging script, `gnome-extensions install`: the steps the README gives) in a temporary
+// Builds the extension for real (TypeScript compiler, emoji name data, packaging script, `gnome-extensions install`: the steps the README gives) in a temporary
 // directory and returns where it was installed, so that tests can run it in the real GNOME libraries
 // without touching the working tree.
 import { spawnSync } from 'node:child_process';
@@ -34,6 +34,7 @@ export function buildAndInstall(base) {
 			cwd: ROOT,
 		},
 	);
+	run('node', [path.join(ROOT, 'translations/tools/names.mjs'), path.join(repo, 'dist', 'extension')], { cwd: ROOT });
 	const env = { PATH: process.env.PATH, HOME: path.join(base, 'home') };
 	const zips = path.join(base, 'zips');
 	run('bash', [path.join(repo, 'build-a-zip.sh'), zips], { cwd: base, env });

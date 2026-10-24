@@ -202,5 +202,54 @@ describe('the extension in a real GNOME Shell', () => {
 			},
 			300_000,
 		);
+
+		describe('searching in their language', () => {
+			// [a locale installed in the dev container, what its users type, the emoji that is the first result]
+			const SEARCHES = [
+				['fr_FR.utf8', 'chat', '🐈'],
+				['de_DE.utf8', 'katze', '🐈'],
+				['es_ES.utf8', 'gato', '🐈'],
+			];
+
+			it.each(SEARCHES)(
+				'a user of %s typing "%s" finds the emoji by the name it has in their language',
+				(locale, word, emoji) => {
+					const logFile = path.join(base, `search-${locale}.log`);
+					const result = spawnSync(
+						'bash',
+						[
+							path.join(ROOT, 'tests/integration/real/run-shell.sh'),
+							xdgDataHome,
+							logFile,
+							METADATA.uuid,
+							locale,
+							'search',
+							word,
+						],
+						{
+							encoding: 'utf8',
+							timeout: 240_000,
+							env: {
+								PATH: process.env.PATH,
+								HOME: path.join(base, 'home'),
+								GI_TYPELIB_PATH: process.env.GI_TYPELIB_PATH ?? '',
+								LD_LIBRARY_PATH: process.env.LD_LIBRARY_PATH ?? '',
+								LANG: 'C.UTF-8',
+							},
+						},
+					);
+					expect({ code: result.status, stderr: result.stderr }).toEqual({ code: 0, stderr: '' });
+					const log = readFileSync(logFile, 'utf8');
+					const [searched] = log
+						.split('\n')
+						.filter((line) => line.includes('DRIVER {"name":"searched"'))
+						.map((line) => JSON.parse(line.slice(line.indexOf('DRIVER ') + 'DRIVER '.length)).value);
+					expect(searched.text).toBe(word);
+					expect(searched.results[0]).toBe(emoji);
+					expect(log).not.toMatch(/JS ERROR|Ignoring the emoji names/);
+				},
+				300_000,
+			);
+		});
 	});
 });

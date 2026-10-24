@@ -46,7 +46,7 @@ export class EmojiButton {
     this.actor.connect('key-press-event', (_actor: St.Button, event: Clutter.Event) => this.onKeyPress(event));
     if (onHover && emoji) {
       this.actor.connect('notify::hover', () => {
-        onHover(this.actor.hover ? emoji.name : null);
+        onHover(this.actor.hover ? emoji.displayName : null);
       });
     }
   }

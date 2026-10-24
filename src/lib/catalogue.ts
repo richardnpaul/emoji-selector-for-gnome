@@ -1,7 +1,7 @@
 import { Emoji } from './emoji.js';
 
 /** Pairs each item of `first` with the item of `second` at the same place, which must exist. */
-function pairUp<A, B>(first: readonly A[], second: readonly B[], mismatch: () => Error): [A, B][] {
+export function pairUp<A, B>(first: readonly A[], second: readonly B[], mismatch: () => Error): [A, B][] {
   const rest = second.values();
   const pairs = first.map((item): [A, B] => {
     const next = rest.next();

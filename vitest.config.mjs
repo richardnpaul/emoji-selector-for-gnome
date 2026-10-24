@@ -10,6 +10,8 @@ export default defineConfig({
 	resolve: {
 		// The TypeScript sources import GNOME libraries by URL; tests get fakes (see tests/support).
 		alias: [
+			// The data of the emoji names is generated into the package, not kept in src/: tests get a little of it.
+			{ find: /^.*\/data\/names\/([\w-]+)\.js$/, replacement: path.join(support, 'names/$1.js') },
 			{ find: /^gi:\/\/(\w+)(\?.*)?$/, replacement: path.join(support, 'gi/$1.js') },
 			{ find: /^resource:\/\/\/org\/gnome\/shell\/(.+)\.js$/, replacement: path.join(support, 'shell/$1.js') },
 			{
