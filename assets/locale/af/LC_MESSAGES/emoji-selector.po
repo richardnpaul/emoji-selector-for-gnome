@@ -1,0 +1,199 @@
+# Afrikaans translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Algemene uitleg"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Dit is beter om die koppelvlak van onder af te wys as jy 'n onderste paneel in plaas van die verstekbalk bo gebruik."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Van bo na onder"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Van onder na bo"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Die instelling kon nie gestoor word nie"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Aantal emoji's per reël"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Grootte van emoji's (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Uitleg"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Wysigersleutels moet tussen hoekhakies wees"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Die verstekwaarde is %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Moenie 'n sneltoets gebruik wat reeds bestaan nie."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Gebruik 'n sneltoets om die kieslys oop en toe te maak"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Sneltoets"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Dit is nie 'n geldige sneltoets nie"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lys van geldige sleutelname"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Wys die ikoon altyd in die paneel"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "As jy die kieslys met die sneltoets oopmaak, hoef jy nie altyd die ikoon te wys nie."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Sleutelbordbindings"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Hierdie uitbreiding bied 'n instelbare opspringkieslys wat die meeste emoji's wys; as jy op 'n emoji klik, word dit na die knipbord gekopieer."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Outeur"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Vertaler(s)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Bydraers"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Rapporteer foute of idees"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Oor"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Kon nie die webblad oopmaak nie"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smileys & Liggaam"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Mense & Klere"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Diere & Natuur"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Kos & Drank"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Reis & Plekke"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Aktiwiteite & Sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Voorwerpe"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Simbole"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Vlae"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Tik hier om te soek…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Geen velkleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Ligte velkleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Medium ligte velkleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Medium velkleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Medium donker velkleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Donker velkleur"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Vrouens"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Mans"

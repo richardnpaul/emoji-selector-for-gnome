@@ -1,0 +1,199 @@
+# Greek translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Γενική διάταξη"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Η εμφάνιση της διεπαφής από κάτω είναι καλύτερη αν χρησιμοποιείτε κάτω πίνακα αντί για την προεπιλεγμένη πάνω γραμμή."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Από πάνω προς τα κάτω"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Από κάτω προς τα πάνω"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Δεν ήταν δυνατή η αποθήκευση της ρύθμισης"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Αριθμός emoji ανά γραμμή"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Μέγεθος emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Διάταξη"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Τα πλήκτρα τροποποίησης πρέπει να βρίσκονται μέσα σε γωνιακές αγκύλες"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Η προεπιλεγμένη τιμή είναι %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Μην χρησιμοποιείτε συντόμευση πληκτρολογίου που υπάρχει ήδη."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Χρήση συντόμευσης πληκτρολογίου για εναλλαγή του μενού"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Συντόμευση πληκτρολογίου"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Αυτή δεν είναι έγκυρη συντόμευση πληκτρολογίου"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Λίστα έγκυρων ονομάτων πλήκτρων"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Να εμφανίζεται πάντα το εικονίδιο στον πίνακα"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Αν ανοίγετε το μενού με τη συντόμευση πληκτρολογίου, δεν χρειάζεται να εμφανίζετε πάντα το εικονίδιο."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Συντομεύσεις πληκτρολογίου"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Αυτή η επέκταση παρέχει ένα ρυθμιζόμενο αναδυόμενο μενού με τα περισσότερα emoji· κάνοντας κλικ σε ένα emoji αντιγράφεται στο πρόχειρο."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Συγγραφέας"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Μεταφραστές"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Συνεισφέροντες"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Αναφορά σφαλμάτων ή ιδεών"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Πληροφορίες"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Δεν ήταν δυνατό το άνοιγμα της ιστοσελίδας"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Φατσούλες και σώμα"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Άνθρωποι και ρούχα"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Ζώα και φύση"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Φαγητό και ποτό"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Ταξίδια και μέρη"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Δραστηριότητες και αθλήματα"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Αντικείμενα"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Σύμβολα"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Σημαίες"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Πληκτρολογήστε εδώ για αναζήτηση…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Χωρίς απόχρωση δέρματος"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Ανοιχτή απόχρωση δέρματος"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Μέτρια ανοιχτή απόχρωση δέρματος"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Μέτρια απόχρωση δέρματος"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Μέτρια σκούρα απόχρωση δέρματος"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Σκούρα απόχρωση δέρματος"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Γυναίκες"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Άνδρες"

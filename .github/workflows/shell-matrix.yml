@@ -1,0 +1,179 @@
+# Loads the built package into real GNOME Shells of several versions (a Shell in a podman container per
+# version, from the images below) and checks that the extension becomes ACTIVE without errors in the Shell's
+# journal. The Shell 51 in the dev container is exercised much more thoroughly by `npm run test:real`
+# (ci.yml); this is the smoke test for the other versions, run when something changes and every week, for the
+# Shells that release after the code was written.
+#
+# GNOME 45 and 46 have no image: the supported range 45-51 is verified there by reading the Shell sources only.
+name: Shell compatibility matrix
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # Weekly run on Mondays at 04:00 UTC
+    - cron: '0 4 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  IMAGE: emoji-selector-dev:matrix
+
+jobs:
+  package:
+    name: Build the package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+      - uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7.4.0
+        with:
+          context: .devcontainer
+          load: true
+          tags: ${{ env.IMAGE }}
+          cache-from: type=gha,scope=devcontainer
+      - name: Build the zip in the dev container
+        run: |
+          chmod -R a+rwX "$GITHUB_WORKSPACE"
+          docker run --rm --volume "$GITHUB_WORKSPACE:/work" --workdir /work "$IMAGE" bash -euo pipefail -c '
+            git config --global --add safe.directory /work
+            npm ci
+            npm run build:package
+          '
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: package
+          path: dist/*.zip
+          if-no-files-found: error
+
+  test-shell-versions:
+    name: GNOME ${{ matrix.gnome-version }}
+    needs: package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - gnome-version: '47'
+            image: 'ghcr.io/richardnpaul/gnome-shell-pod-41:latest'
+          - gnome-version: '48'
+            image: 'ghcr.io/richardnpaul/gnome-shell-pod-42:latest'
+          - gnome-version: '49'
+            image: 'ghcr.io/richardnpaul/gnome-shell-pod-43:latest'
+          - gnome-version: '50'
+            image: 'ghcr.io/richardnpaul/gnome-shell-pod-44:latest'
+          - gnome-version: '51'
+            image: 'ghcr.io/richardnpaul/gnome-shell-pod-rawhide:latest'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: package
+          path: dist
+
+      - name: Install host dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libglib2.0-bin unzip podman jq
+
+      - name: Smoke test in GNOME ${{ matrix.gnome-version }}
+        env:
+          GNOME_VERSION: ${{ matrix.gnome-version }}
+          POD_IMAGE: ${{ matrix.image }}
+        run: |
+          UUID=$(jq -r .uuid assets/metadata.json)
+          ZIP="dist/${UUID}.zip"
+
+          echo "Starting container for GNOME ${GNOME_VERSION}..."
+          POD=$(podman run --rm --systemd=always --cap-add=SYS_NICE --cap-add=IPC_LOCK --cap-add=CAP_SYS_ADMIN -td "${POD_IMAGE}")
+
+          run_in_pod() {
+            podman exec --user gnomeshell --workdir /home/gnomeshell "${POD}" set-env.sh "$@"
+          }
+
+          cleanup() {
+            echo "Cleaning up container ${POD}..."
+            podman stop -t 2 "${POD}" 2>/dev/null || podman rm -f "${POD}" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+
+          echo "Waiting for user session bus and Wayland socket..."
+          if ! timeout 60 podman exec --user gnomeshell --workdir /home/gnomeshell "${POD}" set-env.sh wait-user-bus.sh; then
+            echo "ERROR: user session bus did not become available within 60s"
+            echo "=== System state ==="
+            podman exec "${POD}" systemctl is-system-running || true
+            podman exec "${POD}" systemctl --failed --no-pager || true
+            echo "=== User manager ==="
+            podman exec "${POD}" systemctl status user@1000.service --no-pager || true
+            echo "=== Journal ==="
+            podman exec "${POD}" journalctl -b --no-pager -n 80 || true
+            exit 1
+          fi
+
+          echo "Waiting for org.gnome.Shell.Extensions interface..."
+          run_in_pod wait-dbus-interface.sh -d org.gnome.Shell -o /org/gnome/Shell -i org.gnome.Shell.Extensions
+
+          echo "Installing extension package..."
+          TMP_DIR=$(mktemp -d)
+          unzip -q "${ZIP}" -d "${TMP_DIR}/${UUID}"
+          podman exec --user gnomeshell "${POD}" mkdir -p /home/gnomeshell/.local/share/gnome-shell/extensions
+          podman cp "${TMP_DIR}/${UUID}" "${POD}:/home/gnomeshell/.local/share/gnome-shell/extensions/"
+          podman exec "${POD}" chown -R gnomeshell:gnomeshell "/home/gnomeshell/.local/share/gnome-shell/extensions/${UUID}"
+          run_in_pod glib-compile-schemas "/home/gnomeshell/.local/share/gnome-shell/extensions/${UUID}/schemas"
+          # (The version check would refuse an extension on a Shell newer than its metadata lists, and that is
+          # one of the things this job is for: the extension is loaded anyway, and judged on how it behaves.)
+          run_in_pod gsettings set org.gnome.shell disable-extension-version-validation true
+          rm -rf "${TMP_DIR:?}"
+
+          echo "Loading extension into GNOME Shell..."
+          run_in_pod gdbus call --session \
+            --dest org.gnome.Shell \
+            --object-path /org/gnome/Shell \
+            --method org.gnome.Shell.Eval \
+            "(async () => {
+               const Main = await import('resource:///org/gnome/shell/ui/main.js');
+               const { ExtensionType } = await import('resource:///org/gnome/shell/misc/extensionUtils.js');
+               const { default: Gio } = await import('gi://Gio');
+               const uuid = '${UUID}';
+               if (!Main.extensionManager.lookup(uuid)) {
+                 const dir = Gio.File.new_for_path(global.userdatadir).get_child('extensions').get_child(uuid);
+                 const ext = Main.extensionManager.createExtensionObject(uuid, dir, ExtensionType.PER_USER);
+                 await Main.extensionManager.loadExtension(ext);
+               }
+               return true;
+             })()"
+          sleep 1
+
+          echo "Enabling extension via GSettings..."
+          run_in_pod gsettings set org.gnome.shell enabled-extensions "['${UUID}']"
+          sleep 2
+
+          echo "Verifying extension status..."
+          INFO=$(run_in_pod gnome-extensions info "${UUID}")
+          echo "${INFO}"
+          JOURNAL=$(podman exec "${POD}" journalctl -b -o short-precise --no-pager || true)
+
+          if ! echo "${INFO}" | grep -q "State: ACTIVE"; then
+            echo "ERROR: Extension failed to activate in GNOME ${GNOME_VERSION}!"
+            echo "=== Journal logs ==="
+            echo "${JOURNAL}" | grep -E "${UUID}|gnome-shell" | tail -n 80 || true
+            exit 1
+          fi
+
+          # An ACTIVE extension can still be failing: a JS error or a critical about it is a failure too.
+          if echo "${JOURNAL}" | grep -E "JS ERROR|CRITICAL" | grep -F "${UUID}"; then
+            echo "ERROR: the Shell logged errors about the extension in GNOME ${GNOME_VERSION}!"
+            exit 1
+          fi
+          echo "SUCCESS: Extension is ACTIVE in GNOME ${GNOME_VERSION}, with no errors logged."

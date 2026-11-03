@@ -1,0 +1,199 @@
+# Breton translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: br\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 && n%100!=71 && n%100!=91 ? 0 : n%10==2 && n%100!=12 && n%100!=72 && n%100!=92 ? 1 : ((n%10>=3 && n%10<=4) || n%10==9) && ((n%100<10 || n%100>19) && (n%100<70 || n%100>79) && (n%100<90 || n%100>99)) ? 2 : 3);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Kempennadur hollek"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Gwelloc'h eo diskouez an etrefas diouzh an traoñ ma implijit ur banell traoñ e plas ar varrenn laez dre ziouer."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Eus al laez d'an traoñ"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Eus an traoñ d'al laez"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "N'eus ket bet gallet enrollañ an arventenn"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Niver a emojioù dre linenn"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Ment an emojioù (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Kempennadur"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Ret eo d'an alc'hwezioù kemmer bezañ etre < ha >"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "%s eo an dalvoudegezh dre ziouer"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Arabat implijout ur berradenn glavier zo anezhi dija."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Implijout ur berradenn glavier evit digeriñ ha serriñ ar menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Berradenn glavier"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "N'eo ket mat ar berradenn glavier-mañ"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Roll an anvioù alc'hwez mat"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Diskouez an arlun er banell bepred"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Ma tigorit ar menu gant ar berradenn glavier, n'eo ket ret diskouez an arlun atav."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Berradennoù klavier"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Pourchas a ra an astenn-mañ ur menu diwar-lamm kefluniadus a ziskouez al lodenn vrasañ eus an emojioù; ur c'hlik war un emoji a gopi anezhañ er clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Aozer"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Troer(ien)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Kenlabourerien"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Danevellañ fazioù pe ideoù"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Diwar-benn"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "N'eus ket bet gallet digeriñ ar bajenn web"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Mousc'hoarzhioù & Korf"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Tud & Dilhad"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Loened & Natur"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Boued & Evaj"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Beaj & Lec'hioù"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Obererezhioù & Sportoù"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Traoù"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Arouezioù"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bannieloù"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Skrivit amañ evit klask…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Hep liv kroc'hen"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Liv kroc'hen sklaer"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Liv kroc'hen etre-sklaer"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Liv kroc'hen etre"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Liv kroc'hen etre-teñval"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Liv kroc'hen teñval"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Maouezed"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Gwazed"

@@ -1,0 +1,199 @@
+# Swahili translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Mpangilio wa jumla"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Ni bora kuonyesha kiolesura kutoka chini ikiwa unatumia paneli ya chini badala ya upau wa juu chaguomsingi."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Kutoka juu hadi chini"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Kutoka chini hadi juu"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Mpangilio haukuweza kuhifadhiwa"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Idadi ya emoji kwa kila mstari"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Ukubwa wa emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Mpangilio"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Vitufe vya kibadilishi lazima viwe kati ya alama za < >"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Thamani chaguomsingi ni %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Usitumie njia ya mkato ya kibodi iliyopo tayari."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Tumia njia ya mkato ya kibodi kufungua na kufunga menyu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Njia ya mkato ya kibodi"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Hii si njia ya mkato halali ya kibodi"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Orodha ya majina halali ya vitufe"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Onyesha ikoni kwenye paneli kila wakati"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Ukifungua menyu kwa njia ya mkato ya kibodi, huhitaji kuonyesha ikoni kila wakati."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Mikato ya kibodi"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Kiendelezi hiki hutoa menyu ibukizi inayoweza kusanidiwa inayoonyesha emoji nyingi; kubofya emoji huinakili kwenye ubao wa kunakili."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Mwandishi"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Mfasiri"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Wachangiaji"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Ripoti hitilafu au mawazo"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Kuhusu"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Haikuweza kufungua ukurasa wa wavuti"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Nyuso & Mwili"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Watu & Mavazi"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Wanyama & Asili"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Chakula & Vinywaji"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Safari & Maeneo"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Shughuli & Michezo"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Vitu"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Alama"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bendera"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Andika hapa ili kutafuta…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Hakuna rangi ya ngozi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Rangi ya ngozi nyepesi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Rangi ya ngozi nyepesi ya wastani"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Rangi ya ngozi ya wastani"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Rangi ya ngozi nyeusi ya wastani"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Rangi ya ngozi nyeusi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Wanawake"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Wanaume"

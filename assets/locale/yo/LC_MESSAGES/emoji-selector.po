@@ -1,0 +1,199 @@
+# Yoruba translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: yo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Ìṣètò gbogbogbò"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Ó dára láti fi ojú-ìbáṣepọ̀ hàn láti ìsàlẹ̀ tí o bá ń lo pánẹ́ẹ̀lì ìsàlẹ̀ dípò ọ̀pá òkè àtìbẹ̀rẹ̀."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Láti òkè sí ìsàlẹ̀"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Láti ìsàlẹ̀ sí òkè"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "A kò lè fi ètò náà pamọ́"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Iye emoji ní ìlà kọ̀ọ̀kan"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Ìwọ̀n emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Ìṣètò"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Àwọn kọ́kọ́rọ́ àtúnṣe gbọ́dọ̀ wà láàrín àmì < >"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Iye àtìbẹ̀rẹ̀ ni %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Má lo ọ̀nà àbùjá pátákó kọ́kọ́rọ́ tí ó ti wà tẹ́lẹ̀."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Lo ọ̀nà àbùjá pátákó kọ́kọ́rọ́ láti ṣí àti tì àtòjọ àṣàyàn"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Ọ̀nà àbùjá pátákó kọ́kọ́rọ́"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Èyí kì í ṣe ọ̀nà àbùjá pátákó kọ́kọ́rọ́ tó tọ́"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Àtòjọ orúkọ kọ́kọ́rọ́ tó tọ́"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Máa fi àmì hàn nínú pánẹ́ẹ̀lì nígbà gbogbo"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Tí o bá ṣí àtòjọ àṣàyàn pẹ̀lú ọ̀nà àbùjá pátákó kọ́kọ́rọ́, o kò nílò láti máa fi àmì hàn nígbà gbogbo."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Àsopọ̀ pátákó kọ́kọ́rọ́"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Àfikún yìí pèsè àtòjọ àṣàyàn tí ó ṣeé ṣàtúnṣe tó ń ṣàfihàn ọ̀pọ̀lọpọ̀ emoji; títẹ emoji yóò dà á kọ sí clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Òǹkọ̀wé"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Olùtúmọ̀"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Àwọn olùkópa"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Ròyìn àṣìṣe tàbí èrò"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Nípa"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Kò lè ṣí ojú-ewé wẹ́ẹ̀bù náà"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Ẹ̀rín & Ara"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Ènìyàn & Aṣọ"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Ẹranko & Ìṣẹ̀dá"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Oúnjẹ & Ohun mímu"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Ìrìnàjò & Àwọn ibi"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Àwọn ìgbòkègbodò & Eré ìdárayá"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Àwọn nǹkan"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Àwọn àmì"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Àwọn àsíá"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Tẹ ibí láti wá…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Kò sí àwọ̀ ara"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Àwọ̀ ara fúyẹ́"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Àwọ̀ ara àárín fúyẹ́"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Àwọ̀ ara àárín"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Àwọ̀ ara àárín dúdú"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Àwọ̀ ara dúdú"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Àwọn obìnrin"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Àwọn ọkùnrin"

@@ -1,0 +1,199 @@
+# Maori translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: mi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Whakatakotoranga whānui"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "He pai ake te whakaatu i te atanga mai i raro mēnā ka whakamahia he paewhiri o raro hei utu mō te pae o runga taunoa."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Mai runga ki raro"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Mai raro ki runga"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Kāore i taea te tiaki i te tautuhinga"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Te maha o ngā emoji ia rārangi"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Te rahi o ngā emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Whakatakotoranga"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Me noho ngā pātuhi whakarerekē ki waenga i ngā chevron"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Ko te uara taunoa ko %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Kaua e whakamahi i tētahi ara poto papapātuhi kei te noho kē."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Whakamahia he ara poto papapātuhi hei huaki, hei kati rānei i te tahua"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Ara poto papapātuhi"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Ehara tēnei i te ara poto papapātuhi tika"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Rārangi o ngā ingoa pātuhi tika"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Whakaatuhia tonutia te tohu ki te paewhiri"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Mēnā ka uru koe ki te tahua mā te ara poto papapātuhi, kāore koe e hiahia ki te whakaatu tonu i te tohu."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Ngā ara poto papapātuhi"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Ka whakaratoa e tēnei toronga he tahua e taea ana te whirihora e whakaatu ana i te nuinga o ngā emoji; ma te pāwhiri i tētahi emoji ka kape ki te clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Kaituhi"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Kaiwhakamāori"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Ngā kaitautoko"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Pūrongotia ngā hapa, ngā whakaaro rānei"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Mō"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Kāore i taea te huaki i te whārangi tukutuku"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Kanohi ataata me te Tinana"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Tāngata me ngā Kākahu"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Kararehe me te Taiao"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Kai me te Inu"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Haerenga me ngā Wāhi"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Ngā Mahi me ngā Hākinakina"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Ngā Mea"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Ngā Tohu"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Ngā Haki"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Patohia ki konei hei rapu…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Kāore he tae kiri"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Tae kiri mā"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Tae kiri waenga-mā"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Tae kiri waenga"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Tae kiri waenga-pōuri"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Tae kiri pōuri"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Wāhine"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Tāne"

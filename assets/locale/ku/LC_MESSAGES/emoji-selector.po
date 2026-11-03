@@ -1,0 +1,199 @@
+# Kurdish translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Rêkxistina giştî"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Eger li şûna darika jorîn a bixwerû panelek jêrîn bi kar tînin, nîşandana navrûyê ji jêr çêtir e."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Ji jor ber bi jêr ve"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Ji jêr ber bi jor ve"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Mîheng nehat tomarkirin"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Hejmara emojiyan di her rêzekê de"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Mezinahiya emojiyan (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Rêkxistin"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Divê bişkojkên guhêrker di nav parantezên goşeyî de bin"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Nirxa bixwerû %s ye"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Kurtebirrek klavyeyê ya ku jixwe heye bi kar neynin."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Kurtebirra klavyeyê ji bo vekirin û girtina menuyê bi kar bîne"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Kurtebirra klavyeyê"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Ev kurtebirrek klavyeyê ya derbasdar nîne"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lîsteya navên bişkojkên derbasdar"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Îkonê her tim di panelê de nîşan bide"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Heke hûn bi kurtebirra klavyeyê têkevin menuyê, ne hewce ye ku îkon her tim were nîşandan."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Girêdanên klavyeyê"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Ev pêvek menuyeke popupê ya mîhengkirî pêşkêş dike ku piraniya emojiyan nîşan dide; bi tikandina emojiyekê ew li clipboardê tê kopîkirin."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Nivîskar"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Wergêr"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Beşdar"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Xeletî an ramanan ragihînin"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Der barê"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Rûpela malperê venebû"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Bişirîk û Beden"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Mirov û Cil"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Heywan û Xwezî"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Xwarin û Vexwarin"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Rêwîtî û Cih"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Çalakî û Werzîş"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Tişt"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Sembol"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Ala"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Ji bo lêgerînê li vir binivîsin…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Bê rengê çerm"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Rengê çermê vekirî"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Rengê çermê navîn-vekirî"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Rengê çermê navîn"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Rengê çermê navîn-tarî"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Rengê çermê tarî"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Jin"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Mêr"

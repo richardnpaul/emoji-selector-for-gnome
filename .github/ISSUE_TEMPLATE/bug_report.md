@@ -4,14 +4,13 @@ about: Report something which is broken
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 # System
 
-- OS: 
+- OS:
 - Your version of the extension (visible in the "about" tab of the preferences window):
-- Your version of GNOME Shell: 
+- Your version of GNOME Shell:
 - Most recent GNOME Shell version that is supposed to work ([visible here](https://extensions.gnome.org/extension/1162/emoji-selector/) in the dropdown):
 - Is the extension supposed to work with your version of GNOME Shell [y/n]:
 
@@ -24,7 +23,6 @@ Is your bug already reported? [y/n]:
 <!-- Don't forget to check issues that are already **closed**. A closed issue means the fix has been developed, not that it has been distributed to you. -->
 
 <!-- A clear and concise description of what the bug is: -->
-
 
 ## To Reproduce
 

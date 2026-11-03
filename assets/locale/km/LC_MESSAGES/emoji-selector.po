@@ -1,0 +1,199 @@
+# Central Khmer translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "ប្លង់ទូទៅ"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "ការបង្ហាញចំណុចប្រទាក់ពីខាងក្រោម គឺប្រសើរជាង ប្រសិនបើអ្នកប្រើផ្ទាំងខាងក្រោម ជំនួសរបារខាងលើតាមលំនាំដើម។"
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "ពីលើទៅក្រោម"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "ពីក្រោមទៅលើ"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "មិនអាចរក្សាទុកការកំណត់បានទេ"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "ចំនួនអ៊ីមូជីក្នុងមួយជួរ"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ទំហំអ៊ីមូជី (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "ប្លង់"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "គ្រាប់ចុចកែប្រែត្រូវនៅចន្លោះសញ្ញាតង្កៀបមុំ"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "តម្លៃលំនាំដើមគឺ %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "កុំប្រើផ្លូវកាត់ក្តារចុចដែលមានរួចហើយ។"
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "ប្រើផ្លូវកាត់ក្តារចុចដើម្បីបិទបើកម៉ឺនុយ"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "ផ្លូវកាត់ក្តារចុច"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "នេះមិនមែនជាផ្លូវកាត់ក្តារចុចដែលត្រឹមត្រូវទេ"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "បញ្ជីឈ្មោះគ្រាប់ចុចដែលត្រឹមត្រូវ"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "បង្ហាញរូបតំណាងក្នុងផ្ទាំងជានិច្ច"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "ប្រសិនបើអ្នកចូលម៉ឺនុយដោយផ្លូវកាត់ក្តារចុច អ្នកមិនចាំបាច់បង្ហាញរូបតំណាងជានិច្ចទេ។"
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "ការចងក្តារចុច"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ផ្នែកបន្ថែមនេះផ្តល់ម៉ឺនុយលោតឡើងដែលអាចកំណត់រចនាសម្ព័ន្ធបាន បង្ហាញអ៊ីមូជីភាគច្រើន ការចុចលើអ៊ីមូជីនឹងចម្លងវាទៅក្ដារតម្បៀតខ្ទាស់។"
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "អ្នកនិពន្ធ"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "អ្នកបកប្រែ"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "អ្នកចូលរួមវិភាគទាន"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "រាយការណ៍កំហុស ឬគំនិត"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "អំពី"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "មិនអាចបើកទំព័របណ្ដាញបានទេ"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "ស្មាយលី និងរាងកាយ"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "មនុស្ស និងសម្លៀកបំពាក់"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "សត្វ និងធម្មជាតិ"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "អាហារ និងភេសជ្ជៈ"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "ការធ្វើដំណើរ និងទីកន្លែង"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "សកម្មភាព និងកីឡា"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "វត្ថុ"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "និមិត្តសញ្ញា"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "ទង់ជាតិ"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "វាយនៅទីនេះដើម្បីស្វែងរក…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "គ្មានសម្បុរស្បែក"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "សម្បុរស្បែកស្រាល"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "សម្បុរស្បែកមធ្យមស្រាល"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "សម្បុរស្បែកមធ្យម"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "សម្បុរស្បែកមធ្យមខ្មៅ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "សម្បុរស្បែកខ្មៅ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "ស្ត្រី"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "បុរស"

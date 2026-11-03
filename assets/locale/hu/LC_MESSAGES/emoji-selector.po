@@ -1,0 +1,199 @@
+# Hungarian translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Általános elrendezés"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "A felület alulról történő megjelenítése jobb, ha az alapértelmezett felső sáv helyett alsó panelt használ."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Fentről lefelé"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Lentről felfelé"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "A beállítást nem sikerült menteni"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Emodzsik száma soronként"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Emodzsik mérete (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Elrendezés"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "A módosítóbillentyűket csúcsos zárójelek közé kell tenni"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Az alapértelmezett érték: %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Ne használjon már létező gyorsbillentyűt."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Gyorsbillentyű használata a menü megnyitásához és bezárásához"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Gyorsbillentyű"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Ez nem érvényes gyorsbillentyű"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Az érvényes billentyűnevek listája"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Az ikon mindig legyen látható a panelen"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Ha a menüt a gyorsbillentyűvel nyitja meg, nem kell mindig megjeleníteni az ikont."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Gyorsbillentyűk"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Ez a bővítmény egy beállítható felugró menüt biztosít, amely a legtöbb emodzsit megjeleníti, és egy emodzsira kattintva az a vágólapra másolódik."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Szerző"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Fordító(k)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Közreműködők"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Hibák vagy ötletek jelentése"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Névjegy"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "A weboldalt nem sikerült megnyitni"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Hangulatjelek & test"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Emberek & ruházat"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Állatok & természet"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Étel & ital"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Utazás & helyek"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Tevékenységek & sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Tárgyak"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Szimbólumok"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Zászlók"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Írja ide a keresett szöveget…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Nincs bőrtónus"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Világos bőrtónus"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Közepesen világos bőrtónus"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Közepes bőrtónus"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Közepesen sötét bőrtónus"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Sötét bőrtónus"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Nők"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Férfiak"

@@ -1,0 +1,199 @@
+# Irish translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : (n>=3 && n<=6) ? 2 : (n>=7 && n<=10) ? 3 : 4);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Leagan amach ginearálta"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Is fearr an comhéadan a thaispeáint ón mbun má úsáideann tú painéal bun in ionad an bharra uachtaraigh réamhshocraithe."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Ó bharr go bun"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Ó bhun go barr"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Níorbh fhéidir an socrú a shábháil"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Líon na n-emoji in aghaidh an líne"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Méid na n-emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Leagan amach"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Caithfidh eochracha mionathraithe a bheith idir lúibíní uilleacha"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Is é %s an luach réamhshocraithe"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Ná húsáid aicearra méarchláir atá ann cheana."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Úsáid aicearra méarchláir chun an roghchlár a scoránú"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Aicearra méarchláir"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Ní aicearra méarchláir bailí é seo"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Liosta d'ainmneacha eochrach bailí"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Taispeáin an deilbhín sa phainéal i gcónaí"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Má shroiseann tú an roghchlár leis an aicearra méarchláir, níl gá leis an deilbhín a thaispeáint i gcónaí."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Ceangail méarchláir"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Soláthraíonn an breiseán seo roghchlár aníos inchumraithe a thaispeánann formhór na n-emoji; cóipeálann cliceáil ar emoji é chuig an ghearrthaisce."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Údar"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Aistritheoir(í)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Rannpháirtithe"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Tuairiscigh fabhtanna nó smaointe"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Maidir leis"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Níorbh fhéidir an leathanach gréasáin a oscailt"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Aghaidheanna & Corp"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Daoine & Éadaí"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Ainmhithe & Nádúr"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Bia & Deoch"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Taisteal & Áiteanna"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Gníomhaíochtaí & Spórt"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Réada"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Siombailí"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Bratacha"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Clóscríobh anseo chun cuardach…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Gan ton craicinn"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Ton craicinn éadrom"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Ton craicinn measartha éadrom"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Ton craicinn measartha"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Ton craicinn measartha dorcha"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Ton craicinn dorcha"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Mná"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Fir"

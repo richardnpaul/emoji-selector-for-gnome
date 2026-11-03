@@ -1,0 +1,199 @@
+# Lithuanian translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && ((n%100<11 || n%100>19)) ? 0 : (n%10>=2 && n%10<=9) && ((n%100<11 || n%100>19)) ? 1 : 2);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Bendras išdėstymas"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Sąsajos rodymas iš apačios yra geresnis, jei naudojate apatinį skydelį vietoj numatytosios viršutinės juostos."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Iš viršaus į apačią"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Iš apačios į viršų"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Nepavyko įrašyti nustatymo"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Jaustukų skaičius eilutėje"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Jaustukų dydis (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Išdėstymas"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Modifikavimo klavišai turi būti tarp kampinių skliaustų"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Numatytoji reikšmė yra %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Nenaudokite sparčiojo klavišo, kuris jau egzistuoja."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Naudoti spartųjį klavišą meniu perjungimui"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Spartusis klavišas"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Tai nėra tinkamas spartusis klavišas"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Tinkamų klavišų pavadinimų sąrašas"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Visada rodyti piktogramą skydelyje"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Jei meniu atidarote sparčiuoju klavišu, piktogramos nebūtina rodyti visą laiką."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Spartieji klavišai"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Šis plėtinys suteikia konfigūruojamą iššokantį meniu su daugeliu jaustukų; spustelėjus jaustuką, jis nukopijuojamas į iškarpinę."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Autorius"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Vertėjas(-ai)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Prisidėjusieji"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Pranešti apie klaidas ar idėjas"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Apie"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Nepavyko atverti tinklalapio"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Šypsenėlės ir kūnas"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Žmonės ir apranga"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Gyvūnai ir gamta"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Maistas ir gėrimai"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Kelionės ir vietos"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Veikla ir sportas"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Objektai"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Simboliai"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Vėliavos"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Rašykite čia, kad ieškotumėte…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Be odos atspalvio"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Šviesus odos atspalvis"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Vidutiniškai šviesus odos atspalvis"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Vidutinis odos atspalvis"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Vidutiniškai tamsus odos atspalvis"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Tamsus odos atspalvis"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Moterys"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Vyrai"

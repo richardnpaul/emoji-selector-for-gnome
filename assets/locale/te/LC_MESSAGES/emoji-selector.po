@@ -1,0 +1,199 @@
+# Telugu translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "సాధారణ లేఅవుట్"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "డిఫాల్ట్ పైన ఉండే బార్‌కు బదులుగా కింది ప్యానెల్‌ను ఉపయోగిస్తే, ఇంటర్‌ఫేస్‌ను కింది నుండి చూపించడం మంచిది."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "పై నుండి కిందికి"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "కింది నుండి పైకి"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "సెట్టింగ్‌ను సేవ్ చేయడం సాధ్యం కాలేదు"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "ఒక్కో వరుసలో ఎమోజీల సంఖ్య"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ఎమోజీల పరిమాణం (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "లేఅవుట్"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "మాడిఫైయర్ కీలు కోణ బ్రాకెట్ల మధ్య ఉండాలి"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "డిఫాల్ట్ విలువ %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "ఇప్పటికే ఉన్న కీబోర్డ్ షార్ట్‌కట్‌ను ఉపయోగించవద్దు."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "మెనూను టాగుల్ చేయడానికి కీబోర్డ్ షార్ట్‌కట్‌ను ఉపయోగించండి"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "కీబోర్డ్ షార్ట్‌కట్"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "ఇది చెల్లుబాటు అయ్యే కీబోర్డ్ షార్ట్‌కట్ కాదు"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "చెల్లుబాటు అయ్యే కీ పేర్ల జాబితా"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "ప్యానెల్‌లో ఎల్లప్పుడూ ఐకాన్‌ను చూపండి"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "కీబోర్డ్ షార్ట్‌కట్‌తో మెనూను తెరిస్తే, ఐకాన్‌ను ఎల్లప్పుడూ చూపించాల్సిన అవసరం లేదు."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "కీబోర్డ్ బైండింగ్‌లు"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ఈ ఎక్స్‌టెన్షన్ చాలా ఎమోజీలను చూపించే, కాన్ఫిగర్ చేయదగిన పాపప్ మెనూను అందిస్తుంది; ఎమోజీపై క్లిక్ చేస్తే అది క్లిప్‌బోర్డ్‌కు కాపీ అవుతుంది."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "రచయిత"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "అనువాదకులు"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "సహకారులు"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "బగ్‌లను లేదా ఆలోచనలను నివేదించండి"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "గురించి"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "వెబ్ పేజీని తెరవడం సాధ్యం కాలేదు"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "స్మైలీలు & శరీరం"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "ప్రజలు & దుస్తులు"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "జంతువులు & ప్రకృతి"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "ఆహారం & పానీయం"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "ప్రయాణం & ప్రదేశాలు"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "కార్యకలాపాలు & క్రీడలు"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "వస్తువులు"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "చిహ్నాలు"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "జెండాలు"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "శోధించడానికి ఇక్కడ టైప్ చేయండి…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "చర్మ రంగు లేదు"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "లేత చర్మ రంగు"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "మధ్యస్థ లేత చర్మ రంగు"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "మధ్యస్థ చర్మ రంగు"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "మధ్యస్థ ముదురు చర్మ రంగు"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "ముదురు చర్మ రంగు"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "స్త్రీలు"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "పురుషులు"

@@ -1,0 +1,199 @@
+# Setswana translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: tn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Thulaganyo e e kakaretsang"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Go bontsha interface go simolola kwa tlase go molemo fa o dirisa panele ya kwa tlase go na le bara ya kwa godimo e e tlwaelegileng."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Go tswa kwa godimo go ya kwa tlase"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Go tswa kwa tlase go ya kwa godimo"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Thulaganyo ga e a kgona go bolokwa"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Palo ya di-emoji mo mothalong mongwe le mongwe"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Bogolo jwa di-emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Thulaganyo"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Dinotlolo tsa modifier di tshwanetse go nna fa gare ga matshwao a < >"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Boleng jo bo tlwaelegileng ke %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "O se ka wa dirisa tsela e khutshwane ya keyboard e e leng gone."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Dirisa tsela e khutshwane ya keyboard go bula le go tswala menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Tsela e khutshwane ya keyboard"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Eno ga se tsela e khutshwane ya keyboard e e siameng"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lenane la maina a dinotlolo a a siameng"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Bontsha letshwao nako tsotlhe mo panele"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Fa o tsena mo menung ka tsela e khutshwane ya keyboard, ga o tlhoke go bontsha letshwao nako tsotlhe."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Ditsela tse di khutshwane tsa keyboard"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Extension eno e naya menu e e fetolegang e e bontshang di-emoji tse dintsi; go kgatla emoji go e kopolola mo clipboard."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Mokwadi"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Mofetoledi(ba)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Bathusi"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Begela diphoso kgotsa megopolo"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Kaga"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Tsebe ya webo ga e a kgona go bulwa"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Difatlhego le mmele"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Batho le diaparo"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Diphologolo le tlhago"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Dijo le dino"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Maeto le mafelo"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Ditiro le metshameko"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Dilo"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Matshwao"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Difolaga"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Kwala fa go batla…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Ga go mmala wa letlalo"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Letlalo le le phatsimang"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Letlalo le le phatsimang ka bogare"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Letlalo le le bogare"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Letlalo le le lefifi ka bogare"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Letlalo le le lefifi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Basadi"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Banna"

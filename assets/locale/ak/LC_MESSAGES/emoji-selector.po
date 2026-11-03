@@ -1,0 +1,199 @@
+# Akan translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ak\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=((n>=0 && n<=1) ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Nhyehyɛe nyinaa"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Interface a ɛfiri ase no kyerɛ yɛ papa bere a wode panel a ɛwɔ ase di dwuma sen bar a ɛwɔ soro a ɛyɛ default no."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Efi soro kɔ ase"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Efi ase kɔ soro"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Wɔantumi ankora nhyehyɛe no"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Emoji dodow wɔ line biara so"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Emoji no kɛse (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Nhyehyɛe"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Modifier nkyerɛwde no ɛsɛ sɛ ɛwɔ < > mfinimfini"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Default boɔ no yɛ %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Mfa keyboard shortcut a ɛwɔ hɔ dedaw no nni dwuma."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Fa keyboard shortcut di dwuma sɛ wobɛbue na wato menu no mu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Keyboard shortcut"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Yei nyɛ keyboard shortcut a ɛfata"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Key din a ɛfata no list"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Daa daa kyerɛ icon no wɔ panel no so"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Sɛ wode keyboard shortcut no kɔ menu no mu a, ɛho nhia sɛ wokyerɛ icon no daa."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Keyboard shortcuts"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Extension yi de menu a wotumi hyehyɛ a ɛkyerɛ emoji pii ba; sɛ wopia emoji so a, ɛkopi kɔ clipboard mu."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Okyerɛwfo"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Ɔkyerɛaseɛfoɔ"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Mmoafoɔ"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Ka mfomso anaa adwene ho asɛm"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Ho nsɛm"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Wɔantumi ampue wɛb nsɛmma krataa no"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Anim ne nipadua"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Nnipa ne ntama"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Mmoa ne abɔde"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Aduane ne nsa"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Akwantu ne mmeae"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Nneɛma a wɔyɛ ne agumadi"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Nneɛma"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Agyiraeɛ"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Frankaa"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Twerɛ ha na hwehwɛ…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Honam ho kɔla biara nni hɔ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Honam ho kɔla a ɛyɛ hann"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Honam ho kɔla a ɛyɛ hann kakra"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Honam ho kɔla a ɛda mfinimfini"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Honam ho kɔla a ɛyɛ tuntum kakra"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Honam ho kɔla a ɛyɛ tuntum"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Mmaa"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Mmarima"

@@ -1,1 +1,17 @@
 /_*
+
+# Tooling output
+node_modules/
+coverage/
+reports/
+.stryker-tmp/
+dist/
+
+# Generated: compiled on install, and extensions.gnome.org compiles it itself
+gschemas.compiled
+
+# Claude Code's session lock
+.claude/scheduled_tasks.lock
+
+# Written by VS Code from the *user's* default dev container features, so not project state
+devcontainer-lock.json

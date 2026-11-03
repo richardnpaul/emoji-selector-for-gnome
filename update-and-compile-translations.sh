@@ -1,29 +1,62 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Extracts the translatable strings into the template (.pot), merges them into every language's
+# catalogue (.po), and compiles the catalogues (.mo) that ship with the extension.
+#
+# Usage: ./update-and-compile-translations.sh
+#
+# The template is only rewritten when a message changed, so running this on unchanged sources
+# changes nothing (xgettext would otherwise stamp the current time into it every run).
+set -euo pipefail
 
-################################################################################
+readonly DOMAIN='emoji-selector'
 
-TRANSLATION_ID="emoji-selector"
+if (($# != 0)); then
+	echo "Usage: $0" >&2
+	exit 2
+fi
 
-echo "Generating .pot file..."
-xgettext --files-from=POTFILES.in --from-code=UTF-8 --add-location=file --output=$TRANSLATION_ID@maestroschan.fr/locale/$TRANSLATION_ID.pot
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
 
-################################################################################
-
-IFS='
-'
-dir_list=`ls ./$TRANSLATION_ID@maestroschan.fr/locale/`
-prefix="./$TRANSLATION_ID@maestroschan.fr/locale"
-
-for dir in $dir_list; do
-	if [ "$dir" != "$TRANSLATION_ID.pot" ]; then
-		echo "Updating translation for: $dir"
-		msgmerge --update --previous $prefix/$dir/LC_MESSAGES/$TRANSLATION_ID.po $prefix/$TRANSLATION_ID.pot
-		echo "Compiling translation for: $dir"
-		msgfmt $prefix/$dir/LC_MESSAGES/$TRANSLATION_ID.po -o $prefix/$dir/LC_MESSAGES/$TRANSLATION_ID.mo
-		rm -f "$prefix/$dir/LC_MESSAGES/$TRANSLATION_ID.po~"
+for tool in xgettext msgmerge msgfmt grep; do
+	if ! command -v "$tool" >/dev/null; then
+		echo "Required tool not found: $tool" >&2
+		exit 1
 	fi
 done
 
-################################################################################
+locale_dir="assets/locale"
+template="$locale_dir/$DOMAIN.pot"
 
-exit 0
+fresh_template=$(mktemp)
+trap 'rm -f -- "${fresh_template:?}"' EXIT
+
+echo "Generating $template..."
+# (--language=JavaScript because gettext older than 1.0 does not know .ts files and would read them as C. An unusable GIT_DIR stops xgettext from asking git for file dates, and from complaining about names it cannot parse.)
+GIT_DIR=/nonexistent xgettext --language=JavaScript --files-from=POTFILES.in --from-code=UTF-8 --add-location=file \
+	--package-name='Emoji Selector' --msgid-bugs-address='https://github.com/richardnpaul/emoji-selector-for-gnome/issues' \
+	--output="$fresh_template"
+
+without_date() {
+	grep -v '^"POT-Creation-Date:' -- "$1"
+}
+if [[ -f $template && $(without_date "$template") == "$(without_date "$fresh_template")" ]]; then
+	echo "No message changed."
+else
+	# Not mv: the template keeps its own permissions (mktemp files are private).
+	cat -- "$fresh_template" >"$template"
+fi
+
+shopt -s nullglob
+for catalogue in "$locale_dir"/*/LC_MESSAGES/"$DOMAIN.po"; do
+	language=${catalogue#"$locale_dir"/}
+	language=${language%%/*}
+
+	echo "Updating translation for: $language"
+	msgmerge --update --backup=none --previous --quiet "$catalogue" "$template"
+
+	echo "Compiling translation for: $language"
+	if ! msgfmt --check --output-file="${catalogue%.po}.mo" "$catalogue"; then
+		echo "$catalogue is not a valid catalogue." >&2
+		exit 1
+	fi
+done

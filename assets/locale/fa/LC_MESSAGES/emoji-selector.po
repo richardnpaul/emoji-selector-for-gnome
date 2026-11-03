@@ -1,0 +1,199 @@
+# Persian translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "چیدمان کلی"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "اگر به جای نوار بالای پیش‌فرض از پنل پایین استفاده می‌کنید، نمایش رابط از پایین بهتر است."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "از بالا به پایین"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "از پایین به بالا"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "تنظیم ذخیره نشد"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "تعداد ایموجی‌ها در هر خط"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "اندازه ایموجی‌ها (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "چیدمان"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "کلیدهای تغییردهنده باید میان کروشه‌های زاویه‌ای قرار گیرند"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "مقدار پیش‌فرض %s است"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "از میان‌بر صفحه‌کلیدی که از قبل وجود دارد استفاده نکنید."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "استفاده از میان‌بر صفحه‌کلید برای باز و بسته کردن منو"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "میان‌بر صفحه‌کلید"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "این میان‌بر صفحه‌کلید معتبر نیست"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "فهرست نام‌های معتبر کلیدها"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "همیشه شمایل را در پنل نشان بده"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "اگر با میان‌بر صفحه‌کلید به منو دسترسی دارید، نیازی نیست شمایل همیشه نمایش داده شود."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "اتصال‌های صفحه‌کلید"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "این افزونه یک منوی بازشوی پیکربندی‌پذیر ارائه می‌دهد که بیشتر ایموجی‌ها را نمایش می‌دهد؛ با کلیک روی یک ایموجی، آن در کلیپ‌بورد کپی می‌شود."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "مؤلف"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "مترجم(ها)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "مشارکت‌کنندگان"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "گزارش اشکال‌ها یا ایده‌ها"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "درباره"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "صفحه وب باز نشد"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "چهره‌ها و بدن"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "مردم و پوشاک"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "جانوران و طبیعت"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "غذا و نوشیدنی"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "سفر و مکان‌ها"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "فعالیت‌ها و ورزش"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "اشیا"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "نمادها"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "پرچم‌ها"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "برای جست‌وجو اینجا بنویسید…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "بدون رنگ پوست"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "رنگ پوست روشن"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "رنگ پوست نیمه‌روشن"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "رنگ پوست متوسط"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "رنگ پوست نیمه‌تیره"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "رنگ پوست تیره"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "زنان"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "مردان"

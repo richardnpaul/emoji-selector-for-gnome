@@ -1,0 +1,199 @@
+# Sinhala translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "සාමාන්‍ය පිරිසැලසුම"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "පෙරනිමි ඉහළ තීරුව වෙනුවට පහළ පැනලයක් භාවිතා කරන්නේ නම්, අතුරුමුහුණත පහළින් පෙන්වීම වඩාත් හොඳය."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "ඉහළ සිට පහළට"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "පහළ සිට ඉහළට"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "සැකසුම සුරැකිය නොහැකි විය"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "එක් පේළියකට ඉමෝජි ගණන"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ඉමෝජි විශාලත්වය (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "පිරිසැලසුම"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "වෙනස්කරන යතුරු කෝණ වරහන් අතර තිබිය යුතුය"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "පෙරනිමි අගය %s වේ"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "දැනටමත් පවතින යතුරුපුවරු කෙටිමඟක් භාවිතා නොකරන්න."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "මෙනුව ටොගල් කිරීමට යතුරුපුවරු කෙටිමඟක් භාවිතා කරන්න"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "යතුරුපුවරු කෙටිමඟ"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "මෙය වලංගු යතුරුපුවරු කෙටිමඟක් නොවේ"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "වලංගු යතුරු නාම ලැයිස්තුව"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "පැනලයේ නිතරම නිරූපකය පෙන්වන්න"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "යතුරුපුවරු කෙටිමඟ මගින් මෙනුව විවෘත කරන්නේ නම්, නිරූපකය නිතරම පෙන්වීම අවශ්‍ය නැත."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "යතුරුපුවරු බන්ධන"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "මෙම දිගුව බොහෝ ඉමෝජි පෙන්වන, වින්‍යාස කළ හැකි උත්පතන මෙනුවක් සපයයි; ඉමෝජියක් මත ක්ලික් කිරීමෙන් එය පසුරු පුවරුවට පිටපත් වේ."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "කර්තෘ"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "පරිවර්තක(යින්)"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "දායකයින්"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "දෝෂ හෝ අදහස් වාර්තා කරන්න"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "පිළිබඳව"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "වෙබ් පිටුව විවෘත කළ නොහැකි විය"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "ස්මයිලි සහ ශරීරය"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "මිනිසුන් සහ ඇඳුම්"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "සත්වයන් සහ සොබාදහම"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "ආහාර සහ පානය"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "ගමන් සහ ස්ථාන"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "ක්‍රියාකාරකම් සහ ක්‍රීඩා"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "වස්තු"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "සංකේත"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "ධජ"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "සෙවීමට මෙහි ටයිප් කරන්න…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "සමේ වර්ණයක් නැත"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "ලා සමේ වර්ණය"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "මධ්‍යම ලා සමේ වර්ණය"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "මධ්‍යම සමේ වර්ණය"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "මධ්‍යම තද සමේ වර්ණය"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "තද සමේ වර්ණය"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "කාන්තාවන්"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "පිරිමි"

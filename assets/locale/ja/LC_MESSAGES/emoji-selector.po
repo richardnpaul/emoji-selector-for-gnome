@@ -1,0 +1,199 @@
+# Japanese translations for the Emoji Selector package.
+# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "全体のレイアウト"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "既定の上部バーではなく下部パネルを使用している場合は、インターフェースを下から表示する方が適しています。"
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "上から下へ"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "下から上へ"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "設定を保存できませんでした"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "1行あたりの絵文字の数"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "絵文字のサイズ (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "レイアウト"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "修飾キーは山括弧で囲む必要があります"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "既定値は %s です"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "すでに存在するキーボードショートカットは使用しないでください。"
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "キーボードショートカットでメニューを切り替える"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "キーボードショートカット"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "有効なキーボードショートカットではありません"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "有効なキー名の一覧"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "パネルにアイコンを常に表示する"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "キーボードショートカットでメニューを開く場合は、アイコンを常に表示する必要はありません。"
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "キーバインド"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "この拡張機能は、ほとんどの絵文字を表示する設定可能なポップアップメニューを提供します。絵文字をクリックするとクリップボードにコピーされます。"
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "作者"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "翻訳者"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "貢献者"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "不具合やアイデアを報告"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "情報"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "ウェブページを開けませんでした"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "スマイリーと人体"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "人物と衣類"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "動物と自然"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "食べ物と飲み物"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "旅行と場所"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "アクティビティとスポーツ"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "物"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "記号"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "旗"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "ここに入力して検索…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "肌の色なし"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "明るい肌の色"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "やや明るい肌の色"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "中間の肌の色"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "やや濃い肌の色"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "濃い肌の色"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "女性"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "男性"

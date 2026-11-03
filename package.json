@@ -1,0 +1,60 @@
+{
+  "name": "emoji-selector-for-gnome",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Development tooling for the Emoji Selector GNOME Shell extension (tests, mutation testing, packaging). Nothing here ships in the extension.",
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:coverage": "vitest run --coverage",
+    "test:mutation": "stryker run",
+    "test:mutation:incremental": "stryker run --incremental --incrementalFile reports/stryker-incremental.json",
+    "test:watch": "vitest",
+    "test:real": "vitest run --config vitest.real.config.mjs",
+    "test:prefs": "vitest run --config vitest.real.config.mjs tests/integration/prefs.real.test.js",
+    "test:prefs:rtl": "vitest run --config vitest.real.config.mjs tests/integration/prefs.real.test.js -t right-to-left",
+    "test:shell": "vitest run --config vitest.real.config.mjs tests/integration/shell.real.test.js",
+    "lint": "eslint --max-warnings=0 .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build:names": "node translations/tools/names.mjs",
+    "build:package": "npm run build:ts && npm run build:names && ./build-a-zip.sh",
+    "build:locales": "./update-and-compile-translations.sh",
+    "shexli": "npm run build:ts && npm run build:names && rm -f dist/*.zip && ./build-a-zip.sh dist >/dev/null && node scripts/check-shexli.mjs dist/*.zip",
+    "check": "npm run lint && npm run format:check && npm run typecheck && npm run test:coverage",
+    "check:all": "npm run check && npm run test:real",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build:ts": "rm -rf dist/extension && tsc -p tsconfig.build.json",
+    "sbom": "cyclonedx-npm --spec-version 1.6 --output-reproducible --output-file dist/sbom.cdx.json"
+  },
+  "devDependencies": {
+    "@cyclonedx/cyclonedx-npm": "6.0.1",
+    "@eslint-community/eslint-plugin-eslint-comments": "4.8.1",
+    "@eslint/js": "10.0.1",
+    "@girs/gjs": "5.5.0",
+    "@girs/gnome-shell": "50.0.4",
+    "@stryker-mutator/core": "10.0.0",
+    "@stryker-mutator/vitest-runner": "10.0.0",
+    "@types/node": "26.6.5",
+    "@vitest/coverage-v8": "4.1.12",
+    "@vitest/eslint-plugin": "1.6.27",
+    "cldr-annotations-derived-full": "49.0.0",
+    "cldr-annotations-full": "49.0.0",
+    "cldr-core": "49.0.0",
+    "eslint": "10.13.0",
+    "globals": "17.13.0",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.0",
+    "vitest": "4.1.12"
+  },
+  "overrides": {
+    "qs": "6.16.1"
+  }
+}

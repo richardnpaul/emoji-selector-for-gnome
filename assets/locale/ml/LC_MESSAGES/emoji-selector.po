@@ -1,0 +1,199 @@
+# Malayalam translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==1 ? 0 : 1);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "പൊതുവായ ലേഔട്ട്"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "ഡിഫോൾട്ട് മുകളിലെ ബാറിന് പകരം താഴത്തെ പാനൽ ഉപയോഗിക്കുന്നുണ്ടെങ്കിൽ ഇന്റർഫേസ് താഴെ നിന്ന് കാണിക്കുന്നതാണ് നല്ലത്."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "മുകളിൽ നിന്ന് താഴേക്ക്"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "താഴെ നിന്ന് മുകളിലേക്ക്"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "ക്രമീകരണം സേവ് ചെയ്യാനായില്ല"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "ഓരോ വരിയിലെയും ഇമോജികളുടെ എണ്ണം"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "ഇമോജികളുടെ വലുപ്പം (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "ലേഔട്ട്"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "മോഡിഫയർ കീകൾ ആംഗിൾ ബ്രാക്കറ്റുകൾക്കുള്ളിൽ ആയിരിക്കണം"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "ഡിഫോൾട്ട് മൂല്യം %s ആണ്"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "നിലവിലുള്ള ഒരു കീബോർഡ് ഷോർട്ട്കട്ട് ഉപയോഗിക്കരുത്."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "മെനു ടോഗിൾ ചെയ്യാൻ കീബോർഡ് ഷോർട്ട്കട്ട് ഉപയോഗിക്കുക"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "കീബോർഡ് ഷോർട്ട്കട്ട്"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "ഇത് സാധുവായ കീബോർഡ് ഷോർട്ട്കട്ട് അല്ല"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "സാധുവായ കീ പേരുകളുടെ പട്ടിക"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "പാനലിൽ എപ്പോഴും ഐക്കൺ കാണിക്കുക"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "കീബോർഡ് ഷോർട്ട്കട്ട് ഉപയോഗിച്ചാണ് മെനു തുറക്കുന്നതെങ്കിൽ, ഐക്കൺ എപ്പോഴും കാണിക്കേണ്ടതില്ല."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "കീബോർഡ് ബൈൻഡിംഗുകൾ"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "ഈ എക്സ്റ്റൻഷൻ മിക്ക ഇമോജികളും കാണിക്കുന്ന ക്രമീകരിക്കാവുന്ന ഒരു പോപ്പ്അപ്പ് മെനു നൽകുന്നു; ഒരു ഇമോജിയിൽ ക്ലിക്ക് ചെയ്താൽ അത് ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തപ്പെടും."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "രചയിതാവ്"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "വിവർത്തകർ"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "സംഭാവന ചെയ്തവർ"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "ബഗ്ഗുകളോ ആശയങ്ങളോ റിപ്പോർട്ട് ചെയ്യുക"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "കുറിച്ച്"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "വെബ് പേജ് തുറക്കാനായില്ല"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "സ്മൈലികളും ശരീരവും"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "ആളുകളും വസ്ത്രങ്ങളും"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "മൃഗങ്ങളും പ്രകൃതിയും"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "ഭക്ഷണവും പാനീയവും"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "യാത്രയും സ്ഥലങ്ങളും"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "പ്രവർത്തനങ്ങളും കായികവും"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "വസ്തുക്കൾ"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "ചിഹ്നങ്ങൾ"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "പതാകകൾ"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "തിരയാൻ ഇവിടെ ടൈപ്പ് ചെയ്യുക…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "ചർമ്മ നിറം ഇല്ല"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "ഇളം ചർമ്മ നിറം"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "ഇടത്തരം ഇളം ചർമ്മ നിറം"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "ഇടത്തരം ചർമ്മ നിറം"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "ഇടത്തരം കടുത്ത ചർമ്മ നിറം"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "കടുത്ത ചർമ്മ നിറം"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "സ്ത്രീകൾ"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "പുരുഷന്മാർ"

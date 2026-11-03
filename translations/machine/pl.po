@@ -1,0 +1,199 @@
+# Polish translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Ogólny układ"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Wyświetlanie interfejsu od dołu jest lepsze, jeśli zamiast domyślnego górnego paska używasz panelu dolnego."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Od góry do dołu"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Od dołu do góry"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Nie udało się zapisać ustawienia"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Liczba emoji w wierszu"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Rozmiar emoji (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Układ"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Klawisze modyfikujące muszą być w nawiasach kątowych"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Wartość domyślna to %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Nie używaj skrótu klawiszowego, który już istnieje."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Używaj skrótu klawiszowego do przełączania menu"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Skrót klawiszowy"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "To nie jest prawidłowy skrót klawiszowy"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lista prawidłowych nazw klawiszy"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Zawsze wyświetlaj ikonę na panelu"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Jeśli otwierasz menu skrótem klawiszowym, nie musisz stale wyświetlać ikony."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Skróty klawiszowe"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "To rozszerzenie udostępnia konfigurowalne menu podręczne wyświetlające większość emoji; kliknięcie emoji kopiuje je do schowka."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Autor"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Tłumacze"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Współtwórcy"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Zgłoś błędy lub pomysły"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "O rozszerzeniu"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Nie udało się otworzyć strony internetowej"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Buźki i ciało"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Ludzie i odzież"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Zwierzęta i natura"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Jedzenie i picie"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Podróże i miejsca"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Aktywności i sport"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Przedmioty"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Symbole"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Flagi"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Wpisz tutaj, aby wyszukać…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Brak odcienia skóry"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Jasny odcień skóry"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Średnio jasny odcień skóry"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Średni odcień skóry"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Średnio ciemny odcień skóry"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Ciemny odcień skóry"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Kobiety"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Mężczyźni"

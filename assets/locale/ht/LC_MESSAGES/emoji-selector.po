@@ -1,0 +1,199 @@
+# Haitian translations for Emoji package.
+# Copyright (C) 2026 THE Emoji'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Emoji Selector package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Emoji Selector\n"
+"Report-Msgid-Bugs-To: https://github.com/richardnpaul/emoji-selector-for-gnome/issues\n"
+"POT-Creation-Date: 2026-10-22 21:09+0000\n"
+"PO-Revision-Date: 2026-10-22 21:09+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ht\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prefs.ts
+msgid "General layout"
+msgstr "Aranjman jeneral"
+
+#: src/prefs.ts
+msgid "Displaying the interface from the bottom is better if you use a bottom panel instead of the default top bar."
+msgstr "Li pi bon pou afiche entèfas la anba si w itilize yon panno anba olye de ba anlè pa default la."
+
+#: src/prefs.ts
+msgid "From top to bottom"
+msgstr "Soti anlè pou ale anba"
+
+#: src/prefs.ts
+msgid "From bottom to top"
+msgstr "Soti anba pou ale anlè"
+
+#: src/prefs.ts
+msgid "The setting could not be saved"
+msgstr "Paramèt la pa t ka anrejistre"
+
+#: src/prefs.ts
+msgid "Number of emojis per line"
+msgstr "Kantite emoji pou chak liy"
+
+#: src/prefs.ts
+msgid "Size of emojis (px)"
+msgstr "Gwosè emoji yo (px)"
+
+#: src/prefs.ts
+msgid "Layout"
+msgstr "Aranjman"
+
+#: src/prefs.ts
+msgid "Modifier keys must be between chevrons"
+msgstr "Touch modifikatè yo dwe ant chevwon yo"
+
+#: src/prefs.ts
+#, javascript-format
+msgid "The default value is %s"
+msgstr "Valè pa default la se %s"
+
+#: src/prefs.ts
+msgid "Don't use a keyboard shortcut that already exists."
+msgstr "Pa itilize yon rakousi klavye ki egziste deja."
+
+#: src/prefs.ts
+msgid "Use a keyboard shortcut to toggle the menu"
+msgstr "Itilize yon rakousi klavye pou louvri oswa fèmen meni an"
+
+#: src/prefs.ts
+msgid "Keyboard shortcut"
+msgstr "Rakousi klavye"
+
+#: src/prefs.ts
+msgid "This is not a valid keyboard shortcut"
+msgstr "Sa a pa yon rakousi klavye ki valab"
+
+#: src/prefs.ts
+msgid "List of valid key names"
+msgstr "Lis non touch ki valab yo"
+
+#: src/prefs.ts
+msgid "Always show the icon in the panel"
+msgstr "Toujou montre ikòn nan nan panno a"
+
+#: src/prefs.ts
+msgid "If you access the menu with the keyboard shortcut, you don't need to always display the icon."
+msgstr "Si w louvri meni an ak rakousi klavye a, ou pa bezwen toujou montre ikòn nan."
+
+#: src/prefs.ts
+msgid "Keyboard bindings"
+msgstr "Rakousi klavye yo"
+
+#: src/prefs.ts src/lib/emojiMenu.ts
+msgid "Emoji Selector"
+msgstr "Emoji Selector"
+
+#: src/prefs.ts
+msgid "This extension provides a configurable popup menu displaying most emojis, clicking on an emoji copies it to the clipboard."
+msgstr "Ekstansyon sa a bay yon meni ki ka konfigire ki montre pifò emoji yo; lè w klike sou yon emoji, li kopye l nan près-papye a."
+
+#: src/prefs.ts
+msgid "Author"
+msgstr "Otè"
+
+#: src/prefs.ts
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: src/prefs.ts
+msgid "Translator(s)"
+msgstr "Tradiktè"
+
+#: src/prefs.ts
+msgid "Contributors"
+msgstr "Kontribitè"
+
+#: src/prefs.ts
+msgid "Report bugs or ideas"
+msgstr "Rapòte pwoblèm oswa lide"
+
+#: src/prefs.ts
+msgid "About"
+msgstr "Apwopo"
+
+#: src/prefs.ts
+msgid "Could not open the web page"
+msgstr "Pa t ka louvri paj wèb la"
+
+#: src/lib/emojiMenu.ts
+msgid "Smileys & Body"
+msgstr "Smiley ak Kò"
+
+#: src/lib/emojiMenu.ts
+msgid "Peoples & Clothing"
+msgstr "Moun ak Rad"
+
+#: src/lib/emojiMenu.ts
+msgid "Animals & Nature"
+msgstr "Bèt ak Lanati"
+
+#: src/lib/emojiMenu.ts
+msgid "Food & Drink"
+msgstr "Manje ak Bwason"
+
+#: src/lib/emojiMenu.ts
+msgid "Travel & Places"
+msgstr "Vwayaj ak Kote"
+
+#: src/lib/emojiMenu.ts
+msgid "Activities & Sports"
+msgstr "Aktivite ak Espò"
+
+#: src/lib/emojiMenu.ts
+msgid "Objects"
+msgstr "Objè"
+
+#: src/lib/emojiMenu.ts
+msgid "Symbols"
+msgstr "Senbòl"
+
+#: src/lib/emojiMenu.ts
+msgid "Flags"
+msgstr "Drapo"
+
+#: src/lib/emojiSearchItem.ts
+msgid "Type here to search…"
+msgstr "Tape isit la pou chèche…"
+
+#: src/lib/skinTonesBar.ts
+msgid "No skin tone"
+msgstr "Pa gen koulè po"
+
+#: src/lib/skinTonesBar.ts
+msgid "Light skin tone"
+msgstr "Koulè po klè"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium light skin tone"
+msgstr "Koulè po mwayen klè"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium skin tone"
+msgstr "Koulè po mwayen"
+
+#: src/lib/skinTonesBar.ts
+msgid "Medium dark skin tone"
+msgstr "Koulè po mwayen fonse"
+
+#: src/lib/skinTonesBar.ts
+msgid "Dark skin tone"
+msgstr "Koulè po fonse"
+
+#: src/lib/skinTonesBar.ts
+msgid "Women"
+msgstr "Fanm"
+
+#: src/lib/skinTonesBar.ts
+msgid "Men"
+msgstr "Gason"
